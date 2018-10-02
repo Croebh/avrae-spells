@@ -1,0 +1,5757 @@
+[
+  {
+    "name": "Acid Splash",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d6[acid]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Aid",
+    "automation": null
+  },
+  {
+    "name": "Alarm",
+    "automation": null
+  },
+  {
+    "name": "Alter Self",
+    "automation": null
+  },
+  {
+    "name": "Animal Friendship",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Animal Messenger",
+    "automation": null
+  },
+  {
+    "name": "Animal Shapes",
+    "automation": null
+  },
+  {
+    "name": "Animate Dead",
+    "automation": null
+  },
+  {
+    "name": "Animate Objects",
+    "automation": null
+  },
+  {
+    "name": "Antilife Shell",
+    "automation": null
+  },
+  {
+    "name": "Antimagic Field",
+    "automation": null
+  },
+  {
+    "name": "Antipathy/Sympathy",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arcane Eye",
+    "automation": null
+  },
+  {
+    "name": "Arcane Gate",
+    "automation": null
+  },
+  {
+    "name": "Arcane Lock",
+    "automation": null
+  },
+  {
+    "name": "Armor of Agathys",
+    "automation": null
+  },
+  {
+    "name": "Arms of Hadar",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6[necrotic]",
+            "name": "damage",
+            "higher": {
+              "2": "1d6[necrotic]",
+              "3": "2d6[necrotic]",
+              "4": "3d6[necrotic]",
+              "5": "4d6[necrotic]",
+              "6": "5d6[necrotic]",
+              "7": "6d6[necrotic]",
+              "8": "7d6[necrotic]",
+              "9": "8d6[necrotic]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Astral Projection",
+    "automation": null
+  },
+  {
+    "name": "Augury",
+    "automation": null
+  },
+  {
+    "name": "Aura of Life",
+    "automation": null
+  },
+  {
+    "name": "Aura of Purity",
+    "automation": null
+  },
+  {
+    "name": "Aura of Vitality",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(2d6)[heal]",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Awaken",
+    "automation": null
+  },
+  {
+    "name": "Bane",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Banishing Smite",
+    "automation": null
+  },
+  {
+    "name": "Banishment",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Barkskin",
+    "automation": null
+  },
+  {
+    "name": "Beacon of Hope",
+    "automation": null
+  },
+  {
+    "name": "Beast Sense",
+    "automation": null
+  },
+  {
+    "name": "Bestow Curse",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bigby's Hand",
+    "automation": null
+  },
+  {
+    "name": "Blade Barrier",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "6d10[slashing]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blade Ward",
+    "automation": null
+  },
+  {
+    "name": "Bless",
+    "automation": null
+  },
+  {
+    "name": "Blight",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "8d8[necrotic]",
+            "name": "damage",
+            "higher": {
+              "5": "1d8[necrotic]",
+              "6": "2d8[necrotic]",
+              "7": "3d8[necrotic]",
+              "8": "4d8[necrotic]",
+              "9": "5d8[necrotic]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blinding Smite",
+    "automation": null
+  },
+  {
+    "name": "Blindness/Deafness",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blink",
+    "automation": null
+  },
+  {
+    "name": "Blur",
+    "automation": null
+  },
+  {
+    "name": "Branding Smite",
+    "automation": null
+  },
+  {
+    "name": "Burning Hands",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d6[fire]",
+            "name": "damage",
+            "higher": {
+              "2": "1d6[fire]",
+              "3": "2d6[fire]",
+              "4": "3d6[fire]",
+              "5": "4d6[fire]",
+              "6": "5d6[fire]",
+              "7": "6d6[fire]",
+              "8": "7d6[fire]",
+              "9": "8d6[fire]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Call Lightning",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d10[lightning]",
+            "name": "damage",
+            "higher": {
+              "4": "1d10[lightning]",
+              "5": "2d10[lightning]",
+              "6": "3d10[lightning]",
+              "7": "4d10[lightning]",
+              "8": "5d10[lightning]",
+              "9": "6d10[lightning]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Calm Emotions",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chain Lightning",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "10d8[lightning]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Charm Person",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chill Touch",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d8[necrotic]",
+                "higher": {},
+                "cantripScale": true
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chromatic Orb",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "3d8[chromatic]",
+                "higher": {
+                  "2": "1d8[chromatic]",
+                  "3": "2d8[chromatic]",
+                  "4": "3d8[chromatic]",
+                  "5": "4d8[chromatic]",
+                  "6": "5d8[chromatic]",
+                  "7": "6d8[chromatic]",
+                  "8": "7d8[chromatic]",
+                  "9": "8d8[chromatic]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Circle of Death",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "8d6[necrotic]",
+            "name": "damage",
+            "higher": {
+              "7": "2d6[necrotic]",
+              "8": "4d6[necrotic]",
+              "9": "6d6[necrotic]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Circle of Power",
+    "automation": null
+  },
+  {
+    "name": "Clairvoyance",
+    "automation": null
+  },
+  {
+    "name": "Clone",
+    "automation": null
+  },
+  {
+    "name": "Cloud of Daggers",
+    "automation": null
+  },
+  {
+    "name": "Cloudkill",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "5d8[poison]",
+            "name": "damage",
+            "higher": {
+              "6": "1d8[poison]",
+              "7": "2d8[poison]",
+              "8": "3d8[poison]",
+              "9": "4d8[poison]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Color Spray",
+    "automation": null
+  },
+  {
+    "name": "Command",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Commune",
+    "automation": null
+  },
+  {
+    "name": "Commune with Nature",
+    "automation": null
+  },
+  {
+    "name": "Compelled Duel",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Comprehend Languages",
+    "automation": null
+  },
+  {
+    "name": "Compulsion",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cone of Cold",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "8d8[cold]",
+            "name": "damage",
+            "higher": {
+              "6": "1d8[cold]",
+              "7": "2d8[cold]",
+              "8": "3d8[cold]",
+              "9": "4d8[cold]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Confusion",
+    "automation": null
+  },
+  {
+    "name": "Conjure Animals",
+    "automation": null
+  },
+  {
+    "name": "Conjure Barrage",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d8",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Conjure Celestial",
+    "automation": null
+  },
+  {
+    "name": "Conjure Elemental",
+    "automation": null
+  },
+  {
+    "name": "Conjure Fey",
+    "automation": null
+  },
+  {
+    "name": "Conjure Minor Elementals",
+    "automation": null
+  },
+  {
+    "name": "Conjure Volley",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "8d8",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Conjure Woodland Beings",
+    "automation": null
+  },
+  {
+    "name": "Contact Other Plane",
+    "automation": null
+  },
+  {
+    "name": "Contagion",
+    "automation": null
+  },
+  {
+    "name": "Contingency",
+    "automation": null
+  },
+  {
+    "name": "Continual Flame",
+    "automation": null
+  },
+  {
+    "name": "Control Water",
+    "automation": null
+  },
+  {
+    "name": "Control Weather",
+    "automation": null
+  },
+  {
+    "name": "Cordon of Arrows",
+    "automation": null
+  },
+  {
+    "name": "Counterspell",
+    "automation": null
+  },
+  {
+    "name": "Create Food and Water",
+    "automation": null
+  },
+  {
+    "name": "Create Undead",
+    "automation": null
+  },
+  {
+    "name": "Create or Destroy Water",
+    "automation": null
+  },
+  {
+    "name": "Creation",
+    "automation": null
+  },
+  {
+    "name": "Crown of Madness",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Crusader's Mantle",
+    "automation": null
+  },
+  {
+    "name": "Cure Wounds",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(1d8+SPELL)[heal]",
+            "higher": {
+              "2": "-(1d8[heal])",
+              "3": "-(2d8[heal])",
+              "4": "-(3d8[heal])",
+              "5": "-(4d8[heal])",
+              "6": "-(5d8[heal])",
+              "7": "-(6d8[heal])",
+              "8": "-(7d8[heal])",
+              "9": "-(8d8[heal])"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dancing Lights",
+    "automation": null
+  },
+  {
+    "name": "Darkness",
+    "automation": null
+  },
+  {
+    "name": "Darkvision",
+    "automation": null
+  },
+  {
+    "name": "Daylight",
+    "automation": null
+  },
+  {
+    "name": "Death Ward",
+    "automation": null
+  },
+  {
+    "name": "Delayed Blast Fireball",
+    "automation": null
+  },
+  {
+    "name": "Demiplane",
+    "automation": null
+  },
+  {
+    "name": "Destructive Wave",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "5d6[thunder]+5d6[radiant]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Detect Evil and Good",
+    "automation": null
+  },
+  {
+    "name": "Detect Magic",
+    "automation": null
+  },
+  {
+    "name": "Detect Poison and Disease",
+    "automation": null
+  },
+  {
+    "name": "Detect Thoughts",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dimension Door",
+    "automation": null
+  },
+  {
+    "name": "Disguise Self",
+    "automation": null
+  },
+  {
+    "name": "Disintegrate",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "10d6+40[force]",
+            "name": "damage",
+            "higher": {
+              "7": "3d6[force]",
+              "8": "6d6[force]",
+              "9": "9d6[force]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dispel Evil and Good",
+    "automation": null
+  },
+  {
+    "name": "Dispel Magic",
+    "automation": null
+  },
+  {
+    "name": "Dissonant Whispers",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d6[psychic]",
+            "name": "damage",
+            "higher": {
+              "2": "1d6[psychic]",
+              "3": "2d6[psychic]",
+              "4": "3d6[psychic]",
+              "5": "4d6[psychic]",
+              "6": "5d6[psychic]",
+              "7": "6d6[psychic]",
+              "8": "7d6[psychic]",
+              "9": "8d6[psychic]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Divination",
+    "automation": null
+  },
+  {
+    "name": "Divine Favor",
+    "automation": null
+  },
+  {
+    "name": "Divine Word",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dominate Beast",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dominate Monster",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dominate Person",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Drawmij's Instant Summons",
+    "automation": null
+  },
+  {
+    "name": "Dream",
+    "automation": null
+  },
+  {
+    "name": "Druidcraft",
+    "automation": null
+  },
+  {
+    "name": "Earthquake",
+    "automation": null
+  },
+  {
+    "name": "Eldritch Blast",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d10[force]",
+                "higher": {}
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Elemental Weapon",
+    "automation": null
+  },
+  {
+    "name": "Enhance Ability",
+    "automation": null
+  },
+  {
+    "name": "Enlarge/Reduce",
+    "automation": null
+  },
+  {
+    "name": "Ensnaring Strike",
+    "automation": null
+  },
+  {
+    "name": "Entangle",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Enthrall",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Etherealness",
+    "automation": null
+  },
+  {
+    "name": "Evard's Black Tentacles",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d6[bludgeoning]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Expeditious Retreat",
+    "automation": null
+  },
+  {
+    "name": "Eyebite",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fabricate",
+    "automation": null
+  },
+  {
+    "name": "Faerie Fire",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "False Life",
+    "automation": null
+  },
+  {
+    "name": "Fear",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Feather Fall",
+    "automation": null
+  },
+  {
+    "name": "Feeblemind",
+    "automation": null
+  },
+  {
+    "name": "Feign Death",
+    "automation": null
+  },
+  {
+    "name": "Find Familiar",
+    "automation": null
+  },
+  {
+    "name": "Find Steed",
+    "automation": null
+  },
+  {
+    "name": "Find Traps",
+    "automation": null
+  },
+  {
+    "name": "Find the Path",
+    "automation": null
+  },
+  {
+    "name": "Finger of Death",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "7d8+30[necrotic]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fire Bolt",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d10[fire]",
+                "higher": {},
+                "cantripScale": true
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fire Shield",
+    "automation": null
+  },
+  {
+    "name": "Fire Storm",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "7d10[fire]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fireball",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "8d6[fire]",
+            "name": "damage",
+            "higher": {
+              "4": "1d6[fire]",
+              "5": "2d6[fire]",
+              "6": "3d6[fire]",
+              "7": "4d6[fire]",
+              "8": "5d6[fire]",
+              "9": "6d6[fire]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Flame Blade",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "3d6[fire]",
+                "higher": {
+                  "3": "",
+                  "4": "1d6[fire]",
+                  "5": "1d6[fire]",
+                  "6": "2d6[fire]",
+                  "7": "2d6[fire]",
+                  "8": "3d6[fire]",
+                  "9": "3d6[fire]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Flame Strike",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4d6[fire]+4d6[radiant]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Flaming Sphere",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6[fire]",
+            "name": "damage",
+            "higher": {
+              "3": "1d6[fire]",
+              "4": "2d6[fire]",
+              "5": "3d6[fire]",
+              "6": "4d6[fire]",
+              "7": "5d6[fire]",
+              "8": "6d6[fire]",
+              "9": "7d6[fire]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Flesh to Stone",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fly",
+    "automation": null
+  },
+  {
+    "name": "Fog Cloud",
+    "automation": null
+  },
+  {
+    "name": "Forbiddance",
+    "automation": null
+  },
+  {
+    "name": "Forcecage",
+    "automation": null
+  },
+  {
+    "name": "Foresight",
+    "automation": null
+  },
+  {
+    "name": "Freedom of Movement",
+    "automation": null
+  },
+  {
+    "name": "Friends",
+    "automation": null
+  },
+  {
+    "name": "Gaseous Form",
+    "automation": null
+  },
+  {
+    "name": "Gate",
+    "automation": null
+  },
+  {
+    "name": "Geas",
+    "automation": null
+  },
+  {
+    "name": "Gentle Repose",
+    "automation": null
+  },
+  {
+    "name": "Giant Insect",
+    "automation": null
+  },
+  {
+    "name": "Glibness",
+    "automation": null
+  },
+  {
+    "name": "Globe of Invulnerability",
+    "automation": null
+  },
+  {
+    "name": "Glyph of Warding",
+    "automation": null
+  },
+  {
+    "name": "Goodberry",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(1)[heal]",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Grasping Vine",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Grease",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Greater Invisibility",
+    "automation": null
+  },
+  {
+    "name": "Greater Restoration",
+    "automation": null
+  },
+  {
+    "name": "Guardian of Faith",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "20[radiant]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Guards and Wards",
+    "automation": null
+  },
+  {
+    "name": "Guidance",
+    "automation": null
+  },
+  {
+    "name": "Guiding Bolt",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "4d6[radiant]",
+                "higher": {
+                  "2": "1d6[radiant]",
+                  "3": "2d6[radiant]",
+                  "4": "3d6[radiant]",
+                  "5": "4d6[radiant]",
+                  "6": "5d6[radiant]",
+                  "7": "6d6[radiant]",
+                  "8": "7d6[radiant]",
+                  "9": "8d6[radiant]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gust of Wind",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hail of Thorns",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d10[piercing]",
+            "name": "damage",
+            "higher": {
+              "2": "1d10[piercing]",
+              "3": "2d10[piercing]",
+              "4": "3d10[piercing]",
+              "5": "4d10[piercing]",
+              "6": "5d10[piercing]",
+              "7": "5d10[piercing]",
+              "8": "5d10[piercing]",
+              "9": "5d10[piercing]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hallow",
+    "automation": null
+  },
+  {
+    "name": "Hallucinatory Terrain",
+    "automation": null
+  },
+  {
+    "name": "Harm",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "14d6[necrotic]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Haste",
+    "automation": null
+  },
+  {
+    "name": "Heal",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(70)[heal]",
+            "higher": {
+              "7": "-(10)[heal]",
+              "8": "-(20)[heal]",
+              "9": "-(30)[heal]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Healing Word",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(1d4+SPELL)[heal]",
+            "higher": {
+              "2": "-(1d4[heal])",
+              "3": "-(2d4[heal])",
+              "4": "-(3d4[heal])",
+              "5": "-(4d4[heal])",
+              "6": "-(5d4[heal])",
+              "7": "-(6d4[heal])",
+              "8": "-(7d4[heal])",
+              "9": "-(8d4[heal])"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Heat Metal",
+    "automation": null
+  },
+  {
+    "name": "Hellish Rebuke",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d10[fire]",
+            "name": "damage",
+            "higher": {
+              "2": "1d10[fire]",
+              "3": "2d10[fire]",
+              "4": "3d10[fire]",
+              "5": "4d10[fire]",
+              "6": "5d10[fire]",
+              "7": "6d10[fire]",
+              "8": "7d10[fire]",
+              "9": "8d10[fire]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Heroes' Feast",
+    "automation": null
+  },
+  {
+    "name": "Heroism",
+    "automation": null
+  },
+  {
+    "name": "Hex",
+    "automation": null
+  },
+  {
+    "name": "Hold Monster",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hold Person",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Holy Aura",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hunger of Hadar",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6[cold][cold]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hunter's Mark",
+    "automation": null
+  },
+  {
+    "name": "Hypnotic Pattern",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ice Storm",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d8[bludgeoning]+4d6[cold]",
+            "name": "damage",
+            "higher": {
+              "5": "1d8[bludgeoning]",
+              "6": "2d8[bludgeoning]",
+              "7": "3d8[bludgeoning]",
+              "8": "4d8[bludgeoning]",
+              "9": "5d8[bludgeoning]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Identify",
+    "automation": null
+  },
+  {
+    "name": "Illusory Script",
+    "automation": null
+  },
+  {
+    "name": "Imprisonment",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Incendiary Cloud",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "10d8[fire]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Inflict Wounds",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "3d10[necrotic]",
+                "higher": {
+                  "2": "1d10[necrotic]",
+                  "3": "2d10[necrotic]",
+                  "4": "3d10[necrotic]",
+                  "5": "4d10[necrotic]",
+                  "6": "5d10[necrotic]",
+                  "7": "6d10[necrotic]",
+                  "8": "7d10[necrotic]",
+                  "9": "8d10[necrotic]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Insect Plague",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4d10[piercing]",
+            "name": "damage",
+            "higher": {
+              "6": "1d10[piercing]",
+              "7": "2d10[piercing]",
+              "8": "3d10[piercing]",
+              "9": "4d10[piercing]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Invisibility",
+    "automation": null
+  },
+  {
+    "name": "Jump",
+    "automation": null
+  },
+  {
+    "name": "Knock",
+    "automation": null
+  },
+  {
+    "name": "Legend Lore",
+    "automation": null
+  },
+  {
+    "name": "Leomund's Secret Chest",
+    "automation": null
+  },
+  {
+    "name": "Leomund's Tiny Hut",
+    "automation": null
+  },
+  {
+    "name": "Lesser Restoration",
+    "automation": null
+  },
+  {
+    "name": "Levitate",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Light",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lightning Arrow",
+    "automation": null
+  },
+  {
+    "name": "Lightning Bolt",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "8d6[lightning]",
+            "name": "damage",
+            "higher": {
+              "4": "1d6[lightning]",
+              "5": "2d6[lightning]",
+              "6": "3d6[lightning]",
+              "7": "4d6[lightning]",
+              "8": "5d6[lightning]",
+              "9": "6d6[lightning]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Locate Animals or Plants",
+    "automation": null
+  },
+  {
+    "name": "Locate Creature",
+    "automation": null
+  },
+  {
+    "name": "Locate Object",
+    "automation": null
+  },
+  {
+    "name": "Longstrider",
+    "automation": null
+  },
+  {
+    "name": "Mage Armor",
+    "automation": null
+  },
+  {
+    "name": "Mage Hand",
+    "automation": null
+  },
+  {
+    "name": "Magic Circle",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Magic Jar",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Magic Missile",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "1d4+1[force]",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Magic Mouth",
+    "automation": null
+  },
+  {
+    "name": "Magic Weapon",
+    "automation": null
+  },
+  {
+    "name": "Major Image",
+    "automation": null
+  },
+  {
+    "name": "Mass Cure Wounds",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(3d8+SPELL)[heal]",
+            "higher": {
+              "6": "-(1d8[heal])",
+              "7": "-(2d8[heal])",
+              "8": "-(3d8[heal])",
+              "9": "-(4d8[heal])"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mass Heal",
+    "automation": null
+  },
+  {
+    "name": "Mass Healing Word",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(1d4+SPELL)[heal]",
+            "higher": {
+              "4": "-(1d4[heal])",
+              "5": "-(2d4[heal])",
+              "6": "-(3d4[heal])",
+              "7": "-(4d4[heal])",
+              "8": "-(5d4[heal])",
+              "9": "-(6d4[heal])"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mass Suggestion",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Maze",
+    "automation": null
+  },
+  {
+    "name": "Meld into Stone",
+    "automation": null
+  },
+  {
+    "name": "Melf's Acid Arrow",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "4d4[acid]",
+                "higher": {}
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mending",
+    "automation": null
+  },
+  {
+    "name": "Message",
+    "automation": null
+  },
+  {
+    "name": "Meteor Swarm",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "20d6[fire]+20d6[bludgeoning]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mind Blank",
+    "automation": null
+  },
+  {
+    "name": "Minor Illusion",
+    "automation": null
+  },
+  {
+    "name": "Mirage Arcane",
+    "automation": null
+  },
+  {
+    "name": "Mirror Image",
+    "automation": null
+  },
+  {
+    "name": "Mislead",
+    "automation": null
+  },
+  {
+    "name": "Misty Step",
+    "automation": null
+  },
+  {
+    "name": "Modify Memory",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Moonbeam",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d10[radiant]",
+            "name": "damage",
+            "higher": {
+              "3": "1d10[radiant]",
+              "4": "2d10[radiant]",
+              "5": "3d10[radiant]",
+              "6": "4d10[radiant]",
+              "7": "5d10[radiant]",
+              "8": "6d10[radiant]",
+              "9": "7d10[radiant]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mordenkainen's Faithful Hound",
+    "automation": null
+  },
+  {
+    "name": "Mordenkainen's Magnificent Mansion",
+    "automation": null
+  },
+  {
+    "name": "Mordenkainen's Private Sanctum",
+    "automation": null
+  },
+  {
+    "name": "Mordenkainen's Sword",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "3d10[force]",
+                "higher": {}
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Move Earth",
+    "automation": null
+  },
+  {
+    "name": "Nondetection",
+    "automation": null
+  },
+  {
+    "name": "Nystul's Magic Aura",
+    "automation": null
+  },
+  {
+    "name": "Otiluke's Freezing Sphere",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "10d6[cold]",
+            "name": "damage",
+            "higher": {
+              "7": "1d6[cold]",
+              "8": "2d6[cold]",
+              "9": "3d6[cold]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Otiluke's Resilient Sphere",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Otto's Irresistible Dance",
+    "automation": null
+  },
+  {
+    "name": "Pass without Trace",
+    "automation": null
+  },
+  {
+    "name": "Passwall",
+    "automation": null
+  },
+  {
+    "name": "Phantasmal Force",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "int",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d6[psychic]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Phantasmal Killer",
+    "automation": null
+  },
+  {
+    "name": "Phantom Steed",
+    "automation": null
+  },
+  {
+    "name": "Planar Ally",
+    "automation": null
+  },
+  {
+    "name": "Planar Binding",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Plane Shift",
+    "automation": null
+  },
+  {
+    "name": "Plant Growth",
+    "automation": null
+  },
+  {
+    "name": "Poison Spray",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d12[poison][poison]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Polymorph",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Power Word Heal",
+    "automation": null
+  },
+  {
+    "name": "Power Word Kill",
+    "automation": null
+  },
+  {
+    "name": "Power Word Stun",
+    "automation": null
+  },
+  {
+    "name": "Prayer of Healing",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(2d8+SPELL)[heal]",
+            "higher": {
+              "3": "-(1d8[heal])",
+              "4": "-(2d8[heal])",
+              "5": "-(3d8[heal])",
+              "6": "-(4d8[heal])",
+              "7": "-(5d8[heal])",
+              "8": "-(6d8[heal])",
+              "9": "-(7d8[heal])"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Prestidigitation",
+    "automation": null
+  },
+  {
+    "name": "Prismatic Spray",
+    "automation": null
+  },
+  {
+    "name": "Prismatic Wall",
+    "automation": null
+  },
+  {
+    "name": "Produce Flame",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d8[fire]",
+                "higher": {},
+                "cantripScale": true
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Programmed Illusion",
+    "automation": null
+  },
+  {
+    "name": "Project Image",
+    "automation": null
+  },
+  {
+    "name": "Protection from Energy",
+    "automation": null
+  },
+  {
+    "name": "Protection from Evil and Good",
+    "automation": null
+  },
+  {
+    "name": "Protection from Poison",
+    "automation": null
+  },
+  {
+    "name": "Purify Food and Drink",
+    "automation": null
+  },
+  {
+    "name": "Raise Dead",
+    "automation": null
+  },
+  {
+    "name": "Rary's Telepathic Bond",
+    "automation": null
+  },
+  {
+    "name": "Ray of Enfeeblement",
+    "automation": null
+  },
+  {
+    "name": "Ray of Frost",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d8[cold]",
+                "higher": {},
+                "cantripScale": true
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ray of Sickness",
+    "automation": null
+  },
+  {
+    "name": "Regenerate",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-(4d8+15)[heal]",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Reincarnate",
+    "automation": null
+  },
+  {
+    "name": "Remove Curse",
+    "automation": null
+  },
+  {
+    "name": "Resistance",
+    "automation": null
+  },
+  {
+    "name": "Resurrection",
+    "automation": null
+  },
+  {
+    "name": "Reverse Gravity",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Revivify",
+    "automation": null
+  },
+  {
+    "name": "Rope Trick",
+    "automation": null
+  },
+  {
+    "name": "Sacred Flame",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d8[radiant][radiant]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sanctuary",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Scorching Ray",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "2d6[fire]",
+                "higher": {}
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Scrying",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Searing Smite",
+    "automation": null
+  },
+  {
+    "name": "See Invisibility",
+    "automation": null
+  },
+  {
+    "name": "Seeming",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sending",
+    "automation": null
+  },
+  {
+    "name": "Sequester",
+    "automation": null
+  },
+  {
+    "name": "Shapechange",
+    "automation": null
+  },
+  {
+    "name": "Shatter",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d8[thunder]",
+            "name": "damage",
+            "higher": {
+              "3": "1d8[thunder]",
+              "4": "2d8[thunder]",
+              "5": "3d8[thunder]",
+              "6": "4d8[thunder]",
+              "7": "5d8[thunder]",
+              "8": "6d8[thunder]",
+              "9": "7d8[thunder]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shield",
+    "automation": null
+  },
+  {
+    "name": "Shield of Faith",
+    "automation": null
+  },
+  {
+    "name": "Shillelagh",
+    "automation": null
+  },
+  {
+    "name": "Shocking Grasp",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d8[lightning]",
+                "higher": {},
+                "cantripScale": true
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Silence",
+    "automation": null
+  },
+  {
+    "name": "Silent Image",
+    "automation": null
+  },
+  {
+    "name": "Simulacrum",
+    "automation": null
+  },
+  {
+    "name": "Sleep",
+    "automation": null
+  },
+  {
+    "name": "Sleet Storm",
+    "automation": null
+  },
+  {
+    "name": "Slow",
+    "automation": null
+  },
+  {
+    "name": "Spare the Dying",
+    "automation": null
+  },
+  {
+    "name": "Speak with Animals",
+    "automation": null
+  },
+  {
+    "name": "Speak with Dead",
+    "automation": null
+  },
+  {
+    "name": "Speak with Plants",
+    "automation": null
+  },
+  {
+    "name": "Spider Climb",
+    "automation": null
+  },
+  {
+    "name": "Spike Growth",
+    "automation": null
+  },
+  {
+    "name": "Spirit Guardians",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d8[radiant]",
+            "name": "damage",
+            "higher": {
+              "4": "1d8[radiant]",
+              "5": "2d8[radiant]",
+              "6": "3d8[radiant]",
+              "7": "4d8[radiant]",
+              "8": "5d8[radiant]",
+              "9": "6d8[radiant]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Spiritual Weapon",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d8+SPELL[force]",
+                "higher": {
+                  "3": "",
+                  "4": "1d8[force]",
+                  "5": "1d8[force]",
+                  "6": "2d8[force]",
+                  "7": "2d8[force]",
+                  "8": "3d8[force]",
+                  "9": "3d8[force]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Staggering Smite",
+    "automation": null
+  },
+  {
+    "name": "Stinking Cloud",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Stone Shape",
+    "automation": null
+  },
+  {
+    "name": "Stoneskin",
+    "automation": null
+  },
+  {
+    "name": "Storm of Vengeance",
+    "automation": null
+  },
+  {
+    "name": "Suggestion",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sunbeam",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "6d8[radiant]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sunburst",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "12d6[radiant]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Swift Quiver",
+    "automation": null
+  },
+  {
+    "name": "Symbol",
+    "automation": null
+  },
+  {
+    "name": "Tasha's Hideous Laughter",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Telekinesis",
+    "automation": null
+  },
+  {
+    "name": "Telepathy",
+    "automation": null
+  },
+  {
+    "name": "Teleport",
+    "automation": null
+  },
+  {
+    "name": "Teleportation Circle",
+    "automation": null
+  },
+  {
+    "name": "Tenser's Floating Disk",
+    "automation": null
+  },
+  {
+    "name": "Thaumaturgy",
+    "automation": null
+  },
+  {
+    "name": "Thorn Whip",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d6[piercing]",
+                "higher": {},
+                "cantripScale": true
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thunderous Smite",
+    "automation": null
+  },
+  {
+    "name": "Thunderwave",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d8[thunder]",
+            "name": "damage",
+            "higher": {
+              "2": "1d8[thunder]",
+              "3": "2d8[thunder]",
+              "4": "3d8[thunder]",
+              "5": "4d8[thunder]",
+              "6": "5d8[thunder]",
+              "7": "6d8[thunder]",
+              "8": "7d8[thunder]",
+              "9": "8d8[thunder]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Time Stop",
+    "automation": null
+  },
+  {
+    "name": "Tongues",
+    "automation": null
+  },
+  {
+    "name": "Transport via Plants",
+    "automation": null
+  },
+  {
+    "name": "Tree Stride",
+    "automation": null
+  },
+  {
+    "name": "True Polymorph",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "True Resurrection",
+    "automation": null
+  },
+  {
+    "name": "True Seeing",
+    "automation": null
+  },
+  {
+    "name": "True Strike",
+    "automation": null
+  },
+  {
+    "name": "Tsunami",
+    "automation": null
+  },
+  {
+    "name": "Unseen Servant",
+    "automation": null
+  },
+  {
+    "name": "Vampiric Touch",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "3d6[necrotic]",
+                "higher": {
+                  "4": "1d6[necrotic]",
+                  "5": "2d6[necrotic]",
+                  "6": "3d6[necrotic]",
+                  "7": "4d6[necrotic]",
+                  "8": "5d6[necrotic]",
+                  "9": "6d6[necrotic]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vicious Mockery",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d4[psychic][psychic]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wall of Fire",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "5d8[fire]",
+            "name": "damage",
+            "higher": {
+              "5": "1d8[fire]",
+              "6": "2d8[fire]",
+              "7": "3d8[fire]",
+              "8": "4d8[fire]",
+              "9": "5d8[fire]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wall of Force",
+    "automation": null
+  },
+  {
+    "name": "Wall of Ice",
+    "automation": null
+  },
+  {
+    "name": "Wall of Stone",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wall of Thorns",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "7d8[piercing]",
+            "name": "damage",
+            "higher": {
+              "7": "1d8[piercing]",
+              "8": "2d8[piercing]",
+              "9": "3d8[piercing]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Warding Bond",
+    "automation": null
+  },
+  {
+    "name": "Water Breathing",
+    "automation": null
+  },
+  {
+    "name": "Water Walk",
+    "automation": null
+  },
+  {
+    "name": "Web",
+    "automation": null
+  },
+  {
+    "name": "Weird",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4d10[psychic]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wind Walk",
+    "automation": null
+  },
+  {
+    "name": "Wind Wall",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d8[bludgeoning]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wish",
+    "automation": null
+  },
+  {
+    "name": "Witch Bolt",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d12[lightning]",
+                "higher": {
+                  "2": "1d12[lightning]",
+                  "3": "2d12[lightning]",
+                  "4": "3d12[lightning]",
+                  "5": "4d12[lightning]",
+                  "6": "5d12[lightning]",
+                  "7": "6d12[lightning]",
+                  "8": "7d12[lightning]",
+                  "9": "8d12[lightning]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Word of Recall",
+    "automation": null
+  },
+  {
+    "name": "Wrathful Smite",
+    "automation": null
+  },
+  {
+    "name": "Zone of Truth",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Booming Blade",
+    "automation": null
+  },
+  {
+    "name": "Green-Flame Blade",
+    "automation": null
+  },
+  {
+    "name": "Lightning Lure",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d8[lightning][lightning]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sword Burst",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d6[force][force]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arcane Hacking (UA)",
+    "automation": null
+  },
+  {
+    "name": "Commune with City (UA)",
+    "automation": null
+  },
+  {
+    "name": "Conjure Knowbot (UA)",
+    "automation": null
+  },
+  {
+    "name": "Digital Phantom (UA)",
+    "automation": null
+  },
+  {
+    "name": "Find Vehicle (UA)",
+    "automation": null
+  },
+  {
+    "name": "Haywire (UA)",
+    "automation": null
+  },
+  {
+    "name": "Infallible Relay (UA)",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "cha",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Invisibility to Cameras (UA)",
+    "automation": null
+  },
+  {
+    "name": "On/Off (UA)",
+    "automation": null
+  },
+  {
+    "name": "Protection from Ballistics (UA)",
+    "automation": null
+  },
+  {
+    "name": "Remote Access (UA)",
+    "automation": null
+  },
+  {
+    "name": "Shutdown (UA)",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Synchronicity (UA)",
+    "automation": null
+  },
+  {
+    "name": "System Backdoor (UA)",
+    "automation": null
+  },
+  {
+    "name": "Cause Fear (UA)",
+    "automation": null
+  },
+  {
+    "name": "Ceremony (UA)",
+    "automation": null
+  },
+  {
+    "name": "Chaos Bolt (UA)",
+    "automation": null
+  },
+  {
+    "name": "Guiding Hand (UA)",
+    "automation": null
+  },
+  {
+    "name": "Hand of Radiance (UA)",
+    "automation": null
+  },
+  {
+    "name": "Healing Elixir (UA)",
+    "automation": null
+  },
+  {
+    "name": "Infestation (UA)",
+    "automation": null
+  },
+  {
+    "name": "Primal Savagery (UA)",
+    "automation": null
+  },
+  {
+    "name": "Puppet (UA)",
+    "automation": null
+  },
+  {
+    "name": "Sense Emotion (UA)",
+    "automation": null
+  },
+  {
+    "name": "Snare (UA)",
+    "automation": null
+  },
+  {
+    "name": "Sudden Awakening (UA)",
+    "automation": null
+  },
+  {
+    "name": "Toll the Dead (UA)",
+    "automation": null
+  },
+  {
+    "name": "Unearthly Chorus (UA)",
+    "automation": null
+  },
+  {
+    "name": "Virtue (UA)",
+    "automation": null
+  },
+  {
+    "name": "Wild Cunning (UA)",
+    "automation": null
+  },
+  {
+    "name": "Zephyr Strike (UA)",
+    "automation": null
+  },
+  {
+    "name": "Conjure Barlgura (UA)",
+    "automation": null
+  },
+  {
+    "name": "Conjure Hezrou (UA)",
+    "automation": null
+  },
+  {
+    "name": "Conjure Lesser Demon (UA)",
+    "automation": null
+  },
+  {
+    "name": "Conjure Shadow Demon (UA)",
+    "automation": null
+  },
+  {
+    "name": "Conjure Vrock (UA)",
+    "automation": null
+  },
+  {
+    "name": "Abi-Dalzim's Horrid Wilting",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "12d8[necrotic]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Absorb Elements",
+    "automation": null
+  },
+  {
+    "name": "Aganazzar's Scorcher",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d8[fire]",
+            "name": "damage",
+            "higher": {
+              "3": "1d8[fire]",
+              "4": "2d8[fire]",
+              "5": "3d8[fire]",
+              "6": "4d8[fire]",
+              "7": "5d8[fire]",
+              "8": "6d8[fire]",
+              "9": "7d8[fire]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Beast Bond",
+    "automation": null
+  },
+  {
+    "name": "Bones of the Earth",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Catapult",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d8[bludgeoning]",
+            "name": "damage",
+            "higher": {
+              "2": "1d8[bludgeoning]",
+              "3": "2d8[bludgeoning]",
+              "4": "3d8[bludgeoning]",
+              "5": "4d8[bludgeoning]",
+              "6": "5d8[bludgeoning]",
+              "7": "6d8[bludgeoning]",
+              "8": "7d8[bludgeoning]",
+              "9": "8d8[bludgeoning]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Catnap",
+    "automation": null
+  },
+  {
+    "name": "Cause Fear",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ceremony",
+    "automation": null
+  },
+  {
+    "name": "Chaos Bolt",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "2d8+1d6[chromatic]",
+                "higher": {
+                  "2": "1d6[chromatic]",
+                  "3": "2d6[chromatic]",
+                  "4": "3d6[chromatic]",
+                  "5": "4d6[chromatic]",
+                  "6": "5d6[chromatic]",
+                  "7": "6d6[chromatic]",
+                  "8": "7d6[chromatic]",
+                  "9": "8d6[chromatic]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Charm Monster",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Control Flames",
+    "automation": null
+  },
+  {
+    "name": "Control Winds",
+    "automation": null
+  },
+  {
+    "name": "Create Bonfire",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d8[fire][fire]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Create Homunculus",
+    "automation": null
+  },
+  {
+    "name": "Crown of Stars",
+    "automation": null
+  },
+  {
+    "name": "Danse Macabre",
+    "automation": null
+  },
+  {
+    "name": "Dawn",
+    "automation": null
+  },
+  {
+    "name": "Dragon's Breath",
+    "automation": null
+  },
+  {
+    "name": "Druid Grove",
+    "automation": null
+  },
+  {
+    "name": "Dust Devil",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d8[bludgeoning]",
+            "name": "damage",
+            "higher": {
+              "3": "1d8[bludgeoning]",
+              "4": "2d8[bludgeoning]",
+              "5": "3d8[bludgeoning]",
+              "6": "4d8[bludgeoning]",
+              "7": "5d8[bludgeoning]",
+              "8": "6d8[bludgeoning]",
+              "9": "7d8[bludgeoning]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Earth Tremor",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d6[bludgeoning]",
+            "name": "damage",
+            "higher": {
+              "2": "1d6[bludgeoning]",
+              "3": "2d6[bludgeoning]",
+              "4": "3d6[bludgeoning]",
+              "5": "4d6[bludgeoning]",
+              "6": "5d6[bludgeoning]",
+              "7": "6d6[bludgeoning]",
+              "8": "7d6[bludgeoning]",
+              "9": "8d6[bludgeoning]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Earthbind",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Elemental Bane",
+    "automation": null
+  },
+  {
+    "name": "Enemies Abound",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "int",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Enervation",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4d8[necrotic]",
+            "name": "damage",
+            "higher": {
+              "6": "1d8[necrotic]",
+              "7": "2d8[necrotic]",
+              "8": "3d8[necrotic]",
+              "9": "4d8[necrotic]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Erupting Earth",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d12[bludgeoning]",
+            "name": "damage",
+            "higher": {
+              "4": "1d12[bludgeoning]",
+              "5": "2d12[bludgeoning]",
+              "6": "3d12[bludgeoning]",
+              "7": "4d12[bludgeoning]",
+              "8": "5d12[bludgeoning]",
+              "9": "6d12[bludgeoning]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Far Step",
+    "automation": null
+  },
+  {
+    "name": "Find Greater Steed",
+    "automation": null
+  },
+  {
+    "name": "Flame Arrows",
+    "automation": null
+  },
+  {
+    "name": "Frostbite",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Guardian of Nature",
+    "automation": null
+  },
+  {
+    "name": "Gust",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Healing Spirit",
+    "automation": null
+  },
+  {
+    "name": "Holy Weapon",
+    "automation": null
+  },
+  {
+    "name": "Ice Knife",
+    "automation": null
+  },
+  {
+    "name": "Illusory Dragon",
+    "automation": null
+  },
+  {
+    "name": "Immolation",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "8d6[fire]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Infernal Calling",
+    "automation": null
+  },
+  {
+    "name": "Infestation",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d6[poison]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Investiture of Flame",
+    "automation": null
+  },
+  {
+    "name": "Investiture of Ice",
+    "automation": null
+  },
+  {
+    "name": "Investiture of Stone",
+    "automation": null
+  },
+  {
+    "name": "Investiture of Wind",
+    "automation": null
+  },
+  {
+    "name": "Invulnerability",
+    "automation": null
+  },
+  {
+    "name": "Life Transference",
+    "automation": null
+  },
+  {
+    "name": "Maddening Darkness",
+    "automation": null
+  },
+  {
+    "name": "Maelstrom",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "6d6[bludgeoning]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Magic Stone",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d6+SPELL",
+                "higher": {},
+                "cantripScale": true
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mass Polymorph",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Maximilian's Earthen Grasp",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6[bludgeoning]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Melf's Minute Meteors",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6[fire]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mental Prison",
+    "automation": null
+  },
+  {
+    "name": "Mighty Fortress",
+    "automation": null
+  },
+  {
+    "name": "Mind Spike",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d8[psychic]",
+            "name": "damage",
+            "higher": {
+              "3": "1d6[psychic]",
+              "4": "2d6[psychic]",
+              "5": "3d6[psychic]",
+              "6": "4d6[psychic]",
+              "7": "5d6[psychic]",
+              "8": "6d6[psychic]",
+              "9": "7d6[psychic]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mold Earth",
+    "automation": null
+  },
+  {
+    "name": "Negative Energy Flood",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "5d12[necrotic]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Power Word Pain",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Primal Savagery",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d10[acid]",
+                "higher": {},
+                "cantripScale": true
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Primordial Ward",
+    "automation": null
+  },
+  {
+    "name": "Psychic Scream",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "int",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "half as",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pyrotechnics",
+    "automation": null
+  },
+  {
+    "name": "Scatter",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shadow Blade",
+    "automation": null
+  },
+  {
+    "name": "Shadow of Moil",
+    "automation": null
+  },
+  {
+    "name": "Shape Water",
+    "automation": null
+  },
+  {
+    "name": "Sickening Radiance",
+    "automation": null
+  },
+  {
+    "name": "Skill Empowerment",
+    "automation": null
+  },
+  {
+    "name": "Skywrite",
+    "automation": null
+  },
+  {
+    "name": "Snare",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snilloc's Snowball Swarm",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d6[cold]",
+            "name": "damage",
+            "higher": {
+              "3": "1d6[cold]",
+              "4": "2d6[cold]",
+              "5": "3d6[cold]",
+              "6": "4d6[cold]",
+              "7": "5d6[cold]",
+              "8": "6d6[cold]",
+              "9": "7d6[cold]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Soul Cage",
+    "automation": null
+  },
+  {
+    "name": "Steel Wind Strike",
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "6d10[force]",
+                "higher": {}
+              }
+            ],
+            "miss": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Storm Sphere",
+    "automation": null
+  },
+  {
+    "name": "Summon Greater Demon",
+    "automation": null
+  },
+  {
+    "name": "Summon Lesser Demons",
+    "automation": null
+  },
+  {
+    "name": "Synaptic Static",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "int",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "8d6[psychic]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Temple of the Gods",
+    "automation": null
+  },
+  {
+    "name": "Tenser's Transformation",
+    "automation": null
+  },
+  {
+    "name": "Thunder Step",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d10[thunder]",
+            "name": "damage",
+            "higher": {
+              "4": "1d10[thunder]",
+              "5": "2d10[thunder]",
+              "6": "3d10[thunder]",
+              "7": "4d10[thunder]",
+              "8": "5d10[thunder]",
+              "9": "6d10[thunder]"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thunderclap",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tidal Wave",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "{damage}/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4d8[bludgeoning]",
+            "name": "damage",
+            "higher": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tiny Servant",
+    "automation": null
+  },
+  {
+    "name": "Toll the Dead",
+    "automation": null
+  },
+  {
+    "name": "Transmute Rock",
+    "automation": null
+  },
+  {
+    "name": "Vitriolic Sphere",
+    "automation": null
+  },
+  {
+    "name": "Wall of Light",
+    "automation": null
+  },
+  {
+    "name": "Wall of Sand",
+    "automation": null
+  },
+  {
+    "name": "Wall of Water",
+    "automation": null
+  },
+  {
+    "name": "Warding Wind",
+    "automation": null
+  },
+  {
+    "name": "Watery Sphere",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [],
+            "success": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Whirlwind",
+    "automation": null
+  },
+  {
+    "name": "Word of Radiance",
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d6[radiant]",
+            "name": "damage",
+            "higher": {},
+            "cantripScale": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wrath of Nature",
+    "automation": null
+  },
+  {
+    "name": "Zephyr Strike",
+    "automation": null
+  }
+]
