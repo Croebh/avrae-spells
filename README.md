@@ -62,12 +62,14 @@ It must be inside a Target effect.
 {
     "type": "damage",
     "damage": AnnotatedString,
-    "higher?": {int: string}
+    "higher?": {int: string},
+    "cantripScale?: boolean
 }
 ```
 Deals damage to a targeted creature. It must be inside a Target effect.
 - `damage`: How much damage to deal. Can use variables defined in a Meta tag.
 - `higher` (Optional): How much to add to the damage when a spell is cast at a certain level.
+- `cantripScale` (Optional): Whether this roll should scale like a cantrip.
 
 ### IEffect
 ```json
@@ -90,15 +92,17 @@ It must be inside a Target effect.
     "type": "roll",
     "dice": "2d6[cold]",
     "name": "damage",
-    "higher": {
+    "higher?": {
       "2": "1d6[cold]"
-    }
+    },
+    "cantripScale?": boolean
 }
 ```
 Rolls some dice and saves the result. Should be in a Meta tag.
 - `dice`: What dice to roll.
 - `name`: What to save the result as.
 - `higher` (Optional): How much to add to the roll when a spell is cast at a certain level.
+- `cantripScale` (Optional): Whether this roll should scale like a cantrip.
 
 ### Text
 ```json
