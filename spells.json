@@ -36,42 +36,42 @@
   {
     "name": "Aid",
     "automation": [
-    	{
-    		"type": "target",
-    		"target": "all",
-    		"effects": [
-    			{
-    				"type": "damage",
-    				"damage": "-{heal}[heal]"
-    			},
-    			{
-    				"type": "ieffect",
-    				"name": "Aid - Max HP Increased by {heal}",
-    				"duration": -1,
-    				"effects": ""
-    			}
-    		],
-    		"meta" : [
-    			{
-    				"type": "roll",
-    				"dice": "5",
-    				"name": "heal",
-    				"higher": {
-    					"3": "5",
-    					"4": "10",
-    					"5": "15",
-    					"6": "20",
-    					"7": "25",
-    					"8": "30",
-    					"9": "35"
-    				}
-    			}
-    		]
-    	},
-      	{
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-{heal}[heal]"
+          },
+          {
+            "type": "ieffect",
+            "name": "Aid - Max HP Increased",
+            "duration": -1,
+            "effects": ""
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "5",
+            "name": "heal",
+            "higher": {
+              "3": "5",
+              "4": "10",
+              "5": "15",
+              "6": "20",
+              "7": "25",
+              "8": "30",
+              "9": "35"
+            }
+          }
+        ]
+      },
+      {
         "type": "text",
         "text": "Targets hit point maximum and current hit points increase by 5 for the duration."
-      	}
+      }
     ]
   },
   {
@@ -81,18 +81,18 @@
   {
     "name": "Alter Self",
     "automation": [
-    	{
-    		"type": "target",
-    		"target": "self",
-    		"effects": [
-    			{
-    				"type": "ieffect",
-    				"name": "Alter Self [Concentration]",
-    				"duration":-1,
-    				"effects":""
-    			}
-    		]
-    	}
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Alter Self [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
     ]
   },
   {
@@ -106,12 +106,12 @@
             "type": "save",
             "stat": "wis",
             "fail": [
-            	{
-            		"type":"ieffect",
-            		"name": "Animal Friendship - Charmed",
-            		"duration":-1,
-            		"effects": ""
-            	}
+              {
+                "type": "ieffect",
+                "name": "Animal Friendship - Charmed",
+                "duration": -1,
+                "effects": ""
+              }
             ],
             "success": []
           }
@@ -130,18 +130,18 @@
   {
     "name": "Animal Shapes",
     "automation": [
-    	{
-    		"type": "target",
-    		"target": "self",
-    		"effects" : [
-    			{
-    				"type":"ieffect",
-    				"name":"Animal Shapes [Concentration]",
-    				"duration":-1,
-    				"effects":""
-    			}
-    		]
-    	}
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Animal Shapes [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
     ]
   },
   {
