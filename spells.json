@@ -23,7 +23,6 @@
             "type": "roll",
             "dice": "1d6[acid]",
             "name": "damage",
-            "higher": {},
             "cantripScale": true
           }
         ]
@@ -36,7 +35,44 @@
   },
   {
     "name": "Aid",
-    "automation": null
+    "automation": [
+    	{
+    		"type": "target",
+    		"target": "all",
+    		"effects": [
+    			{
+    				"type": "damage",
+    				"damage": "-{heal}[heal]"
+    			},
+    			{
+    				"type": "ieffect",
+    				"name": "Aid - Max HP Increased by {heal}",
+    				"duration": -1,
+    				"effects": ""
+    			}
+    		],
+    		"meta" : [
+    			{
+    				"type": "roll",
+    				"dice": "5",
+    				"name": "heal",
+    				"higher": {
+    					"3": "5",
+    					"4": "10",
+    					"5": "15",
+    					"6": "20",
+    					"7": "25",
+    					"8": "30",
+    					"9": "35"
+    				}
+    			}
+    		]
+    	},
+      	{
+        "type": "text",
+        "text": "Targets hit point maximum and current hit points increase by 5 for the duration."
+      	}
+    ]
   },
   {
     "name": "Alarm",
@@ -44,7 +80,20 @@
   },
   {
     "name": "Alter Self",
-    "automation": null
+    "automation": [
+    	{
+    		"type": "target",
+    		"target": "self",
+    		"effects": [
+    			{
+    				"type": "ieffect",
+    				"name": "Alter Self [Concentration]",
+    				"duration":-1,
+    				"effects":""
+    			}
+    		]
+    	}
+    ]
   },
   {
     "name": "Animal Friendship",
@@ -56,14 +105,21 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+            	{
+            		"type":"ieffect",
+            		"name": "Animal Friendship - Charmed",
+            		"duration":-1,
+            		"effects": ""
+            	}
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": "Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration.  If you or one of your companions harms the target, the spell ends."
+        "text": "The beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration.  If you or one of your companions harms the target, the spell ends."
       }
     ]
   },
@@ -73,7 +129,20 @@
   },
   {
     "name": "Animal Shapes",
-    "automation": null
+    "automation": [
+    	{
+    		"type": "target",
+    		"target": "self",
+    		"effects" : [
+    			{
+    				"type":"ieffect",
+    				"name":"Animal Shapes [Concentration]",
+    				"duration":-1,
+    				"effects":""
+    			}
+    		]
+    	}
+    ]
   },
   {
     "name": "Animate Dead",
