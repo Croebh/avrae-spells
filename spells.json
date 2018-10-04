@@ -5596,7 +5596,62 @@
   },
   {
     "name": "Ice Knife",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": 1,
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d10[piercing]"
+              }
+            ],
+            "miss": []
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6[cold]",
+            "name": "damage",
+            "higher": {
+              "2": "1d6[cold]",
+              "3": "2d6[cold]",
+              "4": "3d6[cold]",
+              "5": "4d6[cold]",
+              "6": "5d6[cold]",
+              "7": "6d6[cold]",
+              "8": "7d6[cold]",
+              "9": "8d6[cold]"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "On a hit, the target takes 1d10 piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of it must succeed on a Dexterity saving throw or take 2d6 cold damage."
+      }
+    ]
   },
   {
     "name": "Illusory Dragon",
