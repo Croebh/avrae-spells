@@ -141,6 +141,18 @@
             "effects": ""
           }
         ]
+      },
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Animal Shapes",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
       }
     ]
   },
@@ -150,15 +162,54 @@
   },
   {
     "name": "Animate Objects",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Animate Objects [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Antilife Shell",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Antilife Shell [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Antimagic Field",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Antimagic Shield [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Antipathy/Sympathy",
@@ -171,23 +222,54 @@
             "type": "save",
             "stat": "wis",
             "fail": [],
-            "success": []
+            "success": [
+              {
+                "type" : "text",
+                "text" : "A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again."
+              }
+            ]
           }
         ]
       },
       {
         "type": "text",
-        "text": "When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened.  The creature remains frightened while it can see the target or is within 60 feet of it.  While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target.\nWhen such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target.  When the creature has done so, it can't willingly move away from the target.  If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below.\nIn addition, a creature affected by the spells is allowed another Wisdom saving throw every 24 hours while the spell persists."
+        "text": "This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect."
       }
     ]
   },
   {
     "name": "Arcane Eye",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Arcane Eye [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Arcane Gate",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Arcane Gate [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Arcane Lock",
@@ -195,7 +277,24 @@
   },
   {
     "name": "Armor of Agathys",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Armor of Agathys",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage."
+      }
+    ]
   },
   {
     "name": "Arms of Hadar",
@@ -211,6 +310,12 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
+              },
+              {
+                "type": "ieffect",
+                "name": "Arms of Hadar - No reactions",
+                "duration": 0,
+                "effects": ""
               }
             ],
             "success": [
@@ -255,29 +360,52 @@
   },
   {
     "name": "Aura of Life",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Aura of Life [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Aura of Purity",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Aura of Purity [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Aura of Vitality",
     "automation": [
       {
         "type": "target",
-        "target": "each",
+        "target": "self",
         "effects": [
           {
-            "type": "damage",
-            "damage": "-(2d6)[heal]",
-            "higher": {}
+            "type": "ieffect",
+            "name": "Aura of Vitality [Concentration]",
+            "duration": -1,
+            "effects": ""
           }
         ]
-      },
-      {
-        "type": "text",
-        "text": ""
       }
     ]
   },
@@ -295,8 +423,27 @@
           {
             "type": "save",
             "stat": "cha",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Bane",
+                "duration": 10,
+                "effects": "-b -1d4[Bane]"
+              }
+            ],
             "success": []
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Bane [Concentration]",
+            "duration": 10,
+            "effects": ""
           }
         ]
       },
@@ -308,7 +455,24 @@
   },
   {
     "name": "Banishing Smite",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Banishing Smite [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it."
+      }
+    ]
   },
   {
     "name": "Banishment",
@@ -326,6 +490,18 @@
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Banishment [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
         "text": "The target must succeed on a Charisma saving throw or be banished."
       }
@@ -333,15 +509,86 @@
   },
   {
     "name": "Barkskin",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Barkskin [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": 1,
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Barkskin [min. AC 16]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing."
+      }
+    ]
   },
   {
     "name": "Beacon of Hope",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Beacon of Hope [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Beacon of Hope",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing."
+      }
+    ]
   },
   {
     "name": "Beast Sense",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Beast Sense [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Bestow Curse",
@@ -353,20 +600,56 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Bestow Curse",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Bestow Curse [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
-        "text": "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell.  When you cast this spell, choose the nature of the curse from the following options."
+        "text": "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell.  When you cast this spell, choose the nature of the curse."
       }
     ]
   },
   {
     "name": "Bigby's Hand",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Bigby's Hand [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand."
+      }
+    ]
   },
   {
     "name": "Blade Barrier",
@@ -396,24 +679,81 @@
           {
             "type": "roll",
             "dice": "6d10[slashing]",
-            "name": "damage",
-            "higher": {}
+            "name": "damage"
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Blade Barrier [Concentration]",
+            "duration": -1,
+            "effects": ""
           }
         ]
       },
       {
         "type": "text",
-        "text": ""
+        "text": "You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain."
       }
     ]
   },
   {
     "name": "Blade Ward",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Blade Ward",
+            "duration": 1,
+            "effects": "-resist bludgeoning -resist piercing -resist slashing"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks."
+      }
+    ]
   },
   {
     "name": "Bless",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Bless",
+            "duration": 10,
+            "effects": "-b 1d4[Bless]"
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Bless [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw."
+      }
+    ]
   },
   {
     "name": "Blight",
@@ -456,13 +796,53 @@
       },
       {
         "type": "text",
-        "text": "The target must make a Constitution saving throw.  The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one.  This spell has no effect on undead or constructs."
+        "text": "The target must make a Constitution saving throw.  The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one.  This spell has no effect on undead or constructs.\n\nIf you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it."
       }
     ]
   },
   {
     "name": "Blinding Smite",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Blinding Smite [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Blinding Smite - Blinded",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
+            "success": []
+          },
+          {
+            "type": "damage",
+            "damage": "3d8[radiant]"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends.\n\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded."
+      }
+    ]
   },
   {
     "name": "Blindness/Deafness",
@@ -474,7 +854,14 @@
           {
             "type": "save",
             "stat": "con",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Blindness/Deafness",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -487,15 +874,98 @@
   },
   {
     "name": "Blink",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Blink",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Roll a d20 at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action."
+      }
+    ]
   },
   {
     "name": "Blur",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Blur [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
+      }
+    ]
   },
   {
     "name": "Branding Smite",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Branding Smite [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "{damage}"
+          },
+          {
+            "type": "ieffect",
+            "name": "Branding Smite - Visible",
+            "duration": 10,
+            "effects": ""
+          }
+        ],
+        "meta": [   
+          {
+           "type": "roll",
+            "dice": "2d6[radiant]",
+            "name": "damage",
+            "higher":{
+              "3": "1d6[radiant]",
+              "4": "2d6[radiant]",
+              "5": "3d6[radiant]",
+              "6": "4d6[radiant]",
+              "7": "5d6[radiant]",
+              "8": "6d6[radiant]",
+              "9": "7d6[radiant]"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 2d6 radiant damage to the target, which becomes visible if it's invisible, and the target sheds dim light in a 5-foot radius and can't become invisible until the spell ends."
+      }
+    ]
   },
   {
     "name": "Burning Hands",
@@ -541,7 +1011,7 @@
       },
       {
         "type": "text",
-        "text": "Each creature in a 15-foot cone must make a Dexterity saving throw.  A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one."
+        "text": "Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one."
       }
     ]
   },
@@ -586,8 +1056,20 @@
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Call Lightning [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
-        "text": "Each creature within 5 feet of that point must make a Dexterity saving throw.  A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one.  On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one."
+        "text": "Each creature within 5 feet of the target point must make a Dexterity saving throw.  A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one.  On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one."
       }
     ]
   },
