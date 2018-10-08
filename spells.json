@@ -2225,7 +2225,7 @@
       },
       {
         "type": "text",
-        "text": "Each creature you choose within 30 feet of you must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone. Note - The radiant/necrotic is labeled as [choice], and therefore will not parse resists. Please do so at your DM's discretion."
+        "text": "Each creature you choose within 30 feet of you must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone. \n\nNote - The radiant/necrotic is labeled as [choice], and therefore will not parse resists. Please make your choice at time of casting, and let your DM parse the resist."
       }
     ]
   },
@@ -3112,8 +3112,27 @@
           {
             "type": "save",
             "stat": "dex",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Faerie Fire",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Faerie Fire [Concentration]",
+            "duration": 10,
+            "effects": ""
           }
         ]
       },
@@ -3125,7 +3144,24 @@
   },
   {
     "name": "False Life",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "False Life - Temporary Hit Points",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration."
+      }
+    ]
   },
   {
     "name": "Fear",
@@ -3137,14 +3173,33 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Fear - Frightened",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Fear [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
-        "text": "Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration.\nIf the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature."
+        "text": "Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration.\nWhile frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature."
       }
     ]
   },
@@ -3154,11 +3209,56 @@
   },
   {
     "name": "Feeblemind",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "4d6[psychic]"
+          },
+          {
+            "type": "save",
+            "stat": "int",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Feeblemind",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The target takes 4d6 psychic damage and must make an Intelligence saving throw.\n\nOn a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them."
+      }
+    ]
   },
   {
     "name": "Feign Death",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Feign Death - Blinded, Incapacitated",
+            "duration": -1,
+            "effects": "-resist acid -resist bludgeoning -resist cold -resist fire -resist force -resist lightning -resist necrotic -resist piercing -resist poison -resist radiant -resist slashing -resist thunder"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "For the spell's duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target's status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell's effect, the disease and poison have no effect until the spell ends."
+      }
+    ]
   },
   {
     "name": "Find Familiar",
@@ -3204,8 +3304,7 @@
           {
             "type": "roll",
             "dice": "7d8+30[necrotic]",
-            "name": "damage",
-            "higher": {}
+            "name": "damage"
           }
         ]
       },
@@ -3228,7 +3327,6 @@
               {
                 "type": "damage",
                 "damage": "1d10[fire]",
-                "higher": {},
                 "cantripScale": true
               }
             ],
@@ -3244,7 +3342,24 @@
   },
   {
     "name": "Fire Shield",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Fire Shield",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10-foot radius and dim light for an additional 10 feet. You can end the spell early by using an action to dismiss it.\n\nThe flames provide you with a warm shield or a chill shield, as you choose. The warm shield grants you resistance to cold damage, and the chill shield grants you resistance to fire damage.\n\nIn addition, whenever a creature within 5 feet of you hits you with a melee attack, the shield erupts with flame. The attacker takes 2d8 fire damage from a warm shield, or 2d8 cold damage from a cold shield."
+      }
+    ]
   },
   {
     "name": "Fire Storm",
@@ -3274,8 +3389,7 @@
           {
             "type": "roll",
             "dice": "7d10[fire]",
-            "name": "damage",
-            "higher": {}
+            "name": "damage"
           }
         ]
       },
@@ -3360,8 +3474,20 @@
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Flame Blade [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
-        "text": ""
+        "text": "You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage./n/nThe flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
       }
     ]
   },
@@ -3394,13 +3520,18 @@
             "type": "roll",
             "dice": "4d6[fire]+4d6[radiant]",
             "name": "damage",
-            "higher": {}
+            "higher": {
+              "6": "1d6[choice]",
+              "7": "2d6[choice]",
+              "8": "3d6[choice]",
+              "9": "4d6[choice]"
+            }
           }
         ]
       },
       {
         "type": "text",
-        "text": "Each creature in a 10-foot radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one."
+        "text": "Each creature in a 10-foot radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one. \n\nNote - The extra damage from upcasting is labeled as [choice], and therefore will not parse resists. Please make your choice at time of casting, and let your DM parse the resist."
       }
     ]
   },
@@ -3446,6 +3577,18 @@
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Flaming Sphere [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
         "text": "Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one."
       }
@@ -3461,24 +3604,89 @@
           {
             "type": "save",
             "stat": "con",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Flesh to Stone - Restrained",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Flesh to Stone [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
-        "text": "If the targets body is made of flesh, the creature must make a Constitution saving throw. On a failed save, it is restrained as its flesh begins to harden. On a successful save, the creature isn't affected."
+        "text": "If the targets body is made of flesh, the creature must make a Constitution saving throw. On a failed save, it is restrained as its flesh begins to harden. On a successful save, the creature isn't affected.\n\nA creature restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for the duration. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\n\nIf the creature is physically broken while petrified, it suffers from similar deformities if it reverts to its original state.\n\nIf you maintain your concentration on this spell for the entire possible duration, the creature is turned to stone until the effect is removed."
       }
     ]
   },
   {
     "name": "Fly",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Fly [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Fly",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall."
+      }
+    ]
   },
   {
     "name": "Fog Cloud",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Fog Cloud [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it."
+      }
+    ]
   },
   {
     "name": "Forbiddance",
@@ -3486,7 +3694,20 @@
   },
   {
     "name": "Forcecage",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Forcecage",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Foresight",
@@ -3494,11 +3715,57 @@
   },
   {
     "name": "Freedom of Movement",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Freedom of Movement",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a willing creature. For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be paralyzed or restrained.\n\nThe target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks."
+      }
+    ]
   },
   {
     "name": "Friends",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Friends [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Friends - Charmed",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it."
+      }
+    ]
   },
   {
     "name": "Gaseous Form",
