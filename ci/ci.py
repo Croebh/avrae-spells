@@ -80,7 +80,7 @@ def check_ieffect(effect):
     assert 'duration' in effect
     assert 'effects' in effect
     assert isinstance(effect['name'], str)
-    assert isinstance(effect['duration'], int)
+    assert isinstance(effect['duration'], (int, str))
     assert isinstance(effect['effects'], str)
 
 
