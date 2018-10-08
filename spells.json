@@ -2511,7 +2511,7 @@
               {
                 "type": "ieffect",
                 "name": "Dominate Beast - Charmed",
-                "duration": {time},
+                "duration": 10,
                 "effects": ""
               }
             ],
@@ -2526,7 +2526,7 @@
           {
             "type": "ieffect",
             "name": "Dominate Beast [Concentration]",
-            "duration": {time},
+            "duration": 10,
             "effects": ""
           }
         ]
@@ -2607,7 +2607,7 @@
               {
                 "type": "ieffect",
                 "name": "Dominate Person - Charmed",
-                "duration": {time},
+                "duration": 10,
                 "effects": ""
               }
             ],
@@ -2622,7 +2622,7 @@
           {
             "type": "ieffect",
             "name": "Dominate Person [Concentration]",
-            "duration": {time},
+            "duration": 10,
             "effects": ""
           }
         ]
