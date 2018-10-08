@@ -2534,22 +2534,6 @@
       {
         "type": "text",
         "text": "It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw."
-      },
-      {
-        "meta": [
-          {
-            "type": "roll",
-            "dice": 10,
-            "name": "time",
-            "higher":{
-              "5": -1,
-              "6": -1,
-              "7": -1,
-              "8": -1,
-              "9": -1
-            }
-          }
-        ]
       }
     ]
   },
@@ -2630,21 +2614,6 @@
       {
         "type": "text",
         "text": "It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw."
-      },
-      {
-        "meta": [
-          {
-            "type": "roll",
-            "dice": 10,
-            "name": "time",
-            "higher":{
-              "6": -1,
-              "7": -1,
-              "8": -1,
-              "9": -1
-            }
-          }
-        ]
       }
     ]
   },
