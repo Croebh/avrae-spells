@@ -1197,7 +1197,7 @@
               {
                 "type": "ieffect",
                 "name": "Chill Touch - Cannot gain HP",
-                "duration": -1,
+                "duration": 1,
                 "effects": ""
               }
             ],
@@ -1805,7 +1805,7 @@
         "meta": [
           {
             "type": "roll",
-            "dice": "8d8",
+            "dice": "8d8[piercing]",
             "name": "damage"
           }
         ]
@@ -1856,7 +1856,11 @@
                 "type": "ieffect",
                 "name": "Contact Other Plane - Insane",
                 "duration": -1,
-                "effects": "On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you can't take actions, can't understand what other creatures say, can't read, and speak only in gibberish. A greater restoration spell cast on you ends this effect."
+                "effects": ""
+              },
+              {
+                "type": "text",
+                "text": "On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you can't take actions, can't understand what other creatures say, can't read, and speak only in gibberish. A greater restoration spell cast on you ends this effect."
               }
             ],
             "success": [
@@ -2125,7 +2129,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Darkvision - 60-feet",
+            "name": "Darkvision - 60 ft.",
             "duration": -1,
             "effects": ""
           }
@@ -2171,7 +2175,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Delayed Blase Fireball [Concentration]",
+            "name": "Delayed Blast Fireball [Concentration]",
             "duration": 10,
             "effects": ""
           }
@@ -2511,7 +2515,7 @@
               {
                 "type": "ieffect",
                 "name": "Dominate Beast - Charmed",
-                "duration": 10,
+                "duration": "{time}",
                 "effects": ""
               }
             ],
@@ -2526,7 +2530,7 @@
           {
             "type": "ieffect",
             "name": "Dominate Beast [Concentration]",
-            "duration": 10,
+            "duration": "{time}",
             "effects": ""
           }
         ]
@@ -2534,6 +2538,22 @@
       {
         "type": "text",
         "text": "It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw."
+      },
+      {
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "10",
+            "name": "time",
+            "higher":{
+              "5": "-1",
+              "6": "-1",
+              "7": "-1",
+              "8": "-1",
+              "9": "-1"
+            }
+          }
+        ]
       }
     ]
   },
@@ -2591,7 +2611,7 @@
               {
                 "type": "ieffect",
                 "name": "Dominate Person - Charmed",
-                "duration": 10,
+                "duration": "{time}",
                 "effects": ""
               }
             ],
@@ -2606,7 +2626,7 @@
           {
             "type": "ieffect",
             "name": "Dominate Person [Concentration]",
-            "duration": 10,
+            "duration": "{time}",
             "effects": ""
           }
         ]
@@ -2614,6 +2634,21 @@
       {
         "type": "text",
         "text": "It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw."
+      },
+      {
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "10",
+            "name": "time",
+            "higher":{
+              "6": "-1",
+              "7": "-1",
+              "8": "-1",
+              "9": "-1"
+            }
+          }
+        ]
       }
     ]
   },
@@ -2631,7 +2666,42 @@
   },
   {
     "name": "Earthquake",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Earthquake [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },{
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Earthquake - Prone",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area."
+      }
+    ]
   },
   {
     "name": "Eldritch Blast",
@@ -2645,8 +2715,7 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "1d10[force]",
-                "higher": {}
+                "damage": "1d10[force]"
               }
             ],
             "miss": []
@@ -2655,7 +2724,7 @@
       },
       {
         "type": "text",
-        "text": "Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage."
+        "text": "Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.\n\nThe spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."
       }
     ]
   },
