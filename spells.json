@@ -2730,19 +2730,153 @@
   },
   {
     "name": "Elemental Weapon",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Elemental Weapon [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Elemental Weapon",
+            "duration": -1,
+            "effects": "-d 1d4[elemental] -b '1[Elemental Weapon'"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits."
+      }
+    ]
   },
   {
     "name": "Enhance Ability",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Enhance Ability [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Enhance Ability",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a creature and bestow upon it a magical enhancement."
+      }
+    ]
   },
   {
     "name": "Enlarge/Reduce",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Enlarge/Reduce [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Enlarge/Reduce",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect."
+      }
+    ]
   },
   {
     "name": "Ensnaring Strike",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Ensnaring Strike [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Ensnaring Strike - Restrained",
+                "duration": 10,
+                "effects": ""
+              },
+              {
+                "type": "text",
+                "text": "While restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed."
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends."
+      }
+    ]
   },
   {
     "name": "Entangle",
@@ -2754,14 +2888,33 @@
           {
             "type": "save",
             "stat": "str",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Entangle - Restrained",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Entangle [Concentration]",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
-        "text": ""
+        "text": "A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself."
       }
     ]
   },
@@ -2775,7 +2928,14 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Enthrall - Charmed",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -2788,7 +2948,36 @@
   },
   {
     "name": "Etherealness",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Etherealness",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Etherealness",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction."
+      }
+    ]
   },
   {
     "name": "Evard's Black Tentacles",
@@ -2804,6 +2993,12 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
+              },
+              {
+                "type": "ieffect",
+                "name": "Evard's Black Tentacles - Restrained",
+                "duration": 10,
+                "effects": ""
               }
             ],
             "success": []
@@ -2813,20 +3008,48 @@
           {
             "type": "roll",
             "dice": "3d6[bludgeoning]",
-            "name": "damage",
-            "higher": {}
+            "name": "damage"
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Evard's Black Tentacles [Concentration]",
+            "duration": -1,
+            "effects": ""
           }
         ]
       },
       {
         "type": "text",
-        "text": ""
+        "text": "When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage."
       }
     ]
   },
   {
     "name": "Expeditious Retreat",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Expeditious Retreat [Concentration]",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action."
+      }
+    ]
   },
   {
     "name": "Eyebite",
@@ -2838,8 +3061,34 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
-            "success": []
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Eyebite",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
+            "success": [
+              {
+                "type": "ieffect",
+                "name": "Eyebite Immunity",
+                "duration": 10,
+                "effects": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Eyebite [Concentration]",
+            "duration": 10,
+            "effects": ""
           }
         ]
       },
