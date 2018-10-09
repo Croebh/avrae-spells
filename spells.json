@@ -2517,28 +2517,26 @@
                 "name": "Dominate Beast - Charmed",
                 "duration": "{time}",
                 "effects": ""
-              },
-              {
-                "meta": [
-                  {
-                    "type": "roll",
-                    "dice": "10",
-                    "name": "time",
-                    "higher":{
-                      "5": "-1",
-                      "6": "-1",
-                      "7": "-1",
-                      "8": "-1",
-                      "9": "-1"
-                    }
-                  }
-                ]
               }
             ],
             "success": []
           }
-        ]
-      },
+        ],
+          "meta": [
+            {
+              "type": "roll",
+              "dice": "10",
+              "name": "time",
+              "higher":{
+                "5": "-1",
+                "6": "-1",
+                "7": "-1",
+                "8": "-1",
+                "9": "-1"
+              }
+            }
+          ]
+        },
       {
         "type": "target",
         "target": "self",
@@ -2548,22 +2546,20 @@
             "name": "Dominate Beast [Concentration]",
             "duration": "{time}",
             "effects": ""
-          },
+          }
+        ],
+        "meta": [
           {
-            "meta": [
-              {
-                "type": "roll",
-                "dice": "10",
-                "name": "time",
-                "higher":{
-                  "5": "-1",
-                  "6": "-1",
-                  "7": "-1",
-                  "8": "-1",
-                  "9": "-1"
-                }
-              }
-            ]
+            "type": "roll",
+            "dice": "10",
+            "name": "time",
+            "higher":{
+              "5": "-1",
+              "6": "-1",
+              "7": "-1",
+              "8": "-1",
+              "9": "-1"
+            }
           }
         ]
       },
@@ -2629,24 +2625,23 @@
                 "name": "Dominate Person - Charmed",
                 "duration": "{time}",
                 "effects": ""
-              },
-              {
-                "meta": [
-                  {
-                    "type": "roll",
-                    "dice": "10",
-                    "name": "time",
-                    "higher":{
-                      "6": "-1",
-                      "7": "-1",
-                      "8": "-1",
-                      "9": "-1"
-                    }
-                  }
-                ]
               }
             ],
             "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "10",
+            "name": "time",
+            "higher":{
+              "5": "-1",
+              "6": "-1",
+              "7": "-1",
+              "8": "-1",
+              "9": "-1"
+            }
           }
         ]
       },
@@ -2659,21 +2654,20 @@
             "name": "Dominate Person [Concentration]",
             "duration": "{time}",
             "effects": ""
-          },
+          }
+        ],
+        "meta": [
           {
-            "meta": [
-              {
-                "type": "roll",
-                "dice": "10",
-                "name": "time",
-                "higher":{
-                  "6": "-1",
-                  "7": "-1",
-                  "8": "-1",
-                  "9": "-1"
-                }
-              }
-            ]
+            "type": "roll",
+            "dice": "10",
+            "name": "time",
+            "higher":{
+              "5": "-1",
+              "6": "-1",
+              "7": "-1",
+              "8": "-1",
+              "9": "-1"
+            }
           }
         ]
       },
