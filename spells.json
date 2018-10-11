@@ -80,20 +80,7 @@
   },
   {
     "name": "Alter Self",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Alter Self [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Animal Friendship",
@@ -132,18 +119,6 @@
     "automation": [
       {
         "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Animal Shapes [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "target",
         "target": "all",
         "effects": [
           {
@@ -162,54 +137,15 @@
   },
   {
     "name": "Animate Objects",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Animate Objects [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Antilife Shell",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Antilife Shell [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Antimagic Field",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Antimagic Shield [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Antipathy/Sympathy",
@@ -239,37 +175,11 @@
   },
   {
     "name": "Arcane Eye",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Arcane Eye [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Arcane Gate",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Arcane Gate [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Arcane Lock",
@@ -360,54 +270,15 @@
   },
   {
     "name": "Aura of Life",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Aura of Life [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Aura of Purity",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Aura of Purity [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Aura of Vitality",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Aura of Vitality [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Awaken",
@@ -436,18 +307,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Bane [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw."
       }
@@ -456,18 +315,6 @@
   {
     "name": "Banishing Smite",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Banishing Smite [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it."
@@ -490,18 +337,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Banishment [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "The target must succeed on a Charisma saving throw or be banished."
       }
@@ -510,18 +345,6 @@
   {
     "name": "Barkskin",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Barkskin [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": 1,
@@ -545,18 +368,6 @@
     "automation": [
       {
         "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Beacon of Hope [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "target",
         "target": "all",
         "effects": [
           {
@@ -575,20 +386,7 @@
   },
   {
     "name": "Beast Sense",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Beast Sense [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Bestow Curse",
@@ -613,18 +411,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Bestow Curse [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse."
       }
@@ -633,18 +419,6 @@
   {
     "name": "Bigby's Hand",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Bigby's Hand [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand."
@@ -680,18 +454,6 @@
             "type": "roll",
             "dice": "6d10[slashing]",
             "name": "damage"
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Blade Barrier [Concentration]",
-            "duration": -1,
-            "effects": ""
           }
         ]
       },
@@ -734,18 +496,6 @@
             "name": "Bless",
             "duration": 10,
             "effects": "-b 1d4[Bless]"
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Bless [Concentration]",
-            "duration": 10,
-            "effects": ""
           }
         ]
       },
@@ -803,18 +553,6 @@
   {
     "name": "Blinding Smite",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Blinding Smite [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": "all",
@@ -897,18 +635,6 @@
     "name": "Blur",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Blur [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
       }
@@ -917,18 +643,6 @@
   {
     "name": "Branding Smite",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Branding Smite [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": "all",
@@ -1056,18 +770,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Call Lightning [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "Each creature within 5 feet of the target point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one."
       }
@@ -1092,18 +794,6 @@
               }
             ],
             "success": []
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Calm Emotions [Concentration]",
-            "duration": 10,
-            "effects": ""
           }
         ]
       },
@@ -1293,18 +983,6 @@
     "name": "Circle of Power",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Circle of Power [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw."
       }
@@ -1312,20 +990,7 @@
   },
   {
     "name": "Clairvoyance",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Clairvoyance [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Clone",
@@ -1350,18 +1015,6 @@
               "8": "12d4[slashing]",
               "9": "14d4[slashing]"
             }
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Cloud of Daggers [Concentration]",
-            "duration": 10,
-            "effects": ""
           }
         ]
       },
@@ -1406,18 +1059,6 @@
               "8": "3d8[poison]",
               "9": "4d8[poison]"
             }
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Cloudkill [Concentration]",
-            "duration": -1,
-            "effects": ""
           }
         ]
       },
@@ -1490,18 +1131,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Compelled Duel [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "One creature that you can see within range must make a Wisdom saving throw. On a failed save, the creature is drawn to you, compelled by your divine demand. For the duration, it has disadvantage on attack rolls against creatures other than you, and must make a Wisdom saving throw each time it attempts to move to a space that is more than 30 feet away from you, if it succeeds on this saving throw, this spell doesn't restrict the target's movement for that turn."
       }
@@ -1530,18 +1159,6 @@
               }
             ],
             "success": []
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Compulsion [Concentration]",
-            "duration": 10,
-            "effects": ""
           }
         ]
       },
@@ -1600,18 +1217,6 @@
     "automation": [
       {
         "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Confusion [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "target",
         "target": "all",
         "effects": [
           {
@@ -1638,18 +1243,6 @@
   {
     "name": "Conjure Animals",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Conjure Animals [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range. "
@@ -1698,18 +1291,6 @@
     "name": "Conjure Celestial",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Conjure Celestial [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "You summon a celestial of challenge rating 4 or lower, which appears in an unoccupied space that you can see within range. The celestial disappears when it drops to 0 hit points or when the spell ends."
       }
@@ -1718,18 +1299,6 @@
   {
     "name": "Conjure Elemental",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Conjure Elemental [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends."
@@ -1740,18 +1309,6 @@
     "name": "Conjure Fey",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Conjure Fey [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends."
       }
@@ -1760,18 +1317,6 @@
   {
     "name": "Conjure Minor Elementals",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Conjure Minor Elementals [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "You summon elementals that appear in unoccupied spaces that you can see within range. An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends."
@@ -1819,18 +1364,6 @@
   {
     "name": "Conjure Woodland Beings",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Conjure Woodland Beings [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "You summon fey creatures that appear in unoccupied spaces that you can see within range. A summoned creature disappears when it drops to 0 hit points or when the spell ends."
@@ -1917,18 +1450,6 @@
     "name": "Control Water",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Control Water [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one."
       }
@@ -2003,18 +1524,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Crown of Madness [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\n\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
       }
@@ -2023,18 +1532,6 @@
   {
     "name": "Crusader's Mantle",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Crusader's Mantle [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": "all",
@@ -2082,18 +1579,6 @@
     "name": "Dancing Lights",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Dancing Lights [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius."
       }
@@ -2102,18 +1587,6 @@
   {
     "name": "Darkness",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Darkness [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it."
@@ -2170,18 +1643,6 @@
     "name": "Delayed Blast Fireball",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Delayed Blast Fireball [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "When the spell ends, either because your concentration is broken or because you decide to end it, the bead blossoms with a low roar into an explosion of flame that spreads around corners. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes fire damage equal to the total accumulated damage on a failed save, or half as much damage on a successful one.\n\nThe spell's base damage is 12d6. If at the end of your turn the bead has not yet detonated, the damage increases by 1d6."
       }
@@ -2233,18 +1694,6 @@
     "name": "Detect Evil and Good",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Detect Evil and Good [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated."
       }
@@ -2254,18 +1703,6 @@
     "name": "Detect Magic",
     "automation": [
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Detect Magic [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any."
       }
@@ -2274,18 +1711,6 @@
   {
     "name": "Detect Poison and Disease",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Detect Poison and Disease [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case."
@@ -2309,18 +1734,6 @@
             "type": "ieffect",
             "name": "Detect Thoughts",
             "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Detect Thoughts [Concentration]",
-            "duration": 10,
             "effects": ""
           }
         ]
@@ -2380,18 +1793,6 @@
   {
     "name": "Dispel Evil and Good",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Dispel Evil and Good [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you."
@@ -2457,18 +1858,6 @@
   {
     "name": "Divine Favor",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Divine Favor [Concentration]",
-            "duration": 10,
-            "effects": "-d 1d4[radiant]"
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit."
@@ -2537,31 +1926,6 @@
             }
           ]
         },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Dominate Beast [Concentration]",
-            "duration": "{time}",
-            "effects": ""
-          }
-        ],
-        "meta": [
-          {
-            "type": "roll",
-            "dice": "10",
-            "name": "time",
-            "higher":{
-              "5": "-11",
-              "6": "-11",
-              "7": "-11",
-              "8": "-11",
-              "9": "-11"
-            }
-          }
-        ]
       },
       {
         "type": "text",
@@ -2588,18 +1952,6 @@
               }
             ],
             "success": []
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Dominate Monster [Concentration]",
-            "duration": -1,
-            "effects": ""
           }
         ]
       },
@@ -2646,32 +1998,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Dominate Person [Concentration]",
-            "duration": "{time}",
-            "effects": ""
-          }
-        ],
-        "meta": [
-          {
-            "type": "roll",
-            "dice": "10",
-            "name": "time",
-            "higher":{
-              "5": "-11",
-              "6": "-11",
-              "7": "-11",
-              "8": "-11",
-              "9": "-11"
-            }
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw."
       }
@@ -2692,18 +2018,6 @@
   {
     "name": "Earthquake",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Earthquake [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": "all",
@@ -2759,18 +2073,6 @@
     "automation": [
       {
         "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Elemental Weapon [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "target",
         "target": "each",
         "effects": [
           {
@@ -2792,18 +2094,6 @@
     "automation": [
       {
         "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Enhance Ability [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "target",
         "target": "each",
         "effects": [
           {
@@ -2823,18 +2113,6 @@
   {
     "name": "Enlarge/Reduce",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Enlarge/Reduce [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": "each",
@@ -2863,18 +2141,6 @@
   {
     "name": "Ensnaring Strike",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Ensnaring Strike [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": "each",
@@ -2923,18 +2189,6 @@
               }
             ],
             "success": []
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Entangle [Concentration]",
-            "duration": 10,
-            "effects": ""
           }
         ]
       },
@@ -3039,18 +2293,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Evard's Black Tentacles [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage."
       }
@@ -3059,18 +2301,6 @@
   {
     "name": "Expeditious Retreat",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Expeditious Retreat [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action."
@@ -3107,18 +2337,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Eyebite [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration. On each of your turns until the spell ends, you can use your action to target another creature but can't target a creature again if it has succeeded on a saving throw against this casting of Eyebite.\nAt the end of each of its turns, it can make another Wisdom saving throw. If it succeeds, the effect ends."
       }
@@ -3147,18 +2365,6 @@
               }
             ],
             "success": []
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Faerie Fire [Concentration]",
-            "duration": 10,
-            "effects": ""
           }
         ]
       },
@@ -3208,18 +2414,6 @@
               }
             ],
             "success": []
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Fear [Concentration]",
-            "duration": 10,
-            "effects": ""
           }
         ]
       },
@@ -3500,18 +2694,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Flame Blade [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage./n/nThe flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
       }
@@ -3603,18 +2785,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Flaming Sphere [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one."
       }
@@ -3643,18 +2813,6 @@
         ]
       },
       {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Flesh to Stone [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "If the targets body is made of flesh, the creature must make a Constitution saving throw. On a failed save, it is restrained as its flesh begins to harden. On a successful save, the creature isn't affected.\n\nA creature restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for the duration. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\n\nIf the creature is physically broken while petrified, it suffers from similar deformities if it reverts to its original state.\n\nIf you maintain your concentration on this spell for the entire possible duration, the creature is turned to stone until the effect is removed."
       }
@@ -3663,18 +2821,6 @@
   {
     "name": "Fly",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Fly [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": "all",
@@ -3696,18 +2842,6 @@
   {
     "name": "Fog Cloud",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Fog Cloud [Concentration]",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "text",
         "text": "You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it."
@@ -3763,18 +2897,6 @@
   {
     "name": "Friends",
     "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Friends [Concentration]",
-            "duration": 10,
-            "effects": ""
-          }
-        ]
-      },
       {
         "type": "target",
         "target": "all",
