@@ -6582,7 +6582,7 @@
         "meta": [
           {
             "type": "roll",
-            "dice": "half as",
+            "dice": "14d6[psychic]",
             "name": "damage",
             "higher": {}
           }
