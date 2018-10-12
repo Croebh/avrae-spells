@@ -1555,7 +1555,7 @@
         "effects": [
           {
             "type": "damage",
-            "damage": "-(1d8+SPELL)[heal]",
+            "damage": "-(1d8+{spell})[heal]",
             "higher": {
               "2": "-(1d8[heal])",
               "3": "-(2d8[heal])",
@@ -3251,7 +3251,7 @@
         "effects": [
           {
             "type": "damage",
-            "damage": "-(1d4+SPELL)[heal]",
+            "damage": "-(1d4+{spell})[heal]",
             "higher": {
               "2": "-(1d4[heal])",
               "3": "-(2d4[heal])",
@@ -3876,7 +3876,7 @@
         "effects": [
           {
             "type": "damage",
-            "damage": "-(3d8+SPELL)[heal]",
+            "damage": "-(3d8+{spell})[heal]",
             "higher": {
               "6": "-(1d8[heal])",
               "7": "-(2d8[heal])",
@@ -3905,7 +3905,7 @@
         "effects": [
           {
             "type": "damage",
-            "damage": "-(1d4+SPELL)[heal]",
+            "damage": "-(1d4+{spell})[heal]",
             "higher": {
               "4": "-(1d4[heal])",
               "5": "-(2d4[heal])",
@@ -4395,7 +4395,7 @@
         "effects": [
           {
             "type": "damage",
-            "damage": "-(2d8+SPELL)[heal]",
+            "damage": "-(2d8+{spell})[heal]",
             "higher": {
               "3": "-(1d8[heal])",
               "4": "-(2d8[heal])",
@@ -4921,7 +4921,7 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "1d8+SPELL[force]",
+                "damage": "1d8+{spell}[force]",
                 "higher": {
                   "3": "",
                   "4": "1d8[force]",
@@ -6696,7 +6696,7 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "1d6+SPELL",
+                "damage": "1d6+{spell}",
                 "higher": {},
                 "cantripScale": true
               }
