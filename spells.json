@@ -6723,7 +6723,7 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "{damage}[necrotic]",
+                "damage": "{damage}[necrotic]"
               },
               {
                 "type": "target",
