@@ -314,12 +314,7 @@
   },
   {
     "name": "Banishing Smite",
-    "automation": [
-      {
-        "type": "text",
-        "text": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Banishment",
@@ -418,12 +413,7 @@
   },
   {
     "name": "Bigby's Hand",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Blade Barrier",
@@ -633,12 +623,7 @@
   },
   {
     "name": "Blur",
-    "automation": [
-      {
-        "type": "text",
-        "text": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Branding Smite",
@@ -981,12 +966,7 @@
   },
   {
     "name": "Circle of Power",
-    "automation": [
-      {
-        "type": "text",
-        "text": "Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Clairvoyance",
@@ -1242,12 +1222,7 @@
   },
   {
     "name": "Conjure Animals",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range. "
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Conjure Barrage",
@@ -1289,39 +1264,19 @@
   },
   {
     "name": "Conjure Celestial",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You summon a celestial of challenge rating 4 or lower, which appears in an unoccupied space that you can see within range. The celestial disappears when it drops to 0 hit points or when the spell ends."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Conjure Elemental",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Conjure Fey",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Conjure Minor Elementals",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You summon elementals that appear in unoccupied spaces that you can see within range. An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Conjure Volley",
@@ -1363,12 +1318,7 @@
   },
   {
     "name": "Conjure Woodland Beings",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You summon fey creatures that appear in unoccupied spaces that you can see within range. A summoned creature disappears when it drops to 0 hit points or when the spell ends."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Contact Other Plane",
@@ -1448,12 +1398,7 @@
   },
   {
     "name": "Control Water",
-    "automation": [
-      {
-        "type": "text",
-        "text": "Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Control Weather",
@@ -1577,21 +1522,11 @@
   },
   {
     "name": "Dancing Lights",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Darkness",
-    "automation": [
-      {
-        "type": "text",
-        "text": "Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Darkvision",
@@ -1641,12 +1576,7 @@
   },
   {
     "name": "Delayed Blast Fireball",
-    "automation": [
-      {
-        "type": "text",
-        "text": "When the spell ends, either because your concentration is broken or because you decide to end it, the bead blossoms with a low roar into an explosion of flame that spreads around corners. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes fire damage equal to the total accumulated damage on a failed save, or half as much damage on a successful one.\n\nThe spell's base damage is 12d6. If at the end of your turn the bead has not yet detonated, the damage increases by 1d6."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Demiplane",
@@ -1692,30 +1622,15 @@
   },
   {
     "name": "Detect Evil and Good",
-    "automation": [
-      {
-        "type": "text",
-        "text": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Detect Magic",
-    "automation": [
-      {
-        "type": "text",
-        "text": "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Detect Poison and Disease",
-    "automation": [
-      {
-        "type": "text",
-        "text": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Detect Thoughts",
@@ -1792,12 +1707,7 @@
   },
   {
     "name": "Dispel Evil and Good",
-    "automation": [
-      {
-        "type": "text",
-        "text": "For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Dispel Magic",
@@ -1857,12 +1767,7 @@
   },
   {
     "name": "Divine Favor",
-    "automation": [
-      {
-        "type": "text",
-        "text": "Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Divine Word",
@@ -2299,12 +2204,7 @@
   },
   {
     "name": "Expeditious Retreat",
-    "automation": [
-      {
-        "type": "text",
-        "text": "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Eyebite",
@@ -2840,12 +2740,7 @@
   },
   {
     "name": "Fog Cloud",
-    "automation": [
-      {
-        "type": "text",
-        "text": "You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Forbiddance",
