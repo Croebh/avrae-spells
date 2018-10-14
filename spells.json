@@ -7536,7 +7536,7 @@
             "type": "roll",
             "dice": "1d6[radiant]",
             "name": "damage",
-            "cantripScale?: true"
+            "cantripScale?": true
           }
         ]
       },
@@ -7589,7 +7589,7 @@
             "type": "roll",
             "dice": "1d6[piercing]",
             "name": "damage",
-            "cantripScale?: true"
+            "cantripScale?": true
           },
           {
             "type": "roll",
@@ -7617,7 +7617,7 @@
               {
                 "type": "damage",
                 "damage": "1d10[piercing]",
-                "cantripScale?: true"
+                "cantripScale?": true
               }
             ],
             "miss": []
@@ -7711,13 +7711,13 @@
             "type": "roll",
             "dice": "1d8[necrotic]",
             "name": "fullDmg",
-            "cantripScale?: true"
+            "cantripScale?": true
           },
           {
             "type": "roll",
             "dice": "1d12[necrotic]",
             "name": "injuredDmg",
-            "cantripScale?: true"
+            "cantripScale?": true
           }
         ]
       },
