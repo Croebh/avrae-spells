@@ -6552,16 +6552,6 @@
               {
                 "type": "damage",
                 "damage": "{damage}[necrotic]"
-              },
-              {
-                "type": "target",
-                "target": "self",
-                "effects": [
-                  {
-                    "type": "damage",
-                    "damage": "-({damage})/2[heal]"
-                  }
-                ]
               }
             ],
             "miss": []
@@ -6583,6 +6573,16 @@
           }
         ]
       },
+        {
+          "type": "target",
+          "target": "self",
+          "effects": [
+            {
+              "type": "damage",
+              "damage": "-({damage})/2[heal]"
+            }
+          ]
+        },
       {
         "type": "text",
         "text": "Make a melee spell attack against a creature within your reach. On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action."
@@ -8401,32 +8401,12 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
-              },
-              {
-                "type": "target",
-                "target": "self",
-                "effects": [
-                  {
-                    "type": "damage",
-                    "damage": "-({damage})/2"
-                  }
-                ]
               }
             ],
             "success": [
               {
                 "type": "damage",
                 "damage": "({damage})/2"
-              },
-              {
-                "type": "target",
-                "target": "self",
-                "effects": [
-                  {
-                    "type": "damage",
-                    "damage": "-({damage})/4"
-                  }
-                ]
               }
             ]
           }
@@ -8445,6 +8425,16 @@
           }
         ]
       },
+        {
+          "type": "target",
+          "target": "self",
+          "effects": [
+            {
+              "type": "damage",
+              "damage": "-({damage})/2"
+            }
+          ]
+        },
       {
         "type": "text",
         "text": "The target must make a Dexterity saving throw. On a successful save, the target takes 2d8 necrotic damage, and the spell ends. On a failed save, the target takes 4d8 necrotic damage, and until the spell ends, you can use your action on each of your turns to automatically deal 4d8 necrotic damage to the target.\n\nWhenever the spell deals damage to a target, you regain hit points equal to half the amount of necrotic damage the target takes."
