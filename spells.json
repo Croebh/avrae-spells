@@ -46,7 +46,7 @@
           },
           {
             "type": "ieffect",
-            "name": "Aid - Max HP Increased",
+            "name": "Max HP Increased (Aid)",
             "duration": -1,
             "effects": ""
           }
@@ -351,7 +351,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Barkskin [min. AC 16]",
+            "name": "Min. AC 16 (Barkskin)",
             "duration": -1,
             "effects": ""
           }
@@ -653,7 +653,7 @@
           },
           {
             "type": "ieffect",
-            "name": "Branding Smite - Visible",
+            "name": "Visible (Branding Smite)",
             "duration": 10,
             "effects": ""
           }
@@ -2027,7 +2027,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Earthquake - Prone",
+                "name": "Earthquake - Knocked Prone",
                 "duration": -1,
                 "effects": ""
               }
@@ -2382,7 +2382,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "False Life - Temporary Hit Points",
+            "name": "Temporary Hit Points (False Life)",
             "duration": -1,
             "effects": ""
           }
@@ -2467,7 +2467,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Feign Death - Blinded, Incapacitated",
+            "name": "Blinded, Incapacitated (Feign Death)",
             "duration": -1,
             "effects": "-resist acid -resist bludgeoning -resist cold -resist fire -resist force -resist lightning -resist necrotic -resist piercing -resist poison -resist radiant -resist slashing -resist thunder"
           }
@@ -2902,7 +2902,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Friends - Charmed",
+            "name": "Charmed (Friends)",
             "duration": 10,
             "effects": ""
           }
@@ -2916,7 +2916,24 @@
   },
   {
     "name": "Gaseous Form",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Gaseous Form",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\n\nWhile in this form, the target's only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\n\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells."
+      }
+    ]
   },
   {
     "name": "Gate",
@@ -2924,11 +2941,45 @@
   },
   {
     "name": "Geas",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Charmed (Geas)",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day."
+      }
+    ]
   },
   {
     "name": "Gentle Repose",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Gentle Repose",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.\n\nThe spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
+      }
+    ]
   },
   {
     "name": "Giant Insect",
@@ -2936,7 +2987,24 @@
   },
   {
     "name": "Glibness",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Min. 15 on Charisma Checks (Glibness)",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."
+      }
+    ]
   },
   {
     "name": "Globe of Invulnerability",
@@ -2962,7 +3030,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day."
       }
     ]
   },
@@ -2982,6 +3050,18 @@
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Grasping Vine",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
         "text": "That creature must succeed on a Dexterity saving throw or be pulled 20 feet directly toward the vine."
       }
@@ -2997,7 +3077,14 @@
           {
             "type": "save",
             "stat": "dex",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Grease - Knocked Prone",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -3010,7 +3097,24 @@
   },
   {
     "name": "Greater Invisibility",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Greater Invisibility",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You or a creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person."
+      }
+    ]
   },
   {
     "name": "Greater Restoration",
@@ -3050,8 +3154,20 @@
         ]
       },
       {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Guardian of Faith",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
         "type": "text",
-        "text": ""
+        "text": "Any creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a Dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage."
       }
     ]
   },
@@ -3061,7 +3177,24 @@
   },
   {
     "name": "Guidance",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Guidance",
+            "duration": 10,
+            "effects": "-b '1d4[Guidance - Ability Check]'"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends."
+      }
+    ]
   },
   {
     "name": "Guiding Bolt",
@@ -3086,6 +3219,12 @@
                   "8": "7d6[radiant]",
                   "9": "8d6[radiant]"
                 }
+              },
+              {
+                "type": "ieffect",
+                "name": "Guiding Bolt",
+                "duration": 1,
+                "effects": ""
               }
             ],
             "miss": []
@@ -3189,6 +3328,12 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
+              },
+              {
+                "type": "ieffect",
+                "name": "Harm - Max HP Reduced",
+                "duration": -1,
+                "effects": ""
               }
             ],
             "success": [
@@ -3210,13 +3355,30 @@
       },
       {
         "type": "text",
-        "text": "The target must make a Constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1."
+        "text": "The target must make a Constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took."
       }
     ]
   },
   {
     "name": "Haste",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Haste",
+            "duration": 10,
+            "effects": "-ac +2"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, the target's speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.\n\nWhen the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it."
+      }
+    ]
   },
   {
     "name": "Heal",
@@ -3238,7 +3400,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead."
       }
     ]
   },
@@ -3267,13 +3429,43 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
       }
     ]
   },
   {
     "name": "Heat Metal",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "2d8[fire]",
+            "higher":{
+              "3": "1d8[fire]",
+              "4": "2d8[fire]",
+              "5": "3d8[fire]",
+              "6": "4d8[fire]",
+              "7": "5d8[fire]",
+              "8": "6d8[fire]",
+              "9": "7d8[fire]"
+            }
+          },
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Any creature in physical contact with the object takes 2d8 fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again.\n\nIf a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn."
+      }
+    ]
   },
   {
     "name": "Hellish Rebuke",
@@ -3325,15 +3517,62 @@
   },
   {
     "name": "Heroes' Feast",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Heroes' Feast",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Heroism",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Heroism",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell."
+      }
+    ]
   },
   {
     "name": "Hex",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Hex",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also, choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability.\n\nIf the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature."
+      }
+    ]
   },
   {
     "name": "Hold Monster",
@@ -3345,7 +3584,14 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Hold Monster - Paralyzed",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -3366,7 +3612,14 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Hold Person - Paralyzed",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -3387,14 +3640,21 @@
           {
             "type": "save",
             "stat": "con",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Holy Aura - Blinded",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": "The attacker must succeed on a Constitution saving throw or be blinded until the spell ends."
+        "text": "Creatures of your choice in that radius when you cast this spell shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw or be blinded until the spell ends."
       }
     ]
   },
@@ -3415,12 +3675,18 @@
               }
             ],
             "success": []
+          },
+          {
+            "type": "ieffect",
+            "name": "Blinded (Hunger of Hadar)",
+            "duration": 10,
+            "effects": ""
           }
         ],
         "meta": [
           {
             "type": "roll",
-            "dice": "2d6[cold][cold]",
+            "dice": "2d6[cold]",
             "name": "damage",
             "higher": {}
           }
@@ -3428,13 +3694,30 @@
       },
       {
         "type": "text",
-        "text": "Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take 2d6 acid damage as milky, otherworldly tentacles rub against it."
+        "text": "Any creature that starts its turn in the area takes 2d6 cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take 2d6 acid damage as milky, otherworldly tentacles rub against it.\n\nNote - The damage on this spell changes to Acid when applied at the end of the targets turn. Please apply any resistances."
       }
     ]
   },
   {
     "name": "Hunter's Mark",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Hunter's Mark",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature."
+      }
+    ]
   },
   {
     "name": "Hypnotic Pattern",
@@ -3446,14 +3729,21 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Hypnotic Pattern - Charmed",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": "Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0."
+        "text": "Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0.\n\nThe spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor."
       }
     ]
   },
@@ -3566,7 +3856,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "When the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes 10d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there."
       }
     ]
   },
@@ -3645,17 +3935,51 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there."
       }
     ]
   },
   {
     "name": "Invisibility",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Invisibility",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell."
+      }
+    ]
   },
   {
     "name": "Jump",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Jump",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a creature. The creature's jump distance is tripled until the spell ends."
+      }
+    ]
   },
   {
     "name": "Knock",
@@ -3687,14 +4011,21 @@
           {
             "type": "save",
             "stat": "con",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Levitate",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": "An unwilling creature that succeeds on a Constitution saving throw is unaffected."
+        "text": "One creature or object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Constitution saving throw is unaffected."
       }
     ]
   },
@@ -3708,20 +4039,105 @@
           {
             "type": "save",
             "stat": "dex",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Light",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": ""
+        "text": "If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell."
       }
     ]
   },
   {
     "name": "Lightning Arrow",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "1",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "miss": [
+              {
+                "type": "damage",
+                "damage": "({damage})/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4d8[lightning]",
+            "name": "damage",
+            "higher":{
+              "4": "1d8[lightning]",
+              "5": "2d8[lightning]",
+              "6": "3d8[lightning]",
+              "7": "4d8[lightning]",
+              "8": "5d8[lightning]",
+              "9": "6d8[lightning]"
+            }
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              } 
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "({damage})/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d8[lightning]",
+            "name": "damage",
+            "higher":{
+              "4": "1d8[lightning]",
+              "5": "2d8[lightning]",
+              "6": "3d8[lightning]",
+              "7": "4d8[lightning]",
+              "8": "5d8[lightning]",
+              "9": "6d8[lightning]"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Make the attack roll as normal. The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon's normal damage.\n\nWhether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes 2d8 lightning damage on a failed save, or half as much damage on a successful one."
+      }
+    ]
   },
   {
     "name": "Lightning Bolt",
@@ -3783,7 +4199,24 @@
   },
   {
     "name": "Longstrider",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Longstrider",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a creature. The target's speed increases by 10 feet until the spell ends."
+      }
+    ]
   },
   {
     "name": "Mage Armor",
@@ -4778,11 +5211,45 @@
   },
   {
     "name": "Shield",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Shield  ",
+            "duration": 0,
+            "effects": "-ac +5"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile."
+      }
+    ]
   },
   {
     "name": "Shield of Faith",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Shield of Faith",
+            "duration": -1,
+            "effects": "-ac +2"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration."
+      }
+    ]
   },
   {
     "name": "Shillelagh",
