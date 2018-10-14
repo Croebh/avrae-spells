@@ -4973,36 +4973,7 @@
   },
   {
     "name": "Prismatic Spray",
-    "automation": [
-      {
-        "type": "target",
-        "target": "each",
-        "effects": [
-          {
-            "type": "save",
-            "stat": "dex",
-            "fail": [
-              {
-                "type": "damage",
-                "damage": "({table})*0"
-              }
-            ],
-            "success": []
-          }
-        ],
-        "meta": [
-          {
-            "type": "roll",
-            "dice": "1d8[table]",
-            "name": "table"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "text": "Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a d8 to determine which color ray affects it."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Prismatic Wall",
@@ -5655,7 +5626,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Shield  ",
+            "name": "Shield",
             "duration": 0,
             "effects": "-ac +5"
           }
@@ -7431,7 +7402,7 @@
             "type": "roll",
             "dice": "1d6[radiant]",
             "name": "damage",
-            "cantripScale?": true
+            "cantripScale": true
           }
         ]
       },
@@ -7484,7 +7455,7 @@
             "type": "roll",
             "dice": "1d6[piercing]",
             "name": "damage",
-            "cantripScale?": true
+            "cantripScale": true
           },
           {
             "type": "roll",
@@ -7512,7 +7483,7 @@
               {
                 "type": "damage",
                 "damage": "1d10[piercing]",
-                "cantripScale?": true
+                "cantripScale": true
               }
             ],
             "miss": []
@@ -7606,13 +7577,13 @@
             "type": "roll",
             "dice": "1d8[necrotic]",
             "name": "fullDmg",
-            "cantripScale?": true
+            "cantripScale": true
           },
           {
             "type": "roll",
             "dice": "1d12[necrotic]",
             "name": "injuredDmg",
-            "cantripScale?": true
+            "cantripScale": true
           }
         ]
       },
@@ -7683,7 +7654,7 @@
     "automation": null
   },
   {
-    "name": "ZEPHYr Strike (UA)",
+    "name": "Zephyr Strike (UA)",
     "automation": [
       {
         "type": "target",
@@ -7691,7 +7662,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Zephy Strike",
+            "name": "Zephyr Strike",
             "duration": 10,
             "effects": ""
           }
@@ -7783,7 +7754,7 @@
           {
             "type": "damage",
             "damage": "1d6[elemental]",
-            "cantripScale?": true
+            "cantripScale": true
           }
         ]
       },
@@ -8659,7 +8630,7 @@
             "fail": [
               {
                 "type": "damage",
-                "damage": "{burstDamage}"
+                "damage": "{burst}"
               },
               {
                 "type": "ieffect",
@@ -8671,7 +8642,7 @@
             "success": [
               {
                 "type": "damage",
-                "damage": "({burstDamage})/2"
+                "damage": "({burst})/2"
               }
             ]
           }
@@ -8680,7 +8651,7 @@
           {
             "type": "roll",
             "dice": "4d8[radiant]",
-            "name": "burstDamage"
+            "name": "burst"
           }
         ]
       },
@@ -8853,7 +8824,7 @@
             "type": "roll",
             "dice": "1d6[poison]",
             "name": "damage",
-            "cantripScale?": true
+            "cantripScale": true
           },
           {
             "type": "roll",
@@ -8940,7 +8911,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Investiture of ",
+            "name": "Investiture of Wind",
             "duration": -1,
             "effects": ""
           }
@@ -8983,16 +8954,6 @@
           {
             "type": "damage",
             "damage": "-({damage})*2[heal]"
-          },
-          {
-            "type": "target",
-            "target": "self",
-            "effects": [
-              {
-                "type": "damage",
-                "damage": "{damage}[necrotic]"
-              }
-            ]
           }
         ],
         "meta": [
@@ -9011,6 +8972,16 @@
           }
         ]
       },
+        {
+          "type": "target",
+          "target": "self",
+          "effects": [
+            {
+              "type": "damage",
+              "damage": "{damage}[necrotic]"
+            }
+          ]
+        },
       {
         "type": "text",
         "text": "You sacrifice some of your health to mend another creature's injuries. You take 4d8 necrotic damage, and one creature of your choice that you can see within range regains a number of hit points equal to twice the necrotic damage you take."
@@ -9871,22 +9842,7 @@
   },
   {
     "name": "Tenser's Transformation",
-    "automation": [
-      {
-        "type": "target",
-        "target": "each",
-        "effects": [
-          {
-            "type": "damage",
-            "damage": "2d12[force]"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "text": "When you hit a target with a weapon attack, that target takes an extra 2d12 force damage."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Thunder Step",
@@ -10040,13 +9996,13 @@
             "type": "roll",
             "dice": "1d8[necrotic]",
             "name": "fullDmg",
-            "cantripScale?": true
+            "cantripScale": true
           },
           {
             "type": "roll",
             "dice": "1d12[necrotic]",
             "name": "injuredDmg",
-            "cantripScale?": true
+            "cantripScale": true
           }
         ]
       },
