@@ -351,9 +351,9 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Min. AC 16 (Barkskin)",
+            "name": "Barkskin",
             "duration": -1,
-            "effects": ""
+            "effects": "-ac 16"
           }
         ]
       },
@@ -3177,24 +3177,7 @@
   },
   {
     "name": "Guidance",
-    "automation": [
-      {
-        "type": "target",
-        "target": "each",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Guidance",
-            "duration": 10,
-            "effects": "-b '1d4[Guidance - Ability Check]'"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "text": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Guiding Bolt",
@@ -4069,13 +4052,13 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "{damage}"
+                "damage": "{atkdmg}"
               }
             ],
             "miss": [
               {
                 "type": "damage",
-                "damage": "({damage})/2"
+                "damage": "({atkdmg})/2"
               }
             ]
           }
@@ -4084,7 +4067,7 @@
           {
             "type": "roll",
             "dice": "4d8[lightning]",
-            "name": "damage",
+            "name": "atkdmg",
             "higher":{
               "4": "1d8[lightning]",
               "5": "2d8[lightning]",
@@ -4229,7 +4212,7 @@
             "type": "ieffect",
             "name": "Mage Armor",
             "duration": -1,
-            "effects": ""
+            "effects": "-ac +3"
           }
         ]
       },
@@ -4430,28 +4413,7 @@
   },
   {
     "name": "Meld into Stone",
-    "automation": [
-      {
-        "type": "target",
-        "target": "each",
-        "effects": [
-          {
-            "type": "damage",
-            "damage": "6d6[bludgeoning]"
-          },
-          {
-            "type": "ieffect",
-            "name": "Prone (Meld into Stone)",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "text": "Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Melf's Acid Arrow",
@@ -5913,21 +5875,21 @@
             "dice": "5d8",
             "name": "hitpoints",
             "higher":{
-              "2": "1d8",
-              "3": "2d8",
-              "4": "3d8",
-              "5": "4d8",
-              "6": "5d8",
-              "7": "6d8",
-              "8": "7d8",
-              "9": "8d8"
+              "2": "2d8",
+              "3": "4d8",
+              "4": "6d8",
+              "5": "8d8",
+              "6": "10d8",
+              "7": "12d8",
+              "8": "14d8",
+              "9": "16d8"
             }
           }
         ]
       },
       {
         "type": "text",
-        "text": " Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).\n\nStarting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected"
+        "text": "Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).\n\nStarting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected"
       }
     ]
   },
@@ -6565,7 +6527,7 @@
           {
             "type": "ieffect",
             "name": "Extra Turns (Time Stop)",
-            "duration": "time",
+            "duration": "{time}",
             "effects": ""
           }
         ],
@@ -7120,12 +7082,7 @@
   },
   {
     "name": "Wish",
-    "automation": [
-      {
-        "type": "text",
-        "text": "Wish is the mightiest spell a mortal creature can cast. By simply speaking aloud, you can alter the very foundations of reality in accord with your desires."
-      }
-    ]
+    "automation": null
   },
   {
     "name": "Witch Bolt",
