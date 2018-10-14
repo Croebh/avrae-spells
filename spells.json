@@ -223,7 +223,7 @@
               },
               {
                 "type": "ieffect",
-                "name": "No reactions(Arms of Hadar)",
+                "name": "No Reactions (Arms of Hadar)",
                 "duration": 0,
                 "effects": ""
               }
@@ -5546,16 +5546,16 @@
         "target": "all",
         "effects": [
           {
-            "type": "save",
-            "stat": "wis",
-            "fail": [],
-            "success": []
+            "type": "ieffect",
+            "name": "Sanctuary",
+            "duration": 10,
+            "effects": ""
           }
         ]
       },
       {
         "type": "text",
-        "text": "Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball."
+        "text": "Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball.\n\nIf the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends."
       }
     ]
   },
@@ -5571,8 +5571,7 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "2d6[fire]",
-                "higher": {}
+                "damage": "2d6[fire]"
               }
             ],
             "miss": []
@@ -5581,7 +5580,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several.\n\nMake a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage."
       }
     ]
   },
@@ -5608,11 +5607,66 @@
   },
   {
     "name": "Searing Smite",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "1d6[fire]",
+            "higher":{
+              "2": "1d6[fire]",
+              "3": "2d6[fire]",
+              "4": "3d6[fire]",
+              "5": "4d6[fire]",
+              "6": "5d6[fire]",
+              "7": "6d6[fire]",
+              "8": "7d6[fire]",
+              "9": "8d6[fire]"
+            }
+          },
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "On Fire (Searing Smite)",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with white-hot intensity, and the attack deals an extra 1d6 fire damage to the target and causes the target to ignite in flames. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a failed save, it takes 1d6 fire damage. On a successful save, the spell ends. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends."
+      }
+    ]
   },
   {
     "name": "See Invisibility",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "See Invisibility",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent."
+      }
+    ]
   },
   {
     "name": "Seeming",
@@ -5624,7 +5678,14 @@
           {
             "type": "save",
             "stat": "cha",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Seeming",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -5641,11 +5702,45 @@
   },
   {
     "name": "Sequester",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Invisible (Sequester)",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "By means of this spell, a willing creature or an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes invisible and can't be targeted by divination spells or perceived through scrying sensors created by divination spells."
+      }
+    ]
   },
   {
     "name": "Shapechange",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Shapechange",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You assume the form of a different creature for the duration."
+      }
+    ]
   },
   {
     "name": "Shatter",
@@ -5738,7 +5833,28 @@
   },
   {
     "name": "Shillelagh",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "1d8+{spell}[bludgeoning^]"
+              }
+            ],
+            "miss": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon."
+      }
+    ]
   },
   {
     "name": "Shocking Grasp",
@@ -5753,8 +5869,13 @@
               {
                 "type": "damage",
                 "damage": "1d8[lightning]",
-                "higher": {},
                 "cantripScale": true
+              },
+              {
+                "type": "ieffect",
+                "name": "No Reactions (Shocking Grasp)",
+                "duration": 0,
+                "effects": ""
               }
             ],
             "miss": []
@@ -5781,15 +5902,90 @@
   },
   {
     "name": "Sleep",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "5d8",
+            "name": "hitpoints",
+            "higher":{
+              "2": "1d8",
+              "3": "2d8",
+              "4": "3d8",
+              "5": "4d8",
+              "6": "5d8",
+              "7": "6d8",
+              "8": "7d8",
+              "9": "8d8"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": " Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).\n\nStarting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected"
+      }
+    ]
   },
   {
     "name": "Sleet Storm",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Prone (Sleet Storm)",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it falls prone."
+      }
+    ]
   },
   {
     "name": "Slow",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Slow",
+                "duration": 10,
+                "effects": "-ac -2"
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.\n\nAn affected target's speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.\n\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted."
+      }
+    ]
   },
   {
     "name": "Spare the Dying",
@@ -5809,11 +6005,43 @@
   },
   {
     "name": "Spider Climb",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Spider Climb",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed."
+      }
+    ]
   },
   {
     "name": "Spike Growth",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "2d4[piercing]"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels."
+      }
+    ]
   },
   {
     "name": "Spirit Guardians",
@@ -5891,13 +6119,41 @@
       },
       {
         "type": "text",
-        "text": "When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier."
+        "text": "When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.\n\nAs a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it."
       }
     ]
   },
   {
     "name": "Staggering Smite",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "4d6[psychic]"
+          },
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "No Reactions (Staggering Smite)",
+                "duration": 1,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 4d6 psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn"
+      }
+    ]
   },
   {
     "name": "Stinking Cloud",
@@ -5916,7 +6172,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "Each creature that is completely within the cloud at the start of its turn must make a Constitution saving throw against poison. On a failed save, the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw."
       }
     ]
   },
@@ -5926,11 +6182,63 @@
   },
   {
     "name": "Stoneskin",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Stoneskin",
+            "duration": -1,
+            "effects": "-resist bludgeoning -resist piercing -resist slashing"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "This spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage."
+      }
+    ]
   },
   {
     "name": "Storm of Vengeance",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              },
+              {
+                "type": "ieffect",
+                "name": "Deafened (Storm of Vengeance)",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2d6[thunder]",
+            "name": "damage"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes 2d6 thunder damage and becomes deafened for 5 minutes.\n\nEach round you maintain concentration on this spell, the storm produces additional effects on your turn."
+      }
+    ]
   },
   {
     "name": "Suggestion",
@@ -5942,14 +6250,21 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Charmed (Suggestion)",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": ""
+        "text": "The target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do."
       }
     ]
   },
@@ -5967,6 +6282,12 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
+              },
+              {
+                "type": "ieffect",
+                "name": "Blinded (Sunbeam)",
+                "duration": 1,
+                "effects": ""
               }
             ],
             "success": [
@@ -5981,8 +6302,7 @@
           {
             "type": "roll",
             "dice": "6d8[radiant]",
-            "name": "damage",
-            "higher": {}
+            "name": "damage"
           }
         ]
       },
@@ -6006,6 +6326,16 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
+              },
+              {
+                "type": "ieffect",
+                "name": "Blinded (Sunburst)",
+                "duration": 10,
+                "effects": ""
+              },
+              {
+                "type": "text",
+                "text": "A creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded."
               }
             ],
             "success": [
@@ -6020,8 +6350,7 @@
           {
             "type": "roll",
             "dice": "12d6[radiant]",
-            "name": "damage",
-            "higher": {}
+            "name": "damage"
           }
         ]
       },
@@ -6049,7 +6378,14 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Prone (Tasha's Hideous Laughter)",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -6066,7 +6402,36 @@
   },
   {
     "name": "Telepathy",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Telepathy",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Telepathy",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, you and the target can instantaneously share words, images, sounds, and other sensory messages with one another through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature with an Intelligence score of at least 1 to understand the meaning of your words and take in the scope of any sensory messages you send to it."
+      }
+    ]
   },
   {
     "name": "Teleport",
@@ -6097,7 +6462,6 @@
               {
                 "type": "damage",
                 "damage": "1d6[piercing]",
-                "higher": {},
                 "cantripScale": true
               }
             ],
@@ -6113,7 +6477,35 @@
   },
   {
     "name": "Thunderous Smite",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "2d6[thunder]"
+          },
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Prone (Thunderous Smite)",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The first time you hit with a melee weapon attack during this spell's duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and knocked prone."
+      }
+    ]
   },
   {
     "name": "Thunderwave",
@@ -6165,11 +6557,52 @@
   },
   {
     "name": "Time Stop",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Extra Turns (Time Stop)",
+            "duration": "time",
+            "effects": ""
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d4+1",
+            "name": "time"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "No time passes for other creatures, while you take 1d4 + 1 turns in a row, during which you can use actions and move as normal.\n\nThis spell ends if one of the actions you use during this period, or any effects that you create during this period, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it."
+      }
+    ]
   },
   {
     "name": "Tongues",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Tongues",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says."
+      }
+    ]
   },
   {
     "name": "Transport via Plants",
@@ -6189,7 +6622,14 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "True Polymorph",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -6206,7 +6646,24 @@
   },
   {
     "name": "True Seeing",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Truesight (True Seeing)",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
+      }
+    ]
   },
   {
     "name": "True Strike",
@@ -6214,7 +6671,41 @@
   },
   {
     "name": "Tsunami",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "str",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "({damage})/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "6d10[bludgeoning]",
+            "name": "damage"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "When the wall appears, each creature within its area must make a Strength saving throw. On a failed save, a creature takes 6d10 bludgeoning damage, or half as much damage on a successful save.\n\nAny Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take 5d10 bludgeoning damage. A creature can take this damage only once per round."
+      }
+    ]
   },
   {
     "name": "Unseen Servant",
@@ -6232,18 +6723,35 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "3d6[necrotic]",
-                "higher": {
-                  "4": "1d6[necrotic]",
-                  "5": "2d6[necrotic]",
-                  "6": "3d6[necrotic]",
-                  "7": "4d6[necrotic]",
-                  "8": "5d6[necrotic]",
-                  "9": "6d6[necrotic]"
-                }
+                "damage": "{damage}[necrotic]",
+              },
+              {
+                "type": "target",
+                "target": "self",
+                "effects": [
+                  {
+                    "type": "damage",
+                    "damage": "-({damage})/2[heal]"
+                  }
+                ]
               }
             ],
             "miss": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3d6",
+            "name": "damage",
+            "higher":{
+              "4": "1d6",
+              "5": "2d6",
+              "6": "3d6",
+              "7": "4d6",
+              "8": "5d6",
+              "9": "6d6"
+            }
           }
         ]
       },
@@ -6267,6 +6775,12 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
+              },
+              {
+                "type": "ieffect",
+                "name": "Vicious Mockery",
+                "duration": 0,
+                "effects": ""
               }
             ],
             "success": []
@@ -6275,9 +6789,8 @@
         "meta": [
           {
             "type": "roll",
-            "dice": "1d4[psychic][psychic]",
+            "dice": "1d4[psychic]",
             "name": "damage",
-            "higher": {},
             "cantripScale": true
           }
         ]
@@ -6329,7 +6842,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 5d8 fire damage, or half as much damage on a successful save.\n\nOne side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage."
       }
     ]
   },
@@ -6339,7 +6852,46 @@
   },
   {
     "name": "Wall of Ice",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "{damage}"
+              }
+            ],
+            "success": [
+              {
+                "type": "damage",
+                "damage": "({damage})/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "10d6[cold]",
+            "name": "damage",
+            "higher":{
+              "7": "2d6[cold]",
+              "8": "4d6[cold]",
+              "9": "6d6[cold]"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw. On a failed save, the creature takes 10d6 cold damage, or half as much damage on a successful save.\n\n A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one."
+      }
+    ]
   },
   {
     "name": "Wall of Stone",
@@ -6401,25 +6953,100 @@
       },
       {
         "type": "text",
-        "text": "Furthermore, the first time a creature enters the wall on a turn or ends its turn there, the creature must make a Dexterity saving throw. It takes 7d8 slashing damage on a failed save, or half as much on a successful save."
+        "text": "When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 7d8 piercing damage, or half as much damage on a successful save.\n\nFurthermore, the first time a creature enters the wall on a turn or ends its turn there, the creature must make a Dexterity saving throw. It takes 7d8 slashing damage on a failed save, or half as much on a successful save."
       }
     ]
   },
   {
     "name": "Warding Bond",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Warding Bond",
+            "duration": -1,
+            "effects": "-ac +1 -resist acid -resist bludgeoning -resist cold -resist fire -resist force -resist lightning -resist necrotic -resist piercing -resist poison -resist radiant -resist slashing -resist thunder -resist psychic"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount of damage."
+      }
+    ]
   },
   {
     "name": "Water Breathing",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Water Breathing",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "This spell grants up to ten willing creatures you can see within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration."
+      }
+    ]
   },
   {
     "name": "Water Walk",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Water Walk",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.\n\nIf you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round."
+      }
+    ]
   },
   {
     "name": "Web",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Restrained (Web)",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Each creature that starts its turn in the webs or that enters them during its turn must make a Dexterity saving throw. On a failed save, the creature is restrained as long as it remains in the webs or until it breaks free."
+      }
+    ]
   },
   {
     "name": "Weird",
@@ -6433,19 +7060,13 @@
             "stat": "wis",
             "fail": [
               {
-                "type": "damage",
-                "damage": "{damage}"
+                "type": "ieffect",
+                "name": "Frightened (Weird)",
+                "duration": 10,
+                "effects": ""
               }
             ],
             "success": []
-          }
-        ],
-        "meta": [
-          {
-            "type": "roll",
-            "dice": "4d10[psychic]",
-            "name": "damage",
-            "higher": {}
           }
         ]
       },
@@ -6487,20 +7108,24 @@
           {
             "type": "roll",
             "dice": "3d8[bludgeoning]",
-            "name": "damage",
-            "higher": {}
+            "name": "damage"
           }
         ]
       },
       {
         "type": "text",
-        "text": ""
+        "text": "When the wall appears, each creature within its area must make a Strength saving throw. A creature takes 3d8 bludgeoning damage on a failed save, or half as much damage on a successful one."
       }
     ]
   },
   {
     "name": "Wish",
-    "automation": null
+    "automation": [
+      {
+        "type": "text",
+        "text": "Wish is the mightiest spell a mortal creature can cast. By simply speaking aloud, you can alter the very foundations of reality in accord with your desires."
+      }
+    ]
   },
   {
     "name": "Witch Bolt",
@@ -6543,7 +7168,35 @@
   },
   {
     "name": "Wrathful Smite",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "1d6[psychic]"
+          },
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Frightened (Wrathful Smite)",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The next time you hit with a melee weapon attack during this spell's duration, your attack deals an extra 1d6 psychic damage. Additionally, if the target is a creature, it must make a Wisdom saving throw or be frightened of you until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell."
+      }
+    ]
   },
   {
     "name": "Zone of Truth",
@@ -6555,7 +7208,14 @@
           {
             "type": "save",
             "stat": "cha",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Cannot Lie (Zone of Truth)",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
