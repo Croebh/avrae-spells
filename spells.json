@@ -4220,7 +4220,24 @@
   },
   {
     "name": "Mage Armor",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Mage Armor",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action."
+      }
+    ]
   },
   {
     "name": "Mage Hand",
@@ -4273,12 +4290,18 @@
     "automation": [
       {
         "type": "target",
-        "target": "each",
+        "target": "all",
         "effects": [
           {
             "type": "damage",
-            "damage": "1d4+1[force]",
-            "higher": {}
+            "damage": "{damage}"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d4+1[force]",
+            "name": "damage"
           }
         ]
       },
@@ -4321,7 +4344,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 3d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
       }
     ]
   },
@@ -4352,7 +4375,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
       }
     ]
   },
@@ -4366,24 +4389,69 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Charmed (Mass Suggestion)",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": ""
+        "text": "Each target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do."
       }
     ]
   },
   {
     "name": "Maze",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Banished (Maze)",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze.\n\nThe target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds)."
+      }
+    ]
   },
   {
     "name": "Meld into Stone",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "6d6[bludgeoning]"
+          },
+          {
+            "type": "ieffect",
+            "name": "Prone (Meld into Stone)",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered."
+      }
+    ]
   },
   {
     "name": "Melf's Acid Arrow",
@@ -4397,11 +4465,37 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "4d4[acid]",
-                "higher": {}
+                "damage": "{damage}"
+              },
+              {
+                "type": "ieffect",
+                "name": "Melf's Acid Arrow",
+                "duration": 1,
+                "effects": ""
               }
             ],
-            "miss": []
+            "miss": [
+              {
+                "type": "damage",
+                "damage": "({damage})/2"
+              }
+            ]
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4d4[acid]",
+            "name": "damage",
+            "higher":{
+              "3": "1d4[acid]",
+              "4": "2d4[acid]",
+              "5": "3d4[acid]",
+              "6": "4d4[acid]",
+              "7": "5d4[acid]",
+              "8": "6d4[acid]",
+              "9": "7d4[acid]"
+            }
           }
         ]
       },
@@ -4447,8 +4541,7 @@
           {
             "type": "roll",
             "dice": "20d6[fire]+20d6[bludgeoning]",
-            "name": "damage",
-            "higher": {}
+            "name": "damage"
           }
         ]
       },
@@ -4460,7 +4553,24 @@
   },
   {
     "name": "Mind Blank",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Mind Blank",
+            "duration": -1,
+            "effects": "-immune psychic"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils wish spells and spells or effects of similar power used to affect the target's mind or to gain information about the target."
+      }
+    ]
   },
   {
     "name": "Minor Illusion",
@@ -4472,11 +4582,45 @@
   },
   {
     "name": "Mirror Image",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Mirror Image",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates.\n\nEach time a creature targets you with an attack during the spell's duration, roll a d20 to determine whether the attack instead targets one of your duplicates."
+      }
+    ]
   },
   {
     "name": "Mislead",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Invisible (Mislead)",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You become invisible at the same time that an illusory double of you appears where you are standing. The double lasts for the duration, but the invisibility ends if you attack or cast a spell.\n\nYou can use your action to move your illusory double up to twice your speed and make it gesture, speak, and behave in whatever way you choose."
+      }
+    ]
   },
   {
     "name": "Misty Step",
@@ -4492,7 +4636,14 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Charmed (Modify Memory)",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -4546,7 +4697,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "When a creature enters the spell's area for the first time on a turn or starts its turn there, it is engulfed in ghostly flames that cause searing pain, and it must make a Constitution saving throw. It takes 2d10 radiant damage on a failed save, or half as much damage on a successful one."
       }
     ]
   },
@@ -4584,7 +4735,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one."
       }
     ]
   },
@@ -4594,7 +4745,24 @@
   },
   {
     "name": "Nondetection",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Nondetection",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "For the duration, you hide a target that you touch from divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any divination magic or perceived through magical scrying sensors."
+      }
+    ]
   },
   {
     "name": "Nystul's Magic Aura",
@@ -4653,7 +4821,14 @@
           {
             "type": "save",
             "stat": "dex",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Otiluke's Resilient Sphere",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
@@ -4666,11 +4841,45 @@
   },
   {
     "name": "Otto's Irresistible Dance",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Charmed (Otto's Irresistible Dance)",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The target begins a comic dance in place: shuffling, tapping its feet, and capering for the duration. Creatures that can't be charmed are immune to this spell.\n\nA dancing creature must use all its movement to dance without leaving its space and has disadvantage on Dexterity saving throws and attack rolls. While the target is affected by this spell, other creatures have advantage on attack rolls against it. As an action, a dancing creature makes a Wisdom saving throw to regain control of itself. On a successful save, the spell ends."
+      }
+    ]
   },
   {
     "name": "Pass without Trace",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "+10 Stealth (Pass Without Trace)",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "A veil of shadows and silence radiates from you, masking you and your companions from detection. For the duration, each creature you choose within 30 feet of you (including you) has a +10 bonus to Dexterity (Stealth) checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage."
+      }
+    ]
   },
   {
     "name": "Passwall",
@@ -4688,31 +4897,49 @@
             "stat": "int",
             "fail": [
               {
-                "type": "damage",
-                "damage": "{damage}"
+                "type": "ieffect",
+                "name": "Phantasmal Force",
+                "duration": 10,
+                "effects": ""
               }
             ],
             "success": []
-          }
-        ],
-        "meta": [
-          {
-            "type": "roll",
-            "dice": "1d6[psychic]",
-            "name": "damage",
-            "higher": {}
           }
         ]
       },
       {
         "type": "text",
-        "text": "The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs."
+        "text": "The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.\n\nEach round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion."
       }
     ]
   },
   {
     "name": "Phantasmal Killer",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "wis",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Frightened (Phantasmal Killer)",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
+      }
+    ]
   },
   {
     "name": "Phantom Steed",
@@ -4732,20 +4959,50 @@
           {
             "type": "save",
             "stat": "cha",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Planar Binding",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": ") At the completion of the casting, the target must make a Charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell."
+        "text": "At the completion of the casting, the target must make a Charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell."
       }
     ]
   },
   {
     "name": "Plane Shift",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "save",
+                "stat": "cha",
+                "fail": [],
+                "success": []
+              }
+            ],
+            "miss": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You can use this spell to banish an unwilling creature to another plane. Choose a creature within your reach and make a melee spell attack against it. On a hit, the creature must make a Charisma saving throw. If the creature fails this save, it is transported to a random location on the plane of existence you specify. A creature so transported must find its own way back to your current plane of existence."
+      }
+    ]
   },
   {
     "name": "Plant Growth",
@@ -4773,9 +5030,8 @@
         "meta": [
           {
             "type": "roll",
-            "dice": "1d12[poison][poison]",
+            "dice": "1d12[poison]",
             "name": "damage",
-            "higher": {},
             "cantripScale": true
           }
         ]
@@ -4796,14 +5052,21 @@
           {
             "type": "save",
             "stat": "wis",
-            "fail": [],
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Polymorph",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
             "success": []
           }
         ]
       },
       {
         "type": "text",
-        "text": "An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw."
+        "text": "An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw. The transformation lasts for the duration, or until the target drops to 0 hit points or dies."
       }
     ]
   },
@@ -4843,7 +5106,7 @@
       },
       {
         "type": "text",
-        "text": ""
+        "text": "Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
       }
     ]
   },
@@ -4853,11 +5116,64 @@
   },
   {
     "name": "Prismatic Spray",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "dex",
+            "fail": [
+              {
+                "type": "damage",
+                "damage": "({table})*0"
+              }
+            ],
+            "success": []
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1d8[table]",
+            "name": "table"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a d8 to determine which color ray affects it."
+      }
+    ]
   },
   {
     "name": "Prismatic Wall",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "save",
+            "stat": "con",
+            "fail": [
+              {
+                "type": "ieffect",
+                "name": "Blinded (Prismatic Wall)",
+                "duration": 10,
+                "effects": ""
+              }
+            ],
+            "success": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "If another creature that can see the wall moves to within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or become blinded for 1 minute."
+      }
+    ]
   },
   {
     "name": "Produce Flame",
@@ -4872,7 +5188,6 @@
               {
                 "type": "damage",
                 "damage": "1d8[fire]",
-                "higher": {},
                 "cantripScale": true
               }
             ],
@@ -4896,15 +5211,66 @@
   },
   {
     "name": "Protection from Energy",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Protection from Energy",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder."
+      }
+    ]
   },
   {
     "name": "Protection from Evil and Good",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Protection from Evil and Good",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.\n\nThe protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect."
+      }
+    ]
   },
   {
     "name": "Protection from Poison",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Protection from Poison",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a creature. If it is poisoned, you neutralize the poison. If more than one poison afflicts the target, you neutralize one poison that you know is present, or you neutralize one at random.\n\nFor the duration, the target has advantage on saving throws against being poisoned, and it has resistance to poison damage."
+      }
+    ]
   },
   {
     "name": "Purify Food and Drink",
@@ -4916,11 +5282,51 @@
   },
   {
     "name": "Rary's Telepathic Bond",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "all",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Rary's Telepathic Bond",
+            "duration": -1,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Until the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can't extend to other planes of existence."
+      }
+    ]
   },
   {
     "name": "Ray of Enfeeblement",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "ieffect",
+                "name": "Ray of Enfeeblement",
+                "duration": -1,
+                "effects": ""
+              }
+            ],
+            "miss": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Make a ranged spell attack against the target. On a hit, the target deals only half damage with weapon attacks that use Strength until the spell ends.\n\nAt the end of each of the target's turns, it can make a Constitution saving throw against the spell. On a success, the spell ends."
+      }
+    ]
   },
   {
     "name": "Ray of Frost",
@@ -4935,8 +5341,13 @@
               {
                 "type": "damage",
                 "damage": "1d8[cold]",
-                "higher": {},
                 "cantripScale": true
+              },
+              {
+                "type": "ieffect",
+                "name": "Slowed (Ray of Frost)",
+                "duration": 1,
+                "effects": ""
               }
             ],
             "miss": []
@@ -4951,7 +5362,51 @@
   },
   {
     "name": "Ray of Sickness",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "2d8[poison]",
+                "higher":{
+                  "2": "1d8[poison]",
+                  "3": "2d8[poison]",
+                  "4": "3d8[poison]",
+                  "5": "4d8[poison]",
+                  "6": "5d8[poison]",
+                  "7": "6d8[poison]",
+                  "8": "7d8[poison]",
+                  "9": "8d8[poison]"
+                }
+              },
+              {
+                "type": "save",
+                "stat": "con",
+                "fail": [
+                  {
+                    "type": "ieffect",
+                    "name": "Poisoned (Ray of Sickness)",
+                    "duration": 1,
+                    "effects": ""
+                  }
+                ],
+                "success": []
+              }
+            ],
+            "miss": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Make a ranged spell attack against the target. On a hit, the target takes 2d8 poison damage and must make a Constitution saving throw. On a failed save, it is also poisoned until the end of your next turn."
+      }
+    ]
   },
   {
     "name": "Regenerate",
@@ -4962,14 +5417,13 @@
         "effects": [
           {
             "type": "damage",
-            "damage": "-(4d8+15)[heal]",
-            "higher": {}
+            "damage": "-(4d8+15)[heal]"
           }
         ]
       },
       {
         "type": "text",
-        "text": ""
+        "text": "The target regains 4d8 + 15 hit points. For the duration of the spell, the target regains 1 hit point at the start of each of its turns (10 hit points each minute).\n\nThe target's severed body members (fingers, legs, tails, and so on), if any, are restored after 2 minutes. If you have the severed part and hold it to the stump, the spell instantaneously causes the limb to knit to the stump."
       }
     ]
   },
@@ -4983,7 +5437,24 @@
   },
   {
     "name": "Resistance",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Resistance",
+            "duration": 10,
+            "effects": ""
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends."
+      }
+    ]
   },
   {
     "name": "Resurrection",
@@ -5012,7 +5483,22 @@
   },
   {
     "name": "Revivify",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-1[heal]"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts."
+      }
+    ]
   },
   {
     "name": "Rope Trick",
@@ -5040,9 +5526,8 @@
         "meta": [
           {
             "type": "roll",
-            "dice": "1d8[radiant][radiant]",
+            "dice": "1d8[radiant]",
             "name": "damage",
-            "higher": {},
             "cantripScale": true
           }
         ]
