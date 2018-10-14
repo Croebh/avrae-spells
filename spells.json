@@ -7357,13 +7357,13 @@
             "name": "damage",
             "higher":{
               "2": "1d6[chaotic]",
-              "3": "1d6[chaotic]",
-              "4": "1d6[chaotic]",
-              "5": "1d6[chaotic]",
-              "6": "1d6[chaotic]",
-              "7": "1d6[chaotic]",
-              "8": "1d6[chaotic]",
-              "9": "1d6[chaotic]"
+              "3": "2d6[chaotic]",
+              "4": "3d6[chaotic]",
+              "5": "4d6[chaotic]",
+              "6": "5d6[chaotic]",
+              "7": "6d6[chaotic]",
+              "8": "7d6[chaotic]",
+              "9": "8d6[chaotic]"
             }
           }
         ]
