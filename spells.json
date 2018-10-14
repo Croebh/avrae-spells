@@ -8035,7 +8035,7 @@
     "automation": [
       {
         "type": "target",
-        "target": "'each'",
+        "target": "each",
         "effects": [
           {
             "type": "ieffect",
