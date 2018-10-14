@@ -4062,7 +4062,7 @@
     "automation": [
       {
         "type": "target",
-        "target": "1",
+        "target": 1,
         "effects": [
           {
             "type": "attack",
