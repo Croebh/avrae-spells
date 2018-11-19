@@ -9268,13 +9268,13 @@
             "dice": "3d8[psychic]",
             "name": "damage",
             "higher": {
-              "3": "1d6[psychic]",
-              "4": "2d6[psychic]",
-              "5": "3d6[psychic]",
-              "6": "4d6[psychic]",
-              "7": "5d6[psychic]",
-              "8": "6d6[psychic]",
-              "9": "7d6[psychic]"
+              "3": "1d8[psychic]",
+              "4": "2d8[psychic]",
+              "5": "3d8[psychic]",
+              "6": "4d8[psychic]",
+              "7": "5d8[psychic]",
+              "8": "6d8[psychic]",
+              "9": "7d8[psychic]"
             }
           }
         ]
