@@ -160,8 +160,8 @@
             "fail": [],
             "success": [
               {
-                "type" : "text",
-                "text" : "A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again."
+                "type": "text",
+                "text": "A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again."
               }
             ]
           }
@@ -643,12 +643,12 @@
             "effects": ""
           }
         ],
-        "meta": [   
+        "meta": [
           {
-           "type": "roll",
+            "type": "roll",
             "dice": "2d6[radiant]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "3": "1d6[radiant]",
               "4": "2d6[radiant]",
               "5": "3d6[radiant]",
@@ -986,7 +986,7 @@
           {
             "type": "damage",
             "damage": "4d4[slashing]",
-            "higher":{
+            "higher": {
               "3": "2d4[slashing]",
               "4": "4d4[slashing]",
               "5": "6d4[slashing]",
@@ -1821,7 +1821,7 @@
             "type": "roll",
             "dice": "10",
             "name": "time",
-            "higher":{
+            "higher": {
               "5": "-11",
               "6": "-11",
               "7": "-11",
@@ -1891,7 +1891,7 @@
             "type": "roll",
             "dice": "10",
             "name": "time",
-            "higher":{
+            "higher": {
               "5": "-11",
               "6": "-11",
               "7": "-11",
@@ -3321,7 +3321,7 @@
           {
             "type": "damage",
             "damage": "2d8[fire]",
-            "higher":{
+            "higher": {
               "3": "1d8[fire]",
               "4": "2d8[fire]",
               "5": "3d8[fire]",
@@ -3963,7 +3963,7 @@
             "type": "roll",
             "dice": "4d8[lightning]",
             "name": "atkdmg",
-            "higher":{
+            "higher": {
               "4": "1d8[lightning]",
               "5": "2d8[lightning]",
               "6": "3d8[lightning]",
@@ -3985,7 +3985,7 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
-              } 
+              }
             ],
             "success": [
               {
@@ -4000,7 +4000,7 @@
             "type": "roll",
             "dice": "2d8[lightning]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "4": "1d8[lightning]",
               "5": "2d8[lightning]",
               "6": "3d8[lightning]",
@@ -4322,7 +4322,16 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "{damage}"
+                "damage": "4d4[acid]",
+                "higher": {
+                  "3": "1d4[acid]",
+                  "4": "2d4[acid]",
+                  "5": "3d4[acid]",
+                  "6": "4d4[acid]",
+                  "7": "5d4[acid]",
+                  "8": "6d4[acid]",
+                  "9": "7d4[acid]"
+                }
               },
               {
                 "type": "ieffect",
@@ -4334,25 +4343,18 @@
             "miss": [
               {
                 "type": "damage",
-                "damage": "({damage})/2"
+                "damage": "(4d4[acid])/2",
+                "higher": {
+                  "3": "(1d4[acid])/2",
+                  "4": "(2d4[acid])/2",
+                  "5": "(3d4[acid])/2",
+                  "6": "(4d4[acid])/2",
+                  "7": "(5d4[acid])/2",
+                  "8": "(6d4[acid])/2",
+                  "9": "(7d4[acid])/2"
+                }
               }
             ]
-          }
-        ],
-        "meta": [
-          {
-            "type": "roll",
-            "dice": "4d4[acid]",
-            "name": "damage",
-            "higher":{
-              "3": "1d4[acid]",
-              "4": "2d4[acid]",
-              "5": "3d4[acid]",
-              "6": "4d4[acid]",
-              "7": "5d4[acid]",
-              "8": "6d4[acid]",
-              "9": "7d4[acid]"
-            }
           }
         ]
       },
@@ -5201,7 +5203,7 @@
               {
                 "type": "damage",
                 "damage": "2d8[poison]",
-                "higher":{
+                "higher": {
                   "2": "1d8[poison]",
                   "3": "2d8[poison]",
                   "4": "3d8[poison]",
@@ -5443,7 +5445,7 @@
           {
             "type": "damage",
             "damage": "1d6[fire]",
-            "higher":{
+            "higher": {
               "2": "1d6[fire]",
               "3": "2d6[fire]",
               "4": "3d6[fire]",
@@ -5740,7 +5742,7 @@
             "type": "roll",
             "dice": "5d8",
             "name": "hitpoints",
-            "higher":{
+            "higher": {
               "2": "2d8",
               "3": "4d8",
               "4": "6d8",
@@ -6562,7 +6564,7 @@
             "type": "roll",
             "dice": "3d6",
             "name": "damage",
-            "higher":{
+            "higher": {
               "4": "1d6",
               "5": "2d6",
               "6": "3d6",
@@ -6573,16 +6575,16 @@
           }
         ]
       },
-        {
-          "type": "target",
-          "target": "self",
-          "effects": [
-            {
-              "type": "damage",
-              "damage": "-({damage})/2[heal]"
-            }
-          ]
-        },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-({damage})/2[heal]"
+          }
+        ]
+      },
       {
         "type": "text",
         "text": "Make a melee spell attack against a creature within your reach. On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action."
@@ -6707,7 +6709,7 @@
             "type": "roll",
             "dice": "10d6[cold]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "7": "2d6[cold]",
               "8": "4d6[cold]",
               "9": "6d6[cold]"
@@ -7355,7 +7357,7 @@
             "type": "roll",
             "dice": "2d8[chaotic]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "2": "1d6[chaotic]",
               "3": "2d6[chaotic]",
               "4": "3d6[chaotic]",
@@ -8125,7 +8127,7 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
-              } 
+              }
             ],
             "success": [
               {
@@ -8178,7 +8180,7 @@
             "type": "roll",
             "dice": "3d6[chromatic]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "3": "1d6[chromatic]",
               "4": "2d6[chromatic]",
               "5": "3d6[chromatic]",
@@ -8425,16 +8427,16 @@
           }
         ]
       },
-        {
-          "type": "target",
-          "target": "self",
-          "effects": [
-            {
-              "type": "damage",
-              "damage": "-({damage})/2"
-            }
-          ]
-        },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-({damage})/2"
+          }
+        ]
+      },
       {
         "type": "text",
         "text": "The target must make a Dexterity saving throw. On a successful save, the target takes 2d8 necrotic damage, and the spell ends. On a failed save, the target takes 4d8 necrotic damage, and until the spell ends, you can use your action on each of your turns to automatically deal 4d8 necrotic damage to the target.\n\nWhenever the spell deals damage to a target, you regain hit points equal to half the amount of necrotic damage the target takes."
@@ -8575,7 +8577,7 @@
       },
       {
         "type": "text",
-        "text": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n\u2022 One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. \n\u2022 You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you."
+        "text": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n• One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. \n• You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you."
       }
     ]
   },
@@ -8589,7 +8591,7 @@
           {
             "type": "damage",
             "damage": "-(1d6)[heal]",
-            "higher":{
+            "higher": {
               "3": "-(1d6)[heal]",
               "4": "-(2d6)[heal]",
               "5": "-(3d6)[heal]",
@@ -8951,7 +8953,7 @@
             "type": "roll",
             "dice": "4d8",
             "name": "damage",
-            "higher":{
+            "higher": {
               "4": "1d8",
               "5": "2d8",
               "6": "3d8",
@@ -8962,16 +8964,16 @@
           }
         ]
       },
-        {
-          "type": "target",
-          "target": "self",
-          "effects": [
-            {
-              "type": "damage",
-              "damage": "{damage}[necrotic]"
-            }
-          ]
-        },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "{damage}[necrotic]"
+          }
+        ]
+      },
       {
         "type": "text",
         "text": "You sacrifice some of your health to mend another creature's injuries. You take 4d8 necrotic damage, and one creature of your choice that you can see within range regains a number of hit points equal to twice the necrotic damage you take."
@@ -9501,7 +9503,7 @@
               {
                 "type": "damage",
                 "damage": "2d8[psychic]",
-                "higher":{
+                "higher": {
                   "3": "1d8[psychic]",
                   "4": "1d8[psychic]",
                   "5": "2d8[psychic]",
@@ -9747,7 +9749,7 @@
             "type": "roll",
             "dice": "2d6[bludgeoning]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "5": "1d6[bludgeoning]",
               "6": "2d6[bludgeoning]",
               "7": "3d6[bludgeoning]",
@@ -10065,7 +10067,7 @@
             "type": "roll",
             "dice": "10d4[acid]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "5": "2d4[acid]",
               "6": "4d4[acid]",
               "7": "6d4[acid]",
@@ -10116,7 +10118,7 @@
             "type": "roll",
             "dice": "4d8[radiant]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "6": "1d8[radiant]",
               "7": "2d8[radiant]",
               "8": "3d8[radiant]",
