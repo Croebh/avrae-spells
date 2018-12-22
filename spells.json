@@ -367,7 +367,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Affected by Beacon of Hope",
+            "name": "Hopeful",
             "duration": 10,
             "effects": ""
           }
@@ -1483,7 +1483,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Crusader's Mantled",
+            "name": "Emboldening",
             "duration": 10,
             "effects": "-d 1d4[radiant]"
           }
@@ -2258,7 +2258,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Faerie Fired",
+                "name": "Marked (Faerie Fire)",
                 "duration": 10,
                 "effects": ""
               }
@@ -2726,7 +2726,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Flying",
+            "name": "Flight",
             "duration": -1,
             "effects": ""
           }
@@ -2950,7 +2950,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Grasping Vined",
+            "name": "Controlling Vine",
             "duration": 10,
             "effects": ""
           }
@@ -2999,7 +2999,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Greater Invisibilitied",
+            "name": "Invisible",
             "duration": 10,
             "effects": ""
           }
@@ -3585,7 +3585,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Hunter's Marked",
+            "name": "Marked",
             "duration": -1,
             "effects": ""
           }
@@ -4683,7 +4683,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Otiluke's Resilient Sphered",
+                "name": "Enclosed (Resilient Sphere)",
                 "duration": 10,
                 "effects": ""
               }
@@ -4757,7 +4757,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Phantasmal Forced",
+                "name": "Phantasmic Force",
                 "duration": 10,
                 "effects": ""
               }
@@ -5552,27 +5552,6 @@
     ]
   },
   {
-    "name": "Shapechange",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Shapechanged",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "text": "You assume the form of a different creature for the duration."
-      }
-    ]
-  },
-  {
     "name": "Shatter",
     "automation": [
       {
@@ -6019,7 +5998,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Stoneskinned",
+            "name": "Resistant (Stoneskin)",
             "duration": -1,
             "effects": "-resist bludgeoning -resist piercing -resist slashing"
           }
@@ -7286,7 +7265,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Synchronistic",
+            "name": "Synchronicity",
             "duration": -1,
             "effects": ""
           }
@@ -8924,7 +8903,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Invulnerability",
+            "name": "Invulnerable",
             "duration": -1,
             "effects": "-immune acid -immune bludgeoning -immune cold -immune fire -immune force -immune lightning -immune necrotic -immune piercing -immune poison -immune radiant -immune slashing -immune thunder -immune psychic"
           }
@@ -9251,7 +9230,7 @@
               },
               {
                 "type": "ieffect",
-                "name": "Mind Spiked",
+                "name": "Tracked (Mind Spike)",
                 "duration": -1,
                 "effects": ""
               }
@@ -9385,7 +9364,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Primordial Warded",
+            "name": "Warded",
             "duration": 10,
             "effects": "-resist acid -resist fire -resist cold -resist lightning -resist thunder"
           }
@@ -9533,7 +9512,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Shadow of Moiled",
+            "name": "Wreathed by Shadow",
             "duration": 10,
             "effects": "-resist radiant"
           }
