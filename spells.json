@@ -4466,7 +4466,7 @@
         "target": "self",
         "effects": [
           {
-            "type": " ",
+            "type": "ieffect",
             "name": "Invisible (Mislead)",
             "duration": -1,
             "effects": ""
