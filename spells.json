@@ -123,7 +123,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Animal Shapes",
+            "name": "Transformed (Animal Shapes)",
             "duration": -1,
             "effects": ""
           }
@@ -160,8 +160,8 @@
             "fail": [],
             "success": [
               {
-                "type" : "text",
-                "text" : "A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again."
+                "type": "text",
+                "text": "A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again."
               }
             ]
           }
@@ -297,7 +297,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Bane",
+                "name": "Baned",
                 "duration": 10,
                 "effects": "-b -1d4[Bane]"
               }
@@ -346,7 +346,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Barkskin",
+            "name": "Barkskin Armor",
             "duration": -1,
             "effects": "-ac 16"
           }
@@ -367,7 +367,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Beacon of Hope",
+            "name": "Hopeful",
             "duration": 10,
             "effects": ""
           }
@@ -396,7 +396,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Bestow Curse",
+                "name": "Cursed (Bestow Curse)",
                 "duration": 10,
                 "effects": ""
               }
@@ -483,7 +483,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Bless",
+            "name": "Blessed",
             "duration": 10,
             "effects": "-b 1d4[Bless]"
           }
@@ -643,12 +643,12 @@
             "effects": ""
           }
         ],
-        "meta": [   
+        "meta": [
           {
-           "type": "roll",
+            "type": "roll",
             "dice": "2d6[radiant]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "3": "1d6[radiant]",
               "4": "2d6[radiant]",
               "5": "3d6[radiant]",
@@ -986,7 +986,7 @@
           {
             "type": "damage",
             "damage": "4d4[slashing]",
-            "higher":{
+            "higher": {
               "3": "2d4[slashing]",
               "4": "4d4[slashing]",
               "5": "6d4[slashing]",
@@ -1483,7 +1483,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Crusader's Mantle",
+            "name": "Emboldening",
             "duration": 10,
             "effects": "-d 1d4[radiant]"
           }
@@ -1647,7 +1647,7 @@
           },
           {
             "type": "ieffect",
-            "name": "Detect Thoughts",
+            "name": "Detecting Thoughts",
             "duration": -1,
             "effects": ""
           }
@@ -1821,7 +1821,7 @@
             "type": "roll",
             "dice": "10",
             "name": "time",
-            "higher":{
+            "higher": {
               "5": "-11",
               "6": "-11",
               "7": "-11",
@@ -1891,7 +1891,7 @@
             "type": "roll",
             "dice": "10",
             "name": "time",
-            "higher":{
+            "higher": {
               "5": "-11",
               "6": "-11",
               "7": "-11",
@@ -1981,7 +1981,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Elemental Weapon",
+            "name": "Elemental Weapons",
             "duration": -1,
             "effects": "-d 1d4[elemental] -b '1[Elemental Weapon]'"
           }
@@ -2002,7 +2002,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Enhance Ability",
+            "name": "Enhanced Ability",
             "duration": -1,
             "effects": ""
           }
@@ -2027,7 +2027,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Enlarge/Reduce",
+                "name": "Enlarged/Reduced",
                 "duration": 10,
                 "effects": ""
               }
@@ -2219,7 +2219,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Eyebite",
+                "name": "Eyebitten",
                 "duration": -1,
                 "effects": ""
               }
@@ -2258,7 +2258,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Faerie Fire",
+                "name": "Marked (Faerie Fire)",
                 "duration": 10,
                 "effects": ""
               }
@@ -2343,7 +2343,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Feeblemind",
+                "name": "Feebleminded",
                 "duration": -1,
                 "effects": ""
               }
@@ -2468,7 +2468,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Fire Shield",
+            "name": "Fire Shielded",
             "duration": -1,
             "effects": ""
           }
@@ -2726,7 +2726,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Fly",
+            "name": "Flight",
             "duration": -1,
             "effects": ""
           }
@@ -2755,7 +2755,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Forcecage",
+            "name": "Forcecaged",
             "duration": -1,
             "effects": ""
           }
@@ -2818,7 +2818,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Gaseous Form",
+            "name": "Gaseous Formed",
             "duration": -1,
             "effects": ""
           }
@@ -2950,7 +2950,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Grasping Vine",
+            "name": "Controlling Vine",
             "duration": 10,
             "effects": ""
           }
@@ -2999,7 +2999,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Greater Invisibility",
+            "name": "Invisible",
             "duration": 10,
             "effects": ""
           }
@@ -3246,7 +3246,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Haste",
+            "name": "Hasted",
             "duration": 10,
             "effects": "-ac +2"
           }
@@ -3321,7 +3321,7 @@
           {
             "type": "damage",
             "damage": "2d8[fire]",
-            "higher":{
+            "higher": {
               "3": "1d8[fire]",
               "4": "2d8[fire]",
               "5": "3d8[fire]",
@@ -3419,7 +3419,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Heroism",
+            "name": "Heroic",
             "duration": 10,
             "effects": ""
           }
@@ -3440,7 +3440,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Hex",
+            "name": "Hexed",
             "duration": -1,
             "effects": ""
           }
@@ -3585,7 +3585,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Hunter's Mark",
+            "name": "Marked",
             "duration": -1,
             "effects": ""
           }
@@ -3826,7 +3826,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Invisibility",
+            "name": "Invisible",
             "duration": -1,
             "effects": ""
           }
@@ -3892,7 +3892,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Levitate",
+                "name": "Levitating",
                 "duration": -1,
                 "effects": ""
               }
@@ -3963,7 +3963,7 @@
             "type": "roll",
             "dice": "4d8[lightning]",
             "name": "atkdmg",
-            "higher":{
+            "higher": {
               "4": "1d8[lightning]",
               "5": "2d8[lightning]",
               "6": "3d8[lightning]",
@@ -3985,7 +3985,7 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
-              } 
+              }
             ],
             "success": [
               {
@@ -4000,7 +4000,7 @@
             "type": "roll",
             "dice": "2d8[lightning]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "4": "1d8[lightning]",
               "5": "2d8[lightning]",
               "6": "3d8[lightning]",
@@ -4322,7 +4322,16 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "{damage}"
+                "damage": "4d4[acid]",
+                "higher": {
+                  "3": "1d4[acid]",
+                  "4": "2d4[acid]",
+                  "5": "3d4[acid]",
+                  "6": "4d4[acid]",
+                  "7": "5d4[acid]",
+                  "8": "6d4[acid]",
+                  "9": "7d4[acid]"
+                }
               },
               {
                 "type": "ieffect",
@@ -4334,25 +4343,18 @@
             "miss": [
               {
                 "type": "damage",
-                "damage": "({damage})/2"
+                "damage": "(4d4[acid])/2",
+                "higher": {
+                  "3": "(1d4[acid])/2",
+                  "4": "(2d4[acid])/2",
+                  "5": "(3d4[acid])/2",
+                  "6": "(4d4[acid])/2",
+                  "7": "(5d4[acid])/2",
+                  "8": "(6d4[acid])/2",
+                  "9": "(7d4[acid])/2"
+                }
               }
             ]
-          }
-        ],
-        "meta": [
-          {
-            "type": "roll",
-            "dice": "4d4[acid]",
-            "name": "damage",
-            "higher":{
-              "3": "1d4[acid]",
-              "4": "2d4[acid]",
-              "5": "3d4[acid]",
-              "6": "4d4[acid]",
-              "7": "5d4[acid]",
-              "8": "6d4[acid]",
-              "9": "7d4[acid]"
-            }
           }
         ]
       },
@@ -4681,7 +4683,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Otiluke's Resilient Sphere",
+                "name": "Enclosed (Resilient Sphere)",
                 "duration": 10,
                 "effects": ""
               }
@@ -4755,7 +4757,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Phantasmal Force",
+                "name": "Phantasmic Force",
                 "duration": 10,
                 "effects": ""
               }
@@ -4912,7 +4914,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Polymorph",
+                "name": "Polymorphed",
                 "duration": -1,
                 "effects": ""
               }
@@ -5046,7 +5048,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Protection from Energy",
+            "name": "Protected from Energy",
             "duration": -1,
             "effects": ""
           }
@@ -5067,7 +5069,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Protection from Evil and Good",
+            "name": "Protected from Evil and Good",
             "duration": -1,
             "effects": ""
           }
@@ -5141,7 +5143,7 @@
             "hit": [
               {
                 "type": "ieffect",
-                "name": "Ray of Enfeeblement",
+                "name": "Enfeebled",
                 "duration": -1,
                 "effects": ""
               }
@@ -5201,7 +5203,7 @@
               {
                 "type": "damage",
                 "damage": "2d8[poison]",
-                "higher":{
+                "higher": {
                   "2": "1d8[poison]",
                   "3": "2d8[poison]",
                   "4": "3d8[poison]",
@@ -5272,7 +5274,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Resistance",
+            "name": "Resistant",
             "duration": 10,
             "effects": ""
           }
@@ -5443,7 +5445,7 @@
           {
             "type": "damage",
             "damage": "1d6[fire]",
-            "higher":{
+            "higher": {
               "2": "1d6[fire]",
               "3": "2d6[fire]",
               "4": "3d6[fire]",
@@ -5550,27 +5552,6 @@
     ]
   },
   {
-    "name": "Shapechange",
-    "automation": [
-      {
-        "type": "target",
-        "target": "self",
-        "effects": [
-          {
-            "type": "ieffect",
-            "name": "Shapechange",
-            "duration": -1,
-            "effects": ""
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "text": "You assume the form of a different creature for the duration."
-      }
-    ]
-  },
-  {
     "name": "Shatter",
     "automation": [
       {
@@ -5647,7 +5628,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Shield of Faith",
+            "name": "Shielded by Faith",
             "duration": -1,
             "effects": "-ac +2"
           }
@@ -5740,7 +5721,7 @@
             "type": "roll",
             "dice": "5d8",
             "name": "hitpoints",
-            "higher":{
+            "higher": {
               "2": "2d8",
               "3": "4d8",
               "4": "6d8",
@@ -5800,7 +5781,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Slow",
+                "name": "Slowed",
                 "duration": 10,
                 "effects": "-ac -2"
               }
@@ -5840,7 +5821,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Spider Climb",
+            "name": "Spider Climbing",
             "duration": -1,
             "effects": ""
           }
@@ -6017,7 +5998,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Stoneskin",
+            "name": "Resistant (Stoneskin)",
             "duration": -1,
             "effects": "-resist bludgeoning -resist piercing -resist slashing"
           }
@@ -6453,7 +6434,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "True Polymorph",
+                "name": "True Polymorphed",
                 "duration": -1,
                 "effects": ""
               }
@@ -6562,7 +6543,7 @@
             "type": "roll",
             "dice": "3d6",
             "name": "damage",
-            "higher":{
+            "higher": {
               "4": "1d6",
               "5": "2d6",
               "6": "3d6",
@@ -6573,16 +6554,16 @@
           }
         ]
       },
-        {
-          "type": "target",
-          "target": "self",
-          "effects": [
-            {
-              "type": "damage",
-              "damage": "-({damage})/2[heal]"
-            }
-          ]
-        },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-({damage})/2[heal]"
+          }
+        ]
+      },
       {
         "type": "text",
         "text": "Make a melee spell attack against a creature within your reach. On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action."
@@ -6707,7 +6688,7 @@
             "type": "roll",
             "dice": "10d6[cold]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "7": "2d6[cold]",
               "8": "4d6[cold]",
               "9": "6d6[cold]"
@@ -7146,7 +7127,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Digital Phantom",
+            "name": "Digital Phantomed",
             "duration": -1,
             "effects": ""
           }
@@ -7213,7 +7194,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Invisibility to Cameras",
+            "name": "Invisible to Cameras",
             "duration": 10,
             "effects": ""
           }
@@ -7238,7 +7219,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Protection from Ballistics",
+            "name": "Protected from Ballistics",
             "duration": -1,
             "effects": "-resist ballistics"
           }
@@ -7355,7 +7336,7 @@
             "type": "roll",
             "dice": "2d8[chaotic]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "2": "1d6[chaotic]",
               "3": "2d6[chaotic]",
               "4": "3d6[chaotic]",
@@ -7662,7 +7643,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Zephyr Strike",
+            "name": "Zephyr Striking",
             "duration": 10,
             "effects": ""
           }
@@ -7820,7 +7801,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Beast Bond",
+            "name": "Beast Bonded",
             "duration": -1,
             "effects": ""
           }
@@ -8125,7 +8106,7 @@
               {
                 "type": "damage",
                 "damage": "{damage}"
-              } 
+              }
             ],
             "success": [
               {
@@ -8178,7 +8159,7 @@
             "type": "roll",
             "dice": "3d6[chromatic]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "3": "1d6[chromatic]",
               "4": "2d6[chromatic]",
               "5": "3d6[chromatic]",
@@ -8309,7 +8290,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Earthbind",
+                "name": "Earthbound",
                 "duration": 10,
                 "effects": ""
               }
@@ -8337,7 +8318,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Elemental Bane",
+                "name": "Elemental Baned",
                 "duration": 10,
                 "effects": ""
               }
@@ -8372,7 +8353,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Enemies Abount",
+                "name": "Enemies All Around",
                 "duration": 10,
                 "effects": ""
               }
@@ -8425,16 +8406,16 @@
           }
         ]
       },
-        {
-          "type": "target",
-          "target": "self",
-          "effects": [
-            {
-              "type": "damage",
-              "damage": "-({damage})/2"
-            }
-          ]
-        },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "-({damage})/2"
+          }
+        ]
+      },
       {
         "type": "text",
         "text": "The target must make a Dexterity saving throw. On a successful save, the target takes 2d8 necrotic damage, and the spell ends. On a failed save, the target takes 4d8 necrotic damage, and until the spell ends, you can use your action on each of your turns to automatically deal 4d8 necrotic damage to the target.\n\nWhenever the spell deals damage to a target, you regain hit points equal to half the amount of necrotic damage the target takes."
@@ -8575,7 +8556,7 @@
       },
       {
         "type": "text",
-        "text": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n\u2022 One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. \n\u2022 You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you."
+        "text": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n• One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. \n• You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you."
       }
     ]
   },
@@ -8589,7 +8570,7 @@
           {
             "type": "damage",
             "damage": "-(1d6)[heal]",
-            "higher":{
+            "higher": {
               "3": "-(1d6)[heal]",
               "4": "-(2d6)[heal]",
               "5": "-(3d6)[heal]",
@@ -8838,7 +8819,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Investiture of Flame",
+            "name": "Invested by Flame",
             "duration": -1,
             "effects": "-immune fire -resist cold"
           }
@@ -8859,7 +8840,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Investiture of Ice",
+            "name": "Invested by Ice",
             "duration": -1,
             "effects": "-immune cold -resist fire"
           }
@@ -8880,7 +8861,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Investiture of Stone",
+            "name": "Invested by Stone",
             "duration": -1,
             "effects": "-resist bludgeoning -resist slashing -resist piercing"
           }
@@ -8901,7 +8882,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Investiture of Wind",
+            "name": "Invested by Wind",
             "duration": -1,
             "effects": ""
           }
@@ -8922,7 +8903,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Invulnerability",
+            "name": "Invulnerable",
             "duration": -1,
             "effects": "-immune acid -immune bludgeoning -immune cold -immune fire -immune force -immune lightning -immune necrotic -immune piercing -immune poison -immune radiant -immune slashing -immune thunder -immune psychic"
           }
@@ -8951,7 +8932,7 @@
             "type": "roll",
             "dice": "4d8",
             "name": "damage",
-            "higher":{
+            "higher": {
               "4": "1d8",
               "5": "2d8",
               "6": "3d8",
@@ -8962,16 +8943,16 @@
           }
         ]
       },
-        {
-          "type": "target",
-          "target": "self",
-          "effects": [
-            {
-              "type": "damage",
-              "damage": "{damage}[necrotic]"
-            }
-          ]
-        },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "damage",
+            "damage": "{damage}[necrotic]"
+          }
+        ]
+      },
       {
         "type": "text",
         "text": "You sacrifice some of your health to mend another creature's injuries. You take 4d8 necrotic damage, and one creature of your choice that you can see within range regains a number of hit points equal to twice the necrotic damage you take."
@@ -9087,7 +9068,7 @@
             "fail": [
               {
                 "type": "ieffect",
-                "name": "Mass Polymorph",
+                "name": "Mass Polymorphed",
                 "duration": -1,
                 "effects": ""
               }
@@ -9249,7 +9230,7 @@
               },
               {
                 "type": "ieffect",
-                "name": "Mind Spike",
+                "name": "Tracked (Mind Spike)",
                 "duration": -1,
                 "effects": ""
               }
@@ -9383,7 +9364,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Primordial Ward",
+            "name": "Warded",
             "duration": 10,
             "effects": "-resist acid -resist fire -resist cold -resist lightning -resist thunder"
           }
@@ -9501,7 +9482,7 @@
               {
                 "type": "damage",
                 "damage": "2d8[psychic]",
-                "higher":{
+                "higher": {
                   "3": "1d8[psychic]",
                   "4": "1d8[psychic]",
                   "5": "2d8[psychic]",
@@ -9531,7 +9512,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Shadow of Moil",
+            "name": "Wreathed by Shadow",
             "duration": 10,
             "effects": "-resist radiant"
           }
@@ -9747,7 +9728,7 @@
             "type": "roll",
             "dice": "2d6[bludgeoning]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "5": "1d6[bludgeoning]",
               "6": "2d6[bludgeoning]",
               "7": "3d6[bludgeoning]",
@@ -10065,7 +10046,7 @@
             "type": "roll",
             "dice": "10d4[acid]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "5": "2d4[acid]",
               "6": "4d4[acid]",
               "7": "6d4[acid]",
@@ -10116,7 +10097,7 @@
             "type": "roll",
             "dice": "4d8[radiant]",
             "name": "damage",
-            "higher":{
+            "higher": {
               "6": "1d8[radiant]",
               "7": "2d8[radiant]",
               "8": "3d8[radiant]",
