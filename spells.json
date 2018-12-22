@@ -1,5 +1,9 @@
 [
   {
+    "name": "Encode Thoughts",
+    "automation": null
+  },
+  {
     "name": "Acid Splash",
     "automation": [
       {
@@ -5552,6 +5556,10 @@
     ]
   },
   {
+    "name": "Shapechange",
+    "automation": null
+  },
+  {
     "name": "Shatter",
     "automation": [
       {
@@ -5792,7 +5800,7 @@
       },
       {
         "type": "text",
-        "text": "Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.\n\nAn affected target's speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.\n\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted."
+        "text": "Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.\n\nAn affected target's speed is halved, it takes a \u22122 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.\n\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted."
       }
     ]
   },
@@ -6825,7 +6833,7 @@
       },
       {
         "type": "text",
-        "text": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.\n\nIf you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round."
+        "text": "This spell grants the ability to move across any liquid surface\u2014such as water, acid, mud, snow, quicksand, or lava\u2014as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.\n\nIf you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round."
       }
     ]
   },
@@ -8556,7 +8564,7 @@
       },
       {
         "type": "text",
-        "text": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n• One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. \n• You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you."
+        "text": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n\u2022 One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. \n\u2022 You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you."
       }
     ]
   },
@@ -10263,5 +10271,17 @@
         "text": "You move like the wind. Until the spell ends, your movement doesn't provoke opportunity attacks.\n\nOnce before the spell ends, you can give yourself advantage on one weapon attack roll on your turn. That attack deals an extra 1d8 force damage on a hit. Whether you hit or miss, your walking speed increases by 30 feet until the end of that turn."
       }
     ]
+  },
+  {
+    "name": "Flock of Familiars",
+    "automation": null
+  },
+  {
+    "name": "Galder's Speedy Courier",
+    "automation": null
+  },
+  {
+    "name": "Galder's Tower",
+    "automation": null
   }
 ]
