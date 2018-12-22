@@ -19,53 +19,53 @@ def ensure_keys(spell):
     assert isinstance(spell['automation'], list) or spell['automation'] is None
 
 
-def check_automation(automation):
+def check_automation(spell, automation):
     for effect in automation:
-        check_effect(effect)
+        check_effect(spell, effect)
 
 
-def check_effect(effect):
+def check_effect(spell, effect):
     assert isinstance(effect, dict)
     assert "type" in effect
     assert effect['type'] in EFFECT_TYPES
-    EFFECT_TYPES[effect['type']](effect)
+    EFFECT_TYPES[effect['type']](spell, effect)
     if 'meta' in effect:
         for metaeffect in effect['meta']:
-            check_effect(metaeffect)
+            check_effect(spell, metaeffect)
 
 
-def check_target(effect):
+def check_target(spell, effect):
     print("Found target...")
     assert 'target' in effect
     assert effect['target'] in ("all", "each", "self") or (isinstance(effect['target'], int) and effect['target'] > 0)
     assert 'effects' in effect
     for effect_ in effect['effects']:
-        check_effect(effect_)
+        check_effect(spell, effect_)
 
 
-def check_attack(effect):
+def check_attack(spell, effect):
     print("Found attack...")
     assert 'hit' in effect
     assert 'miss' in effect
     for effect_ in effect['hit']:
-        check_effect(effect_)
+        check_effect(spell, effect_)
     for effect_ in effect['miss']:
-        check_effect(effect_)
+        check_effect(spell, effect_)
 
 
-def check_save(effect):
+def check_save(spell, effect):
     print("Found save...")
     assert 'stat' in effect
     assert effect['stat'] in ('str', 'dex', 'con', 'int', 'wis', 'cha')
     assert 'fail' in effect
     assert 'success' in effect
     for effect_ in effect['fail']:
-        check_effect(effect_)
+        check_effect(spell, effect_)
     for effect_ in effect['success']:
-        check_effect(effect_)
+        check_effect(spell, effect_)
 
 
-def check_damage(effect):
+def check_damage(spell, effect):
     print("Found damage...")
     assert 'damage' in effect
     if 'higher' in effect:
@@ -74,7 +74,7 @@ def check_damage(effect):
         assert isinstance(effect['cantripScale'], bool)
 
 
-def check_ieffect(effect):
+def check_ieffect(spell, effect):
     print("Found ieffect...")
     assert 'name' in effect
     assert 'duration' in effect
@@ -83,8 +83,11 @@ def check_ieffect(effect):
     assert isinstance(effect['duration'], (int, str))
     assert isinstance(effect['effects'], str)
 
+    if effect['name'] == spell['name']:
+        print("Warning: ieffect name is same as spell name")
 
-def check_roll(effect):
+
+def check_roll(spell, effect):
     print("Found roll...")
     assert 'dice' in effect
     assert 'name' in effect
@@ -96,7 +99,7 @@ def check_roll(effect):
         assert isinstance(effect['cantripScale'], bool)
 
 
-def check_text(effect):
+def check_text(spell, effect):
     print("Found text...")
     assert 'text' in effect
     assert isinstance(effect['text'], str)
@@ -127,7 +130,7 @@ def run():
         print(f"Running checks on {spell['name']}...")
         ensure_keys(spell)
         if spell['automation'] is not None:
-            check_automation(spell['automation'])
+            check_automation(spell, spell['automation'])
         print("OK")
 
 
