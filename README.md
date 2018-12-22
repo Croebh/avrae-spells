@@ -5,21 +5,21 @@ Feel free to improve the automation of any spell!
 ## Basic Spell Structure
 A spell is made up of a list of *effects*.
 See below for what each effect does.
-```json
+```ts
 {
-    "type": string,
-    "meta?": [Effect]
+    type: string;
+    meta?: Effect[];
 }
 ```
 All effects in an effect's `meta` will be executed before the
 rest of the effect, if there is a meta.
 
 ### Target
-```json
+```ts
 {
-    "type": "target",
-    "target": "all"|"each"|int|"self",
-    "effects": [Effect]
+    type: "target";
+    target: "all"|"each"|int|"self";
+    effects: Effect[];
 }
 ```
 A Target effect should only show up as a top-level effect.
@@ -32,11 +32,11 @@ It designates what creatures to affect.
 - `effects`: A list of effects that each targeted creature will be subject to.
 
 ### Attack
-```json
+```ts
 {
-    "type": "attack",
-    "hit": [Effect],
-    "miss": [Effect]
+    type: "attack";
+    hit: Effect[];
+    miss: Effect[];
 }
 ```
 An Attack effect makes an attack roll against a targeted creature.
@@ -44,12 +44,12 @@ It must be inside a Target effect.
 - `hit`, `miss`: A list of effects to execute on a hit or miss.
 
 ### Save
-```json
+```ts
 {
-    "type": "save",
-    "stat": "str"|"dex"|"con"|"int"|"wis"|"cha",
-    "fail": [Effect],
-    "success": [Effect]
+    type: "save";
+    stat: "str"|"dex"|"con"|"int"|"wis"|"cha";
+    fail: Effect[];
+    success: Effect[];
 }
 ```
 A Save effect forces a targeted creature to make a saving throw.
@@ -58,12 +58,12 @@ It must be inside a Target effect.
 - `fail`, `success`: A list of effects to execute on a failed or successful save.
 
 ### Damage
-```json
+```ts
 {
-    "type": "damage",
-    "damage": AnnotatedString,
-    "higher?": {int: string},
-    "cantripScale?: boolean
+    type: "damage";
+    damage: AnnotatedString;
+    higher?: {int: string};
+    cantripScale?: boolean;
 }
 ```
 Deals damage to a targeted creature. It must be inside a Target effect.
@@ -72,12 +72,12 @@ Deals damage to a targeted creature. It must be inside a Target effect.
 - `cantripScale` (Optional): Whether this roll should scale like a cantrip.
 
 ### IEffect
-```json
+```ts
 {
-    "type": "ieffect",
-    "name": string,
-    "duration": int or AnnotatedString,
-    "effects": AnnotatedString
+    type: "ieffect";
+    name: string;
+    duration: int | AnnotatedString;
+    effects: AnnotatedString;
 }
 ```
 Adds an InitTracker Effect to a targeted creature, if the spell is cast in init.
@@ -87,15 +87,13 @@ It must be inside a Target effect.
 - `effects`: The effects to add (see `add_effect()` in [scripting](https://avrae.io/cheatsheets/aliasing) docs). Can use variables defined in a Meta tag.
 
 ### Roll
-```json
+```ts
 {
-    "type": "roll",
-    "dice": "2d6[cold]",
-    "name": "damage",
-    "higher?": {
-      "2": "1d6[cold]"
-    },
-    "cantripScale?": boolean
+    type: "roll";
+    dice: string;
+    name: string;
+    higher?: {int: string};
+    cantripScale?: boolean;
 }
 ```
 Rolls some dice and saves the result. Should be in a Meta tag.
@@ -105,10 +103,10 @@ Rolls some dice and saves the result. Should be in a Meta tag.
 - `cantripScale` (Optional): Whether this roll should scale like a cantrip.
 
 ### Text
-```json
+```ts
 {
-    "type": "text",
-    "text": string
+    type: "text";
+    text: string;
 }
 ```
 Outputs a short amount of text in the resulting embed.
