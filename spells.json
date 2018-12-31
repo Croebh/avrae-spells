@@ -200,7 +200,24 @@
             "type": "ieffect",
             "name": "Armor of Agathys",
             "duration": -1,
-            "effects": ""
+            "effects": "-attack '|{damage}|If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "5",
+            "name": "damage",
+            "higher": {
+              "2": "5",
+              "3": "10",
+              "4": "15",
+              "5": "20",
+              "6": "25",
+              "7": "30",
+              "8": "35",
+              "9": "40"
+            }
           }
         ]
       },
@@ -303,7 +320,7 @@
                 "type": "ieffect",
                 "name": "Baned",
                 "duration": 10,
-                "effects": "-b -1d4[Bane]"
+                "effects": "-b -1d4[Bane] -sb -1d4[Bane]"
               }
             ],
             "success": []
@@ -417,7 +434,37 @@
   },
   {
     "name": "Bigby's Hand",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Bigby's Fist",
+            "duration": 10,
+            "effects": "-attack '{spell + proficiencyBonus}|{fist}d8[force]|**Clenched Fist.** The hand strikes one creature or object within 5 feet of it.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4",
+            "name": "fist",
+            "higher": {
+              "6": "2",
+              "7": "4",
+              "8": "6",
+              "9": "8"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand.\n\nThe hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn't fill its space."
+      }
+    ]
   },
   {
     "name": "Blade Barrier",
@@ -489,7 +536,7 @@
             "type": "ieffect",
             "name": "Blessed",
             "duration": 10,
-            "effects": "-b 1d4[Bless]"
+            "effects": "-b 1d4[Bless] -sb 1d4[Bless]"
           }
         ]
       },
@@ -1771,7 +1818,24 @@
   },
   {
     "name": "Divine Favor",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Favor of the Divine",
+            "duration": 10,
+            "effects": "-d 1d4[radiant]"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit."
+      }
+    ]
   },
   {
     "name": "Divine Word",
@@ -2572,33 +2636,36 @@
     "name": "Flame Blade",
     "automation": [
       {
-        "type": "target",
-        "target": "each",
-        "effects": [
-          {
-            "type": "attack",
-            "hit": [
-              {
-                "type": "damage",
-                "damage": "3d6[fire]",
-                "higher": {
-                  "3": "",
-                  "4": "1d6[fire]",
-                  "5": "1d6[fire]",
-                  "6": "2d6[fire]",
-                  "7": "2d6[fire]",
-                  "8": "3d6[fire]",
-                  "9": "3d6[fire]"
-                }
-              }
-            ],
-            "miss": []
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage./n/nThe flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Flaming Blade",
+            "duration": -1,
+            "effects": "-attack '{spell+proficiencyBonus}|{dice}d6[fire]|You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage.\n\nThe flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3",
+            "name": "dice",
+            "higher": {
+              "3": "",
+              "4": "1",
+              "5": "1",
+              "6": "2",
+              "7": "2",
+              "8": "3",
+              "9": "3"
+            }
+          }
+        ]
       }
     ]
   },
@@ -3346,6 +3413,34 @@
       {
         "type": "text",
         "text": "Any creature in physical contact with the object takes 2d8 fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again.\n\nIf a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Hot Metal",
+            "duration": 10,
+            "effects": "-attack '|{dice}d8[fire]|If a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it does not drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2",
+            "name": "dice",
+            "higher": {
+              "3": "1",
+              "4": "2",
+              "5": "3",
+              "6": "4",
+              "7": "5",
+              "8": "6",
+              "9": "7"
+            }
+          }
+        ]
       }
     ]
   },
@@ -4566,7 +4661,24 @@
   },
   {
     "name": "Mordenkainen's Faithful Hound",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Faithful Hound",
+            "duration": -1,
+            "effects": "-attack '{spell + proficiencyBonus}|4d8[piercing]|At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you.'"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.\n\nThe hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions."
+      }
+    ]
   },
   {
     "name": "Mordenkainen's Magnificent Mansion",
@@ -4588,8 +4700,7 @@
             "hit": [
               {
                 "type": "damage",
-                "damage": "3d10[force]",
-                "higher": {}
+                "damage": "3d10[force]"
               }
             ],
             "miss": []
@@ -4599,6 +4710,18 @@
       {
         "type": "text",
         "text": "When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Sword of Mordenkainen",
+            "duration": 10,
+            "effects": "-attack '{spell + proficiencyBonus}|3d10[force]| On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.'"
+          }
+        ]
       }
     ]
   },
@@ -4773,6 +4896,18 @@
       {
         "type": "text",
         "text": "The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.\n\nEach round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Phantasmal Master",
+            "duration": 10,
+            "effects": "-attack '|1d6[psychic]|Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasms area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion.'"
+          }
+        ]
       }
     ]
   },
@@ -5800,7 +5935,7 @@
       },
       {
         "type": "text",
-        "text": "Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.\n\nAn affected target's speed is halved, it takes a \u22122 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.\n\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted."
+        "text": "Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.\n\nAn affected target's speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.\n\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted."
       }
     ]
   },
@@ -5845,18 +5980,20 @@
     "name": "Spike Growth",
     "automation": [
       {
-        "type": "target",
-        "target": "each",
-        "effects": [
-          {
-            "type": "damage",
-            "damage": "2d4[piercing]"
-          }
-        ]
-      },
-      {
         "type": "text",
         "text": "The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Spiked Ground",
+            "duration": -1,
+            "effects": "-attack '|2d4[piercing]|When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels.'"
+          }
+        ]
       }
     ]
   },
@@ -5937,6 +6074,34 @@
       {
         "type": "text",
         "text": "When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.\n\nAs a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Spiritual Weapon",
+            "duration": 10,
+            "effects": "-attack '{spell + proficiencyBonus}|{dice}d8+{spell}[force]|As a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1",
+            "name": "dice",
+            "higher": {
+              "3": "",
+              "4": "1",
+              "5": "1",
+              "6": "2",
+              "7": "2",
+              "8": "3",
+              "9": "3"
+            }
+          }
+        ]
       }
     ]
   },
@@ -6569,6 +6734,27 @@
           {
             "type": "damage",
             "damage": "-({damage})/2[heal]"
+          },
+          {
+            "type": "ieffect",
+            "name": "Siphoning Grasp",
+            "duration": 10,
+            "effects": "-attack '{spell + proficiencyBonus}|{dice}d6[necrotic]|On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "3",
+            "name": "dice",
+            "higher": {
+              "4": "1",
+              "5": "2",
+              "6": "3",
+              "7": "4",
+              "8": "5",
+              "9": "6"
+            }
           }
         ]
       },
@@ -6660,6 +6846,32 @@
       {
         "type": "text",
         "text": "When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 5d8 fire damage, or half as much damage on a successful save.\n\nOne side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Fire Wall",
+            "duration": 10,
+            "effects": "-attack '|{dice}d8[fire]|One side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "5",
+            "name": "dice",
+            "higher": {
+              "5": "1",
+              "6": "2",
+              "7": "3",
+              "8": "4",
+              "9": "5"
+            }
+          }
+        ]
       }
     ]
   },
@@ -6833,7 +7045,7 @@
       },
       {
         "type": "text",
-        "text": "This spell grants the ability to move across any liquid surface\u2014such as water, acid, mud, snow, quicksand, or lava\u2014as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.\n\nIf you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round."
+        "text": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.\n\nIf you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round."
       }
     ]
   },
@@ -6971,6 +7183,18 @@
       {
         "type": "text",
         "text": "Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Witch's Bolt",
+            "duration": 10,
+            "effects": "-attack '|1d12[lightning]|On each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else.'"
+          }
+        ]
       }
     ]
   },
@@ -8075,6 +8299,22 @@
     "name": "Crown of Stars",
     "automation": [
       {
+        "type": "text",
+        "text": "You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. When you do so, make a ranged spell attack. On a hit, the target takes 4d12 radiant damage. Whether you hit or miss, the mote is expended. The spell ends early if you expend the last mote.\n\nIf you have four or more motes remaining, they shed bright light in a 30-foot radius and dim light for an additional 30 feet. If you have one to three motes remaining, they shed dim light in a 30-foot radius."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Crown of Stars",
+            "duration": -1,
+            "effects": "-attack '{spell + proficiencyBonus}|4d12[radiant]|You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. Whether you hit or miss, the mote is expended. The spell ends early if you expend the last mote.'"
+          }
+        ]
+      },
+      {
         "type": "target",
         "target": "each",
         "effects": [
@@ -8089,10 +8329,6 @@
             "miss": []
           }
         ]
-      },
-      {
-        "type": "text",
-        "text": "You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. When you do so, make a ranged spell attack. On a hit, the target takes 4d12 radiant damage. Whether you hit or miss, the mote is expended. The spell ends early if you expend the last mote.\n\nIf you have four or more motes remaining, they shed bright light in a 30-foot radius and dim light for an additional 30 feet. If you have one to three motes remaining, they shed dim light in a 30-foot radius."
       }
     ]
   },
@@ -8564,7 +8800,7 @@
       },
       {
         "type": "text",
-        "text": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n\u2022 One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. \n\u2022 You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you."
+        "text": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n• One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. \n• You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you."
       }
     ]
   },
@@ -8829,7 +9065,7 @@
             "type": "ieffect",
             "name": "Invested by Flame",
             "duration": -1,
-            "effects": "-immune fire -resist cold"
+            "effects": "-immune fire -resist cold -attack '|1d10[fire]|Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage.'"
           }
         ]
       },
@@ -9481,6 +9717,38 @@
     "name": "Shadow Blade",
     "automation": [
       {
+        "type": "text",
+        "text": "This magic sword lasts until the spell ends. It counts as a simple melee weapon with which you are proficient. It deals 2d8 psychic damage on a hit and has the finesse, light, and thrown properties (range 20/60). In addition, when you use the sword to attack a target that is in dim light or darkness, you make the attack roll with advantage."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Blade of Shadow",
+            "duration": 10,
+            "effects": "-attack '{dexterityMod+proficiencyBonus}|{dice}d8+{dexterityMod}[psychic]|It deals 2d8 psychic damage on a hit and has the finesse, light, and thrown properties (range 20/60). In addition, when you use the sword to attack a target that is in dim light or darkness, you make the attack roll with advantage.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "2",
+            "name": "dice",
+            "higher": {
+              "3": "3",
+              "4": "3",
+              "5": "4",
+              "6": "4",
+              "7": "5",
+              "8": "5",
+              "9": "5"
+            }
+          }
+        ]
+      },
+      {
         "type": "target",
         "target": "each",
         "effects": [
@@ -9504,10 +9772,6 @@
             "miss": []
           }
         ]
-      },
-      {
-        "type": "text",
-        "text": "This magic sword lasts until the spell ends. It counts as a simple melee weapon with which you are proficient. It deals 2d8 psychic damage on a hit and has the finesse, light, and thrown properties (range 20/60). In addition, when you use the sword to attack a target that is in dim light or darkness, you make the attack roll with advantage."
       }
     ]
   },
@@ -9522,17 +9786,7 @@
             "type": "ieffect",
             "name": "Wreathed by Shadow",
             "duration": 10,
-            "effects": "-resist radiant"
-          }
-        ]
-      },
-      {
-        "type": "target",
-        "target": "each",
-        "effects": [
-          {
-            "type": "damage",
-            "damage": "2d8[necrotic]"
+            "effects": "-resist radiant -attack '|2d8[necrotic]|Whenever a creature within 10 feet of you hits you with an attack, the shadows lash out at that creature, dealing it 2d8 necrotic damage.'"
           }
         ]
       },
@@ -9749,6 +10003,32 @@
       {
         "type": "text",
         "text": "Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take 2d6 bludgeoning damage. The sphere's space is difficult terrain."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Lighting Storm",
+            "duration": 10,
+            "effects": "-attack '{spell + proficiencyBonus}|{dice}d6[lightning]|Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "4",
+            "name": "dice",
+            "higher": {
+              "5": "1",
+              "6": "2",
+              "7": "3",
+              "8": "4",
+              "9": "5"
+            }
+          }
+        ]
       }
     ]
   },
@@ -10117,6 +10397,31 @@
       {
         "type": "text",
         "text": "When the wall appears, each creature in its area must make a Constitution saving throw. On a failed save, a creature takes 4d8 radiant damage, and it is blinded for 1 minute. On a successful save, it takes half as much damage and isn't blinded. A blinded creature can make a Constitution saving throw at the end of each of its turns, ending the effect on itself on a success."
+      },
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Light Wall",
+            "duration": 10,
+            "effects": "-attack '{spell + proficiencyBonus}|{dice}d8[radiant]|Until the spell ends, you can use an action to launch a beam of radiance from the wall at one creature you can see within 60 feet of it. Make a ranged spell attack. On a hit, the target takes 4d8 radiant damage. Whether you hit or miss, reduce the length of the wall by 10 feet. If the wall's length drops to 0 feet, the spell ends.'"
+          }
+        ],
+        "meta": [
+          {
+            "type": "roll",
+            "dice": "1",
+            "name": "dice",
+            "higher": {
+              "6": "1",
+              "7": "2",
+              "8": "3",
+              "9": "4"
+            }
+          }
+        ]
       }
     ]
   },
@@ -10251,7 +10556,24 @@
   },
   {
     "name": "Wrath of Nature",
-    "automation": null
+    "automation": [
+      {
+        "type": "target",
+        "target": "self",
+        "effects": [
+          {
+            "type": "ieffect",
+            "name": "Wrath of Rocks",
+            "duration": 10,
+            "effects": "-attack '{spell + proficiencyBonus}|3d8[bludgeoning]|Rocks. As a bonus action on your turn, you can cause a loose rock in the cube to launch at a creature you can see in the cube. Make a ranged spell attack against the target. On a hit, the target takes 3d8 nonmagical bludgeoning damage, and it must succeed on a Strength saving throw or fall prone.'"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "You call out to the spirits of nature to rouse them against your enemies. Choose a point you can see within range. The spirits cause trees, rocks, and grasses in a 60-foot cube centered on that point to become animated until the spell ends."
+      }
+    ]
   },
   {
     "name": "Zephyr Strike",
