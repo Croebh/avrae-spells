@@ -3430,7 +3430,7 @@
             "type": "roll",
             "dice": "2",
             "name": "dice",
-            "higher":{
+            "higher": {
               "3": "1",
               "4": "2",
               "5": "3",
@@ -4668,7 +4668,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Faitful Hound",
+            "name": "Faithful Hound",
             "duration": -1,
             "effects": "-attack '{spell + proficiencyBonus}|4d8[piercing]|At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you.'"
           }
@@ -6091,7 +6091,7 @@
             "type": "roll",
             "dice": "1",
             "name": "dice",
-            "higher":{
+            "higher": {
               "3": "",
               "4": "1",
               "5": "1",
@@ -6747,7 +6747,7 @@
             "type": "roll",
             "dice": "3",
             "name": "dice",
-            "higher":{
+            "higher": {
               "4": "1",
               "5": "2",
               "6": "3",
@@ -6863,7 +6863,7 @@
             "type": "roll",
             "dice": "5",
             "name": "dice",
-            "higher":{
+            "higher": {
               "5": "1",
               "6": "2",
               "7": "3",
@@ -7190,7 +7190,7 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Witches Bolt",
+            "name": "Witch's Bolt",
             "duration": 10,
             "effects": "-attack '|1d12[lightning]|On each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else.'"
           }
@@ -8311,6 +8311,22 @@
             "name": "Crown of Stars",
             "duration": -1,
             "effects": "-attack '{spell + proficiencyBonus}|4d12[radiant]|You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. Whether you hit or miss, the mote is expended. The spell ends early if you expend the last mote.'"
+          }
+        ]
+      },
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "4d12[radiant]"
+              }
+            ],
+            "miss": []
           }
         ]
       }
@@ -9731,6 +9747,31 @@
             }
           }
         ]
+      },
+      {
+        "type": "target",
+        "target": "each",
+        "effects": [
+          {
+            "type": "attack",
+            "hit": [
+              {
+                "type": "damage",
+                "damage": "2d8[psychic]",
+                "higher": {
+                  "3": "1d8[psychic]",
+                  "4": "1d8[psychic]",
+                  "5": "2d8[psychic]",
+                  "6": "2d8[psychic]",
+                  "7": "3d8[psychic]",
+                  "8": "3d8[psychic]",
+                  "9": "3d8[psychic]"
+                }
+              }
+            ],
+            "miss": []
+          }
+        ]
       }
     ]
   },
@@ -9979,7 +10020,7 @@
             "type": "roll",
             "dice": "4",
             "name": "dice",
-            "higher":{
+            "higher": {
               "5": "1",
               "6": "2",
               "7": "3",
@@ -10373,7 +10414,7 @@
             "type": "roll",
             "dice": "1",
             "name": "dice",
-            "higher":{
+            "higher": {
               "6": "1",
               "7": "2",
               "8": "3",
