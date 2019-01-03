@@ -111,3 +111,10 @@ Rolls some dice and saves the result. Should be in a Meta tag.
 ```
 Outputs a short amount of text in the resulting embed.
 - `text`: The text to display.
+
+## AnnotatedString
+An AnnotatedString is a string that can access saved variables from a meta effect.
+To access a variable, surround the name in brackets (e.g. `{damage}`).
+
+This will replace the bracketed portion with the value of the meta variable (usually a roll).
+No math can be performed inside AnnotatedStrings.
