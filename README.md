@@ -114,7 +114,8 @@ Outputs a short amount of text in the resulting embed.
 
 ## AnnotatedString
 An AnnotatedString is a string that can access saved variables from a meta effect.
-To access a variable, surround the name in brackets (e.g. `{damage}`).
+To access a variable, surround the name in brackets (e.g. `{damage}`). Available variables are any defined in Meta effects and character variables.
 
 This will replace the bracketed portion with the value of the meta variable (usually a roll).
-No math can be performed inside AnnotatedStrings.
+
+To perform math inside an AnnotatedString, surround the formula with two curly braces (e.g. `{{floor(dexterityMod+spell)}}`).
