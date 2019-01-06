@@ -9735,7 +9735,7 @@
             "type": "ieffect",
             "name": "Blade of Shadow",
             "duration": 10,
-            "effects": "-attack '{{max(dexterityMod,strengthMod)+proficiencyBonus}}|{dice}d8+{{max(dexterityMod,strengthMod}}[psychic]|It deals 2d8 psychic damage on a hit and has the finesse, light, and thrown properties (range 20/60). In addition, when you use the sword to attack a target that is in dim light or darkness, you make the attack roll with advantage.'"
+            "effects": "-attack '{{max(dexterityMod,strengthMod)+proficiencyBonus}}|{dice}d8+{{max(dexterityMod,strengthMod)}}[psychic]|It deals 2d8 psychic damage on a hit and has the finesse, light, and thrown properties (range 20/60). In addition, when you use the sword to attack a target that is in dim light or darkness, you make the attack roll with advantage.'"
           }
         ],
         "meta": [
