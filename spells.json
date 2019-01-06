@@ -443,7 +443,7 @@
             "type": "ieffect",
             "name": "Bigby's Fist",
             "duration": 10,
-            "effects": "-attack '{spell + proficiencyBonus}|{fist}d8[force]|**Clenched Fist.** The hand strikes one creature or object within 5 feet of it.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|{fist}d8[force]|**Clenched Fist.** The hand strikes one creature or object within 5 feet of it.'"
           }
         ],
         "meta": [
@@ -2647,7 +2647,7 @@
             "type": "ieffect",
             "name": "Flaming Blade",
             "duration": -1,
-            "effects": "-attack '{spell+proficiencyBonus}|{dice}d6[fire]|You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage.\n\nThe flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.'"
+            "effects": "-attack '{{spell+proficiencyBonus}}|{dice}d6[fire]|You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage.\n\nThe flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.'"
           }
         ],
         "meta": [
@@ -4670,7 +4670,7 @@
             "type": "ieffect",
             "name": "Faithful Hound",
             "duration": -1,
-            "effects": "-attack '{spell + proficiencyBonus}|4d8[piercing]|At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|4d8[piercing]|At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you.'"
           }
         ]
       },
@@ -4719,7 +4719,7 @@
             "type": "ieffect",
             "name": "Sword of Mordenkainen",
             "duration": 10,
-            "effects": "-attack '{spell + proficiencyBonus}|3d10[force]| On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|3d10[force]| On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.'"
           }
         ]
       }
@@ -6083,7 +6083,7 @@
             "type": "ieffect",
             "name": "Spiritual Weapon",
             "duration": 10,
-            "effects": "-attack '{spell + proficiencyBonus}|{dice}d8+{spell}[force]|As a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|{dice}d8+{spell}[force]|As a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it.'"
           }
         ],
         "meta": [
@@ -6739,7 +6739,7 @@
             "type": "ieffect",
             "name": "Siphoning Grasp",
             "duration": 10,
-            "effects": "-attack '{spell + proficiencyBonus}|{dice}d6[necrotic]|On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|{dice}d6[necrotic]|On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt.'"
           }
         ],
         "meta": [
@@ -8310,7 +8310,7 @@
             "type": "ieffect",
             "name": "Crown of Stars",
             "duration": -1,
-            "effects": "-attack '{spell + proficiencyBonus}|4d12[radiant]|You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. Whether you hit or miss, the mote is expended. The spell ends early if you expend the last mote.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|4d12[radiant]|You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. Whether you hit or miss, the mote is expended. The spell ends early if you expend the last mote.'"
           }
         ]
       },
@@ -9728,7 +9728,7 @@
             "type": "ieffect",
             "name": "Blade of Shadow",
             "duration": 10,
-            "effects": "-attack '{dexterityMod+proficiencyBonus}|{dice}d8+{dexterityMod}[psychic]|It deals 2d8 psychic damage on a hit and has the finesse, light, and thrown properties (range 20/60). In addition, when you use the sword to attack a target that is in dim light or darkness, you make the attack roll with advantage.'"
+            "effects": "-attack '{{max(dexterityMod,strengthMod)+proficiencyBonus}}|{dice}d8+{dexterityMod}[psychic]|It deals 2d8 psychic damage on a hit and has the finesse, light, and thrown properties (range 20/60). In addition, when you use the sword to attack a target that is in dim light or darkness, you make the attack roll with advantage.'"
           }
         ],
         "meta": [
@@ -9769,7 +9769,8 @@
                 }
               }
             ],
-            "miss": []
+            "miss": [],
+            "attackBonus": "{{max(dexterityMod,strengthMod)+proficiencyBonus}}"
           }
         ]
       }
@@ -10010,9 +10011,9 @@
         "effects": [
           {
             "type": "ieffect",
-            "name": "Lighting Storm",
+            "name": "Lightning Storm",
             "duration": 10,
-            "effects": "-attack '{spell + proficiencyBonus}|{dice}d6[lightning]|Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|{dice}d6[lightning]|Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere.'"
           }
         ],
         "meta": [
@@ -10406,7 +10407,7 @@
             "type": "ieffect",
             "name": "Light Wall",
             "duration": 10,
-            "effects": "-attack '{spell + proficiencyBonus}|{dice}d8[radiant]|Until the spell ends, you can use an action to launch a beam of radiance from the wall at one creature you can see within 60 feet of it. Make a ranged spell attack. On a hit, the target takes 4d8 radiant damage. Whether you hit or miss, reduce the length of the wall by 10 feet. If the wall's length drops to 0 feet, the spell ends.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|{dice}d8[radiant]|Until the spell ends, you can use an action to launch a beam of radiance from the wall at one creature you can see within 60 feet of it. Make a ranged spell attack. On a hit, the target takes 4d8 radiant damage. Whether you hit or miss, reduce the length of the wall by 10 feet. If the wall's length drops to 0 feet, the spell ends.'"
           }
         ],
         "meta": [
@@ -10565,7 +10566,7 @@
             "type": "ieffect",
             "name": "Wrath of Rocks",
             "duration": 10,
-            "effects": "-attack '{spell + proficiencyBonus}|3d8[bludgeoning]|Rocks. As a bonus action on your turn, you can cause a loose rock in the cube to launch at a creature you can see in the cube. Make a ranged spell attack against the target. On a hit, the target takes 3d8 nonmagical bludgeoning damage, and it must succeed on a Strength saving throw or fall prone.'"
+            "effects": "-attack '{{spell + proficiencyBonus}}|3d8[bludgeoning]|Rocks. As a bonus action on your turn, you can cause a loose rock in the cube to launch at a creature you can see in the cube. Make a ranged spell attack against the target. On a hit, the target takes 3d8 nonmagical bludgeoning damage, and it must succeed on a Strength saving throw or fall prone.'"
           }
         ]
       },

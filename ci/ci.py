@@ -51,6 +51,8 @@ def check_attack(spell, effect):
         check_effect(spell, effect_)
     for effect_ in effect['miss']:
         check_effect(spell, effect_)
+    if 'attackBonus' in effect:
+        assert isinstance(effect['attackBonus'], str)
 
 
 def check_save(spell, effect):
@@ -63,6 +65,8 @@ def check_save(spell, effect):
         check_effect(spell, effect_)
     for effect_ in effect['success']:
         check_effect(spell, effect_)
+    if 'dc' in effect:
+        assert isinstance(effect['dc'], str)
 
 
 def check_damage(spell, effect):

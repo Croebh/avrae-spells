@@ -37,11 +37,13 @@ It designates what creatures to affect.
     type: "attack";
     hit: Effect[];
     miss: Effect[];
+    attackBonus?: AnnotatedString;
 }
 ```
 An Attack effect makes an attack roll against a targeted creature.
 It must be inside a Target effect.
 - `hit`, `miss`: A list of effects to execute on a hit or miss.
+- `attackBonus` (Optional): An AnnotatedString that details what AB to use (defaults to caster AB).
 
 ### Save
 ```ts
@@ -50,12 +52,14 @@ It must be inside a Target effect.
     stat: "str"|"dex"|"con"|"int"|"wis"|"cha";
     fail: Effect[];
     success: Effect[];
+    dc?: AnnotatedString;
 }
 ```
 A Save effect forces a targeted creature to make a saving throw.
 It must be inside a Target effect.
 - `stat`: What type of saving throw it is.
 - `fail`, `success`: A list of effects to execute on a failed or successful save.
+- `dc` (Optional): An AnnotatedString that details what DC to use (defaults to caster DC).
 
 ### Damage
 ```ts
