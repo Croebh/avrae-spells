@@ -101,6 +101,8 @@ def check_roll(spell, effect):
         check_higher(effect['higher'])
     if 'cantripScale' in effect:
         assert isinstance(effect['cantripScale'], bool)
+    if 'hidden' in effect:
+        assert isinstance(effect['hidden'], bool)
 
 
 def check_text(spell, effect):
