@@ -7974,7 +7974,16 @@
           {
             "type": "damage",
             "damage": "1d6[elemental]",
-            "cantripScale": true
+            "higher": {
+            	"2": "1d6[elemental]",
+            	"3": "2d6[elemental]",
+            	"4": "3d6[elemental]",
+            	"5": "4d6[elemental]",
+            	"6": "5d6[elemental]",
+            	"7": "6d6[elemental]",
+            	"8": "7d6[elemental]",
+            	"9": "8d6[elemental]"
+            }
           }
         ]
       },
