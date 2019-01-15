@@ -106,7 +106,7 @@ Rolls some dice and saves the result. Should be in a Meta tag.
 - `name`: What to save the result as.
 - `higher` (Optional): How much to add to the roll when a spell is cast at a certain level.
 - `cantripScale` (Optional): Whether this roll should scale like a cantrip.
-- `hidden` (Optional): If true, won't display the roll in the Meta field.
+- `hidden` (Optional): If true, won't display the roll in the Meta field, or apply any bonuses from -d.
 
 ### Text
 ```ts
