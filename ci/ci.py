@@ -89,6 +89,8 @@ def check_ieffect(spell, effect):
 
     if effect['name'] == spell['name']:
         print("Warning: ieffect name is same as spell name")
+    if 'end' in effect:
+        assert isinstance(effect['end'], bool)
 
 
 def check_roll(spell, effect):
