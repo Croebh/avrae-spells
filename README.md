@@ -82,6 +82,7 @@ Deals damage to a targeted creature. It must be inside a Target effect.
     name: string;
     duration: int | AnnotatedString;
     effects: AnnotatedString;
+    end?: boolean;
 }
 ```
 Adds an InitTracker Effect to a targeted creature, if the spell is cast in init.
@@ -89,6 +90,7 @@ It must be inside a Target effect.
 - `name`: The name of the effect to add.
 - `duration`: The duration of the effect. Can use variables defined in a Meta tag.
 - `effects`: The effects to add (see `add_effect()` in [scripting](https://avrae.io/cheatsheets/aliasing) docs). Can use variables defined in a Meta tag.
+- `end` (Optional): Whether the effect should tick on the end of the turn, rather than start.
 
 ### Roll
 ```ts
