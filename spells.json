@@ -514,8 +514,9 @@
           {
             "type": "ieffect",
             "name": "Blade Ward",
-            "duration": 1,
-            "effects": "-resist bludgeoning -resist piercing -resist slashing"
+            "duration": 2,
+            "effects": "-resist bludgeoning -resist piercing -resist slashing",
+            "end": true
           }
         ]
       },
@@ -6129,7 +6130,8 @@
                 "type": "ieffect",
                 "name": "No Reactions (Staggering Smite)",
                 "duration": 1,
-                "effects": ""
+                "effects": "",
+                "end": true
               }
             ],
             "success": []
@@ -6788,8 +6790,9 @@
               {
                 "type": "ieffect",
                 "name": "Vicious Mockery",
-                "duration": 0,
-                "effects": ""
+                "duration": 1,
+                "effects": "",
+                "end": true
               }
             ],
             "success": []
@@ -8774,7 +8777,8 @@
                 "type": "ieffect",
                 "name": "Frostbite",
                 "duration": 1,
-                "effects": ""
+                "effects": "",
+                "end": true
               }
             ],
             "success": []
@@ -10337,7 +10341,8 @@
                 "type": "ieffect",
                 "name": "Vitriolic Sphere",
                 "duration": 1,
-                "effects": ""
+                "effects": "",
+                "end": true
               }
             ],
             "success": [
