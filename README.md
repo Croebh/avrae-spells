@@ -75,6 +75,20 @@ Deals damage to a targeted creature. It must be inside a Target effect.
 - `higher` (Optional): How much to add to the damage when a spell is cast at a certain level.
 - `cantripScale` (Optional): Whether this roll should scale like a cantrip.
 
+### TempHP
+```ts
+{
+    type: "temphp";
+    amount: AnnotatedString;
+    higher?: {int: string};
+    cantripScale?: boolean;
+}
+```
+Sets the target's THP. It must be inside a Target effect.
+- `amount`: How much THP the target should have. Can use variables defined in a Meta tag.
+- `higher` (Optional): How much to add to the THP when a spell is cast at a certain level.
+- `cantripScale` (Optional): Whether this roll should scale like a cantrip.
+
 ### IEffect
 ```ts
 {
