@@ -77,6 +77,14 @@ def check_damage(spell, effect):
     if 'cantripScale' in effect:
         assert isinstance(effect['cantripScale'], bool)
 
+def check_temphp(spell, effect):
+    print("Found temphp...")
+    assert 'amount' in effect
+    if 'higher' in effect:
+        check_higher(effect['higher'])
+    if 'cantripScale' in effect:
+        assert isinstance(effect['cantripScale'], bool)
+
 
 def check_ieffect(spell, effect):
     print("Found ieffect...")
@@ -118,6 +126,7 @@ EFFECT_TYPES = {
     "attack": check_attack,
     "save": check_save,
     "damage": check_damage,
+    "temphp": check_temphp,
     "ieffect": check_ieffect,
     "roll": check_roll,
     "text": check_text
