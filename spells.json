@@ -5831,7 +5831,7 @@
         	  "type": "ieffect",
         	  "name": "Shillelagh",
         	  "duration": 10,
-        	  "effects": "-attack '{{max(spell,strengthMod)}}|1d8+{{max(spell,strengthMod)}}[^bludgeoning]|The wood of a club or quarterstaff you are holding is imbued with nature\'s power.'"
+        	  "effects": "-attack '{{max(spell,strengthMod)}}|1d8+{{max(spell,strengthMod)}}[^bludgeoning]|The wood of a club or quarterstaff you are holding is imbued with natures power.'"
         	}
         ]
       },
